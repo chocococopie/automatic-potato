@@ -1,0 +1,42 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("./fonts/#{$file_name}.woff") format("woff"), url("./fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+;
+
+@mixin for-tablet-l {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin for-tablet {
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin for-mobile {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin color-blue-white {
+	background-color: #0066FF !important;
+	color: #FFFFFF !important;
+}
+
+@mixin btn-text-s {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	color: #FFFFFF;
+}

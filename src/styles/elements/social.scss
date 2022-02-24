@@ -1,0 +1,22 @@
+.social {
+	@extend .d-flex, .align-items-center;
+
+	& > .sub-menu__item {
+		@extend .me-1, .d-flex, .align-items-center, .justify-content-center, .px-1;
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+
+		&:last-child {
+
+			@extend .me-0;
+		}
+
+		& svg path {
+			transition: $transition-base;
+		}
+
+		&:hover svg path {
+			fill: map-get($theme-colors, "blue");
+		}
+	}
+}

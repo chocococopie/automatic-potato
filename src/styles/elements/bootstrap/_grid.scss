@@ -1,0 +1,32 @@
+$spacer: 1rem;
+
+$spacers: (
+	0: 0,
+	1: ($spacer * .5),
+	2: ($spacer * .75),
+	3: $spacer,
+	4: ($spacer * 1.25),
+	5: ($spacer * 1.5),
+	6: ($spacer * 1.75),
+	7: ($spacer * 2),
+	8: ($spacer * 2.25),
+	9: ($spacer * 2.5),
+	10: ($spacer * 2.75),
+	11: ($spacer * 3),
+	12: ($spacer * 3.25),
+	13: ($spacer * 3.5),
+	14: ($spacer * 3.75),
+	15: ($spacer * 4),
+);
+
+$grid-gutter-width: $spacer * 1.5 !default;
+$container-padding-x: $grid-gutter-width * 3.5 !default;
+$enable-negative-margins: true;
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 100%
+);

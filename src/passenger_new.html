@@ -1,0 +1,178 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="reserved passenger container-mt">
+    <section class="container">
+        <div class="breadcrumb__container d-none d-sm-block">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="./river.html">Речные круизы</a></li>
+                <li class="breadcrumb-item"><a href="./detail.html">Описание круиза</a></li>
+                <li class="breadcrumb-item active">Бронирование</li>
+            </ol>
+        </div>
+        <div class="row flex-column justify-content-center align-items-center position-relative reserved__timer">
+            <a href="./passenger.html" class="link-primary link-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M11 19L4 12L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="col text-center fs-7 fw-700 reserved__timer-title">Укажите данные пассажира</div>
+            <div class="col text-center fs-9 mt-1">Бронь на каюты автоматически аннулируется через <span
+                    class="text-red fw-700" id="reservedTimer">14:59</span> минут
+            </div>
+        </div>
+    </section>
+    <section class="bg-light-2 pt-11 pb-15">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8">
+                    <form action="/" method="post" class="reserved__shadow">
+                        <div class="fs-7 fw-700 text-gray">Укажите данные пассажира</div>
+
+                        <div class="fs-8 fw-600 mt-7">Основная информация</div>
+                        <div class="fio row mt-4">
+                            <div class="col-12 col-sm-4 d-flex flex-column">
+                                <label for="surname" class="fs-11 fw-600 pb-1 text-gray">Фамилия*</label>
+                                <textarea class="textarea" name="surname" id="surname" placeholder=""
+                                          required></textarea>
+                            </div>
+                            <div class="col-12 col-sm-4 d-flex flex-column">
+                                <label for="name" class="fs-11 fw-600 pb-1 text-gray">Имя*</label>
+                                <textarea class="textarea" name="name" id="name" placeholder="" required></textarea>
+                            </div>
+                            <div class="col-12 col-sm-4 d-flex flex-column">
+                                <label for="fathersName" class="fs-11 fw-600 pb-1 text-gray">Отчество</label>
+                                <textarea class="textarea" name="fathersName" id="fathersName"
+                                          placeholder=""></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-6 col-sm-2 d-flex flex-column passenger__doc">
+                                <label for="sex" class="fs-11 fw-600 pb-1 text-gray">Пол*</label>
+                                <div class="passenger__doc-select">
+                                    <select name="sex" id="sex" class="select2 select-padding select2ForDocuments" data-placeholder=""
+                                            required>
+                                        <option value=""></option>
+                                        <option value="passport">Муж</option>
+                                        <option value="birth-certificate">Жен</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fio row mt-2">
+                            <div class="col-9 col-sm-3 passenger__doc-date">
+                                <label for="dateFrom" class="fs-11 fw-600 pb-1 text-gray">Дата рождения*</label>
+                                <input id="dateFrom" type="text" placeholder="" class="datepicker-here"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="fs-8 fw-600 mt-7">Документы</div>
+
+                        <div class="row mt-4">
+                            <div class="col-5 d-flex flex-column passenger__doc">
+                                <label for="document" class="fs-11 fw-600 pb-1 text-gray">Документ*</label>
+                                <div class="passenger__doc-select">
+                                    <select name="document" id="document" class="select2 select2ForDocuments"
+                                            data-placeholder="" required>
+                                        <option value=""></option>
+                                        <option value="1">Паспорт</option>
+                                        <option value="2">Свидетельство о рождении</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="passenger__doc-passport">
+                            <div class="fio row mt-4">
+                                <div class="col-2 d-flex flex-column">
+                                    <label for="passportSeries" class="fs-11 fw-600 pb-1 text-gray">Серия</label>
+                                    <textarea class="textarea" name="passportSeries" id="passportSeries"
+                                              placeholder=""></textarea>
+                                </div>
+                                <div class="col-2 d-flex flex-column">
+                                    <label for="passportNumber" class="fs-11 fw-600 pb-1 text-gray">Номер</label>
+                                    <textarea class="textarea" name="passportNumber" id="passportNumber"
+                                              placeholder=""></textarea>
+                                </div>
+                            </div>
+                            <div class="fio row mt-4">
+                                <div class="col-8 d-flex flex-column">
+                                    <label for="issuePlace" class="fs-11 fw-600 pb-1 text-gray">Паспорт выдан</label>
+                                    <textarea class="textarea" name="issuePlace" id="issuePlace"
+                                              placeholder=""></textarea>
+                                </div>
+                            </div>
+                            <div class="fio row mt-2">
+                                <div class="col-3 passenger__doc-date">
+                                    <label for="dateTo" class="fs-11 fw-600 pb-1 text-gray">Дата выдачи</label>
+                                    <input id="dateTo" type="text" placeholder="" class="datepicker-here"
+                                           autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fio row mt-4 passenger__doc-birth-certificate">
+                            <div class="col-2 d-flex flex-column">
+                                <label for="birthCertificateNumber" class="fs-11 fw-600 pb-1 text-gray">Номер
+                                    документа</label>
+                                <textarea class="textarea" name="birthCertificateNumber" id="birthCertificateNumber"
+                                          placeholder=""></textarea>
+                            </div>
+                        </div>
+
+                        <div class="fs-8 fw-600 mt-7">Контакты</div>
+                        <div class="fio row mt-4 d-flex flex-column">
+                            <div class="col-4">
+                                <label for="phone" class="fs-11 fw-600 pb-1 text-gray">Телефон*</label>
+                                <input type="tel" id="phone" name="phone" class="textarea" autocomplete="off" required>
+                            </div>
+                            <div class="col-4 mt-4">
+                                <label for="email" class="fs-11 fw-600 pb-1 text-gray">Email*</label>
+                                <textarea class="textarea" name="email" id="email" placeholder="" required></textarea>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-blue mt-9 p-3 text-uppercase" type="button">Добавить</button>
+
+                    </form>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="reserved__shadow">
+                        <div class="fs-11 fw-500 text-gray">Т/Х</div>
+                        <h5 class="fs-6 fw-500 py-1">Андрей РУБЛЕВ</h5>
+                        <div class="card__text">
+                            <ul class="card__list">
+                                <li>Москва (СРВ)</li>
+                                <li>Мышкин</li>
+                                <li>Ярославль</li>
+                                <li>Плёс</li>
+                                <li>Кострома</li>
+                                <li>Коприно</li>
+                                <li>Углич</li>
+                                <li>Тверь</li>
+                                <li>Хвойный бор</li>
+                                <li>Москва (СРВ)</li>
+                            </ul>
+                        </div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Дата</div>
+                        <div class="fs-8">25 июля 17:00 - 31 июля 7:30</div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Количество дней</div>
+                        <div class="fs-8">7</div>
+                        <a href="./pay.html" class="btn btn-blue opacity-50 py-2 w-100 mt-9 fs-8 fw-600 text-uppercase">Перейти к оплате</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html__include/_footer.html')

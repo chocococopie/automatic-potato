@@ -1,0 +1,13 @@
+$box-shadow-card: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+.bonus-card {
+	background: linear-gradient(90deg, rgba(237, 222, 93, 0.41) 0%, rgba(240, 152, 25, 0.41) 100%), url("./img/bonus-card/mostur-logo.png");
+	background-position: 98% 95%;
+	background-repeat: no-repeat;
+	border-radius: 8px;
+	box-shadow: $box-shadow-card;
+
+	@include for-mobile {
+		background: linear-gradient(90deg, rgba(237, 222, 93, 0.41) 0%, rgba(240, 152, 25, 0.41) 100%);
+	}
+}

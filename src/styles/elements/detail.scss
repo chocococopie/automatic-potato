@@ -1,0 +1,257 @@
+.detail {
+
+  &__wrap {
+    box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.25);
+  }
+
+  & .accordion-item {
+    //margin-bottom: 16px;
+
+    & .accordion-button {
+      font-weight: bold;
+      padding: 20px 16px !important;
+
+      &:not(.collapsed) {
+        @include for-mobile {
+          box-shadow: none;
+          color: #000033;
+        }
+      }
+    }
+  }
+
+  &__deck {
+    .accordion-body {
+      background-color: #FFFFFF !important;
+    }
+
+    @include for-mobile {
+      .accordion-body {
+        background-color: #FFFFFF !important;
+      }
+    }
+  }
+
+  &__cabin {
+
+    //.accordion-item {
+    //  box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.25);
+    //}
+
+    .accordion-body {
+      background-color: #FFFFFF !important;
+    }
+
+    & .accordion {
+      & .tab-content {
+        & > .tab-pane {
+          @include for-mobile {
+            display: block;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__category {
+    & .card__price-ordinary {
+      @include for-mobile {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: normal;
+        margin-top: 14px;
+      }
+    }
+
+    & .accordion-item .accordion-button {
+      @include for-mobile {
+        padding-right: 32px !important;
+      }
+    }
+
+    & .accordion-body {
+      @include for-mobile {
+        padding-top: 0 !important;
+      }
+    }
+  }
+
+  &__swiper {
+
+    &-thumbs {
+      //@extend .mt-3;
+
+      & .swiper {
+        &-wrapper {
+          @extend .align-items-center;
+        }
+
+        &-slide {
+          border: 2px solid transparent;
+
+          &.swiper-slide-thumb-active {
+            border: 2px solid #0066FF;
+          }
+        }
+      }
+    }
+
+    & .swiper {
+
+      &-slide {
+        height: 330px;
+
+        @include for-mobile {
+          height: 190px;
+        }
+
+        & img {
+          @extend .w-100;
+        }
+      }
+    }
+
+    & .controls {
+      @extend .position-absolute, .justify-content-between, .w-100, .h-100;
+      display: flex;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      @include for-mobile {
+        display: none;
+      }
+
+      & button {
+        width: 10%;
+        opacity: 0.6;
+        @extend .h-100, .bg-transparent, .border-0;
+        transition: $transition-base;
+
+        &:hover {
+          @extend .opacity-100;
+        }
+
+        &.swiper-button-next {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &--main {
+    & .swiper {
+      &-slide {
+        height: 632px;
+      }
+    }
+  }
+
+  &__card {
+
+    & .card {
+      &-title {
+        @extend .h4;
+
+        letter-spacing: -1px;
+      }
+
+      &__link {
+        @extend .fs-9, .w-100, .py-2;
+      }
+    }
+  }
+
+  &__nav {
+
+    & .nav {
+      flex-wrap: wrap;
+      @extend .align-items-center, .justify-content-center;
+
+      @include for-mobile {
+        flex-wrap: nowrap;
+      }
+
+      &__link {
+        letter-spacing: 0.25px;
+        @extend .link-primary, .fw-700, .border-transparent;
+        font-size: 18px;
+        transition: $transition-base;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid;
+
+        @include for-mobile {
+          font-size: 14px;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        &:not(:last-child) {
+          margin-right: 48px;
+
+          @include for-mobile {
+            margin-right: 14px;
+          }
+        }
+
+        &.active {
+          border-color: #0066FF !important;
+          pointer-events: none;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &__choice {
+
+    padding-bottom: 64px;
+
+    @include for-mobile {
+      padding-bottom: 8px;
+    }
+
+    & .detail__nav {
+      & .nav {
+        &__link {
+          @extend .text-gray;
+
+          &.active {
+            @extend .text-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.info {
+  &__block {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__btn {
+    cursor: pointer;
+  }
+
+  &__popover {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: 16px 15px 12px 16px;
+    min-width: 251px;
+    background: #FFFFFF;
+    border: 1px solid #EDEDEE;
+    box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.35);
+    z-index: 1;
+
+    & span {
+      line-height: 19px;
+    }
+  }
+}

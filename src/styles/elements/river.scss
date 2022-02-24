@@ -1,0 +1,47 @@
+.river {
+  padding-bottom: 64px;
+
+  @include for-mobile {
+    padding-bottom: 37px;
+  }
+
+  &__result {
+    & tbody tr {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%);
+    }
+
+    & thead tr {
+      background-color: #EDEDEE;;
+    }
+
+    & .card-title {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.6px;
+    }
+
+    &.subtitle {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 33px;
+      line-height: 46px;
+      letter-spacing: -1.5px;
+    }
+  }
+
+  & .search-cruise {
+  }
+
+  &__sorting-dropdown {
+    li {
+      padding: 0 18px 0 16px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

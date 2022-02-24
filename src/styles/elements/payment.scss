@@ -1,0 +1,33 @@
+.fio {
+  //display: flex;
+  //flex-direction: row;
+
+  & .textarea {
+    min-height: auto;
+    height: 47px;
+  }
+}
+
+//#options-sort > option {
+//  &::after {
+//      -ms-flex-negative: 0;
+//      flex-shrink: 0;
+//      width: 0.75rem;
+//      height: 0.75rem;
+//      margin-left: auto;
+//      content: "";
+//      background-image: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 3.5L6 7.5L10 3.5' stroke='%230066FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+//      background-repeat: no-repeat;
+//      background-size: 0.75rem;
+//      -webkit-transition: -webkit-transform 0.2s ease-in-out;
+//      transition: -webkit-transform 0.2s ease-in-out;
+//      -o-transition: transform 0.2s ease-in-out;
+//      transition: transform 0.2s ease-in-out;
+//      transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+//  }
+//}
+
+
+#options-sort > option[value="1"] {
+  background-image: url("./img/search-cruise/down.png");
+}

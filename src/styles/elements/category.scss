@@ -1,0 +1,65 @@
+$box-shadow-tooltip: 2px 2px 8px rgba(155, 155, 155, 0.35);
+
+.category {
+
+
+	&__item {
+		@extend .bg-white, .p-9, .pt-5;
+
+		&:not(:first-child) {
+			@extend .mt-1;
+		}
+
+		& .subtitle {
+			@extend .fs-5;
+		}
+
+		& .card__price {
+			@extend .mt-2;
+
+			&.card__price--black {
+				@extend .text-primary, .mt-0;
+				font-size: 18px;
+
+				@include for-mobile {
+					font-size: 14px;
+				}
+			}
+		}
+
+		& .cabin__facilities {
+			@extend .mt-0;
+		}
+
+		&-label {
+			@extend .text-gray, .fs-11, .fw-500;
+			padding-bottom: 16px;
+
+			@include for-mobile {
+				padding: 0;
+			}
+		}
+
+
+	}
+}
+
+.imgAlt .cabin {
+	&__facilities {
+		&-item {
+			@extend .position-relative;
+
+			& .img-tooltip {
+				display: none;
+				@extend .position-absolute, .p-1, .bg-white, .text-primary, .border-light;
+				z-index: 1;
+				border: 1px solid;
+				box-shadow: $box-shadow-tooltip;
+
+				&.show {
+					display: block;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,385 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="reserved container-mt">
+    <section class="container">
+        <div class="breadcrumb__container d-none d-sm-block">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="./river.html">Речные круизы</a></li>
+                <li class="breadcrumb-item"><a href="./detail.html">Описание круиза</a></li>
+                <li class="breadcrumb-item active">Бронирование</li>
+            </ol>
+        </div>
+        <div class="row flex-column justify-content-center align-items-center position-relative reserved__timer">
+            <a href="./detail.html" class="link-primary link-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M11 19L4 12L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="col text-center fs-7 fw-700 reserved__timer-title">Укажите данные пассажиров</div>
+            <div class="col text-center fs-9 mt-1">Бронь на каюты автоматически аннулируется через <span
+                    class="text-red fw-700" id="reservedTimer">14:59</span> минут
+            </div>
+        </div>
+    </section>
+    <section class="bg-light-2 pt-11 pb-15">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <form action="/" method="post" class="reserved__shadow">
+                        <div class="fs-6 text-navy">Выбор напитков</div>
+                        <h4 class="fs-7 lh-2 fw-700 reserved__pass-label pb-3 mt-6">Место основное</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="mb-0 fs-11 text-gray">Пассажир</p>
+                                <p class="mb-0 fs-9 text-navy">Александров Александр Александрович</p>
+                                <p class="mb-0 fs-9 text-gray">12.12.1980</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-0 fs-11 text-gray">Документ</p>
+                                <p class="mb-0 fs-9 text-navy">Паспорт РФ</p>
+                                <p class="mb-0 fs-9 text-gray">3123 535362</p>
+                            </div>
+                        </div>
+                        <div class="col-9 mt-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <div class=" mt-1">
+                                            <button type="button" class="btn beverages__button-add btn-link link-blue d-flex flex-row"
+                                                    data-bs-toggle="modal" data-bs-target="#selectDrink">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                            d="M20 2H8C6.897 2 6 2.897 6 4V16C6 17.103 6.897 18 8 18H20C21.103 18 22 17.103 22 16V4C22 2.897 21.103 2 20 2ZM8 16V4H20L20.002 16H8Z"
+                                                            fill="currentColor"/>
+                                                    <path d="M4 8H2V20C2 21.103 2.897 22 4 22H16V20H4V8ZM15 6H13V9H10V11H13V14H15V11H18V9H15V6Z"
+                                                          fill="currentColor"/>
+                                                </svg>
+                                                <div class="ms-1 d-flex flex-column align-items-start">
+                                                    <span class="text-uppercase fw-600">Выбор пакета напитков</span>
+                                                    <span class="fs-11 text-gray mt-1">Пакет напитков 1</span>
+                                                </div>
+                                            </button>
+                                            <div class="modal fade" id="selectDrink1" tabindex="-1"
+                                                 aria-labelledby="#selectDrinkLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header border-0 p-5">
+                                                            <h5 class="modal-title subtitle pt-7" id="selectDrinkLabel1">
+                                                                Выберите напитки
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row gy-7">
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink1.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        1</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink2.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        2</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink3.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        3</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink4.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        4</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <div class="form-check">
+                                            <label class="form-check-label d-flex align-items-center"
+                                                   for="withoutBeverages1">
+                                                <input class="checkbox-cruise" type="checkbox" value=""
+                                                       id="withoutBeverages1">
+                                                <span class="checkbox-fake"></span>
+                                                <span class="checkbox-text">Продолжить без пакета напитков</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="fs-7 lh-2 fw-700 reserved__pass-label pb-3 mt-6">Место основное</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="mb-0 fs-11 text-gray">Пассажир</p>
+                                <p class="mb-0 fs-9 text-navy">Александров Александр Александрович</p>
+                                <p class="mb-0 fs-9 text-gray">12.12.1980</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-0 fs-11 text-gray">Документ</p>
+                                <p class="mb-0 fs-9 text-navy">Паспорт РФ</p>
+                                <p class="mb-0 fs-9 text-gray">3123 535362</p>
+                            </div>
+                        </div>
+                        <div class="col-9 mt-5">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <div class="lk__docs-add mt-1">
+                                            <button type="button" class="btn beverages__button-add btn-link link-blue d-flex flex-row"
+                                                    data-bs-toggle="modal" data-bs-target="#selectDrink">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                            d="M20 2H8C6.897 2 6 2.897 6 4V16C6 17.103 6.897 18 8 18H20C21.103 18 22 17.103 22 16V4C22 2.897 21.103 2 20 2ZM8 16V4H20L20.002 16H8Z"
+                                                            fill="currentColor"/>
+                                                    <path d="M4 8H2V20C2 21.103 2.897 22 4 22H16V20H4V8ZM15 6H13V9H10V11H13V14H15V11H18V9H15V6Z"
+                                                          fill="currentColor"/>
+                                                </svg>
+                                                <div class="ms-1 d-flex flex-column align-items-start">
+                                                    <span class="text-uppercase fw-600">Выбор пакета напитков</span>
+                                                </div>
+                                            </button>
+                                            <div class="modal fade" id="selectDrink" tabindex="-1"
+                                                 aria-labelledby="#selectDrinkLabel2" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header border-0 p-5">
+                                                            <h5 class="modal-title subtitle pt-7" id="selectDrinkLabel2">
+                                                                Выберите напитки
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row gy-7">
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink1.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        1</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink2.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        2</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink3.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        3</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <img src="./img/reserved/drink4.jpg" alt=""
+                                                                         class="img-fluid">
+                                                                    <h6 class="subtitle-3 mb-3 mt-3">Пакет напитков
+                                                                        4</h6>
+                                                                    <span class="subtitle-4">Цена: 5 000 <sup>₽</sup></span>
+                                                                    <ul class="reserved__drink-list">
+                                                                        <li>коктейли безалкогольные</li>
+                                                                        <li>домашние лимонады</li>
+                                                                        <li>газированные напитки</li>
+                                                                        <li>сок</li>
+                                                                        <li>вода</li>
+                                                                        <li>чай листовой</li>
+                                                                        <li>кофе зерновой</li>
+                                                                        <li>мороженое развесное</li>
+                                                                    </ul>
+                                                                    <button class="btn btn-blue px-5 py-2 text-uppercase"
+                                                                            type="button">Выбрать
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="d-flex flex-column align-items-start">
+                                        <div class="form-check">
+                                            <label class="form-check-label d-flex align-items-center"
+                                                   for="withoutBeverages2">
+                                                <input class="checkbox-cruise" type="checkbox" value=""
+                                                       id="withoutBeverages2">
+                                                <span class="checkbox-fake"></span>
+                                                <span class="checkbox-text">Продолжить без пакета напитков</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-4">
+                    <div class="reserved__shadow">
+                        <div class="fs-11 fw-500 text-gray">Т/Х</div>
+                        <h5 class="fs-6 fw-500 py-1">Андрей РУБЛЕВ</h5>
+                        <div class="card__text">
+                            <ul class="card__list">
+                                <li>Москва (СРВ)</li>
+                                <li>Мышкин</li>
+                                <li>Ярославль</li>
+                                <li>Плёс</li>
+                                <li>Кострома</li>
+                                <li>Коприно</li>
+                                <li>Углич</li>
+                                <li>Тверь</li>
+                                <li>Хвойный бор</li>
+                                <li>Москва (СРВ)</li>
+                            </ul>
+                        </div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Дата</div>
+                        <div class="fs-8">25 июля 17:00 - 31 июля 7:30</div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Количество дней</div>
+                        <div class="fs-8">7</div>
+                        <div class="d-flex justify-content-between align-items-center mt-6">
+                            <div class="fs-8">Стоимость за тариф</div>
+                            <div class="card__price">
+                                <span class="text-primary fs-7">58 000 <sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="fs-8">Стоимость доп. услуг</div>
+                            <div class="card__price">
+                                <span class="text-primary fs-7">28 966 <sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-9">
+                            <div class="fs-7 fw-700">Стоимость круиза</div>
+                            <div class="card__price">
+                                <span class="text-yellow fs-6">86 966 <sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <a href="./pay.html" class="btn btn-blue opacity-50 py-2 w-100 mt-9 fs-8 fw-600 text-uppercase">Продолжить</a>
+                        <div class="reserved__warning">Выберите напитки</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html__include/_footer.html')

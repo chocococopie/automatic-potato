@@ -1,0 +1,14 @@
+$box-shadow-board: 2px 2px 8px rgba(155, 155, 155, 0.25);
+
+.board {
+
+	&__list {
+		border: 2px solid;
+		@extend .border-blue, .p-7, .pt-9;
+		box-shadow: $box-shadow-board;
+
+		@include for-mobile {
+			background-color: #FFFFFF;
+		}
+	}
+}

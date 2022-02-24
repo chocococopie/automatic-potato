@@ -1,0 +1,87 @@
+.news {
+  padding: 40px 0 32px;
+
+  @include for-mobile {
+    padding: 16px 0 24px;
+  }
+
+  &__head {
+    margin-bottom: 40px;
+    @extend .d-flex, .justify-content-between;
+    align-items: flex-end;
+
+    @include for-mobile {
+      margin-bottom: 16px;
+      padding-top: 24px;
+    }
+
+    &-links {
+      & a {
+        letter-spacing: 0.4px;
+        @extend .link-blue, .small, .fw-600, .text-uppercase;
+
+        @include for-mobile {
+          padding-top: 12px;
+          font-size: 12px;
+        }
+
+        &:first-child {
+          @include for-mobile {
+            padding-top: 16px;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 36px;
+
+          @include for-mobile {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    @include for-mobile {
+      align-items: flex-start;
+    }
+  }
+
+  &__list {
+
+    & .card {
+      border: 1px solid transparent !important;
+      @extend .h-100;
+
+      &:hover {
+        @extend .border-blue;
+        //border-color: $yellow !important;
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.6px;
+        @extend .fs-7, .mb-1, .text-navy;
+      }
+
+      &-date {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        @extend .text-gray;
+      }
+
+      &-body {
+        @extend .d-flex, .flex-column;
+      }
+
+      &__text {
+        @extend .mb-auto;
+      }
+    }
+  }
+}

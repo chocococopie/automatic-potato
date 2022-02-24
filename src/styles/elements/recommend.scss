@@ -1,0 +1,66 @@
+$card-box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.25) !default;
+$card-box-shadow-hover: 4px 4px 10px rgba(155, 155, 155, 0.25);
+$card-box-shadow-press: 1px 1px 10px rgba(155, 155, 155, 0.25);
+
+.recommend {
+
+  @include for-mobile {
+    & .swiper-container {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  &__tabs {
+    @extend .bg-white, .mt-9, .pb-5;
+    border: 1px solid #E2E2E2;
+
+    & .nav {
+      background: 0;
+      border: 0;
+      height: auto;
+
+      @extend .pt-0;
+
+      &-tabs {
+
+        & li {
+          @extend .w-50, .m-0, .text-center;
+
+          & button {
+            letter-spacing: 0.25px;
+            border: 1px solid;
+
+
+            @extend .w-100, .fs-7, .rounded-0, .btn, .bg-gray-2, .fw-700, .border-border-1;
+
+            &:focus {
+              @extend .position-relative;
+              z-index: 1;
+            }
+
+            &.active {
+              @extend .bg-white, .border-transparent;
+            }
+          }
+        }
+      }
+    }
+
+    &-content {
+      @extend .mt-5, .px-5;
+
+      & .tab-pane {
+        //@extend .d-flex, .invisible;
+
+        &.active {
+          @extend .d-flex;
+        }
+      }
+    }
+  }
+
+  &__link-more {
+    letter-spacing: 0.4px;
+    @extend .me-3, .d-flex, .align-items-center;
+  }
+}

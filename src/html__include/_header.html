@@ -1,0 +1,332 @@
+<header class="header  w-100 d-flex align-items-center @@headerWhite">
+
+    <nav class="navbar navbar-expand-lg w-100">
+        <div class="d-flex flex-column w-100" id="mainMenu">
+            <div class="menu__top bg-white d-inline-flex justify-content-between w-100 align-items-center" id="topMenu">
+                <a class="navbar-brand d-inline-flex align-items-center" href="./index.html">
+                    <img class="nav__logo-icon" src="./img/header/logo.png" alt="Компания" height="45">
+                    <span class="d-flex flex-column align-items-center">
+                        <span class="nav__logo-title">Мостурфлот</span>
+                        <span class="nav__logo-subtitle">Круизная компания</span>
+                    </span>
+                </a>
+                <div class="d-inline-flex align-items-sm-center" id="topMenuLeft">
+                    <a class="navbar__link" href="tel:+7 (495) 367-24-54">
+                        <img class="d-sm-none" src="../img/header-new/phone-icon.svg">
+                        <span class="fs-11 me-sm-9 d-none d-sm-flex">+7 (495) 367-24-54</span>
+                    </a>
+                    <a class="navbar__link fs-11 d-none d-sm-flex"
+                       href="mailto: info@mosturflot.ru">info@mosturflot.ru</a>
+                </div>
+                <div class="d-inline-flex align-items-sm-center" id="topMenuRight">
+                    <form class="search-field me-sm-5">
+                        <input type="text" name="search" placeholder="">
+                    </form>
+                    <a href="#" class="navbar__link fs-11 d-flex me-sm-9 align-items-center" id="scheduleMenu">
+                        Расписание
+                        <img style="width: 12px; height: 12px; margin-left: 6px"
+                             src="../img/header-new/schedule-icon.svg">
+                    </a>
+                    <a href="#" type="button" class="navbar__link fs-11 d-flex me-sm-9 align-items-center"
+                       id="loginMenu" data-bs-toggle="modal"
+                       data-bs-target="#authModal">
+                        Войти
+                        <img style="width: 12px; height: 12px; margin-left: 6px" src="../img/header-new/login-icon.svg">
+                    </a>
+                    <a href="#" class="navbar__link fs-11 text-uppercase align-self-center">Ru</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="menu__bottom d-flex align-items-center flex-row justify-content-between w-100" id="bottomMenu">
+                <div class="logoBottom d-flex d-sm-none"></div>
+                <div class="dropdownBottom d-flex d-sm-none"></div>
+            </div>
+            <div class="collapse navbar-collapse px-1" id="navbarSupportedContent">
+                <ul class="navbar-nav d-inline-flex me-auto me-sm-0 mb-2 mb-lg-0">
+                    <li id="liSchedule" class="d-flex flex-row justify-content-between px-1 py-3"></li>
+                    <hr class="m-0 d-block d-sm-none bg-gray">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="../river.html">Речные круизы</a>
+                        <hr class="m-0 d-block d-sm-none bg-gray">
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Теплоходы
+                        </a>
+                        <hr class="m-0 d-block d-sm-none bg-gray">
+                        <ul class="dropdown-menu dropdown-ships" aria-labelledby="navbarDropdown1">
+                            <li class="">
+                                <h6 class="dropdown-item dropdown-item-subtitle">Люкс</h6>
+                                <ul>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">Александр Грин</a></li>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">Княжна Виктория</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-gray fs-8" href="#">Россия</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <h6 class="dropdown-item dropdown-item-subtitle mb-sm-3 mt-5">Премиум</h6>
+                                <ul>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">Михаил Булгаков</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">Сергей Есенин</a></li>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">Василий Суриков</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-gray fs-8" href="#">Илья Репин</a></li>
+                                </ul>
+                            </li>
+                            <li class="no-break">
+                                <h6 class="dropdown-item dropdown-item-subtitle mb-sm-3">Комфорт +</h6>
+                                <ul>
+                                    <li><a class="dropdown-item text-gray fs-8" href="#">Николай Карамзин</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <h6 class="dropdown-item dropdown-item-subtitle mb-sm-3 mt-5">Винтаж</h6>
+                                <ul>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">И.А.Крылов</a></li>
+                                    <li><a class="dropdown-item text-gray fs-8" href="#">Сергей Образцов</a></li>
+                                </ul>
+                            </li>
+                            <li class="no-break">
+                                <h6 class="dropdown-item dropdown-item-subtitle mb-sm-3">Лоукостер</h6>
+                                <ul>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">А.С. Пушкин</a></li>
+                                    <li><a class="dropdown-item text-gray fs-8 mb-sm-2" href="#">Княжна Анастасия</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-gray fs-8" href="#">Леонид Красин</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            О компании
+                        </a>
+                        <hr class="m-0 d-block d-sm-none bg-gray">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="#">Общие сведения</a></li>
+                            <li><a class="dropdown-item" href="#">Проекты</a></li>
+                            <li><a class="dropdown-item" href="#">Наши награды</a></li>
+                            <li><a class="dropdown-item" href="#">Наши партнеры</a></li>
+                            <li><a class="dropdown-item" href="#">Безопасность</a></li>
+                            <li><a class="dropdown-item" href="#">Вакансии</a></li>
+                            <li><a class="dropdown-item" href="#">Форум</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Новости
+                        </a>
+                        <hr class="m-0 d-block d-sm-none bg-gray">
+                        <ul class="dropdown-menu dropdown-news" aria-labelledby="navbarDropdown2">
+                            <li>
+                                <a class="dropdown-item d-inline-flex flex-column" href="#">
+                                    <span class="">Круизы-2022: «Суриков», «Репин», «Есенин», «Рублёв»</span>
+                                    <span class="text-gray fw-600 fs-11 text-uppercase mt-1">21 июня 2021</span>
+                                </a>
+                                <hr class="mt-sm-1 mb-sm-2 my-3 bg-gray">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-inline-flex flex-column" href="#">
+                                    <span class="">«И.А. Крылов»: завершающий круиз сезона</span>
+                                    <span class="text-gray fw-600 fs-11 text-uppercase mt-1">21 июня 2021</span>
+                                </a>
+                                <hr class="mt-sm-1 mb-sm-2 my-3 bg-gray">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-inline-flex flex-column" href="#">
+                                    <span class="">Специальный гость «Княжны Виктории»</span>
+                                    <span class="text-gray fw-600 fs-11 text-uppercase mt-1">21 июня 2021</span>
+                                </a>
+                                <hr class="mt-sm-1 mb-sm-2 my-3 bg-gray">
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-inline-flex flex-column" href="#">
+                                    <span class="">«И.А. Крылов»: завершающий круиз сезона</span>
+                                    <span class="text-gray fw-600 fs-11 text-uppercase mt-1">21 июня 2021</span>
+                                </a>
+                            </li>
+                            <li><a class="dropdown-item all-news mt-4" href="./news.html">Все новости</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Информация
+                        </a>
+                        <hr class="m-0 d-block d-sm-none bg-gray">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="#">Советы новичкам</a></li>
+                            <li><a class="dropdown-item" href="#">О теплоходах</a></li>
+                            <li><a class="dropdown-item" href="#">Бронирование и оплата</a></li>
+                            <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                            <li><a class="dropdown-item" href="#">Клиентам</a></li>
+                            <li><a class="dropdown-item" href="#">Сервис на борту</a></li>
+                            <li><a class="dropdown-item" href="#">О круизах</a></li>
+                            <li><a class="dropdown-item" href="#">Скидки</a></li>
+                            <li><a class="dropdown-item" href="#">Агентам</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Контакты
+                        </a>
+                        <hr class="m-0 d-block d-sm-none bg-gray">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="../office1.html">Офис на Белорусской</a></li>
+                            <li><a class="dropdown-item" href="#">Центральный офис</a></li>
+                            <li><a class="dropdown-item" href="#">Схема проезда</a></li>
+                            <li><a class="dropdown-item" href="../office2.html">Офис на Таганской</a></li>
+                            <li><a class="dropdown-item" href="../office3.html">Северный речной вокзал</a></li>
+                            <li><a class="dropdown-item" href="../press.html">Пресс-служба</a></li>
+                            <li><a class="dropdown-item text-gray" href="#">info@mosturflot.ru</a></li>
+                            <li><span class="dropdown-item footer__social social">
+                                <a class="sub-menu__item" href="#">
+                                    <svg width="24" height="14" viewBox="0 0 24 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9157 8.028C19.5277 7.538 19.6387 7.32 19.9157 6.882C19.9207 6.877 23.1238 2.451 23.4538 0.95L23.4558 0.949C23.6198 0.402 23.4558 0 22.6628 0H20.0387C19.3707 0 19.0627 0.345 18.8977 0.731C18.8977 0.731 17.5616 3.929 15.6715 6.002C15.0615 6.601 14.7795 6.793 14.4465 6.793C14.2825 6.793 14.0275 6.601 14.0275 6.054V0.949C14.0275 0.293 13.8405 0 13.2875 0H9.16132C8.7423 0 8.49329 0.306 8.49329 0.591C8.49329 1.213 9.43833 1.356 9.53633 3.106V6.903C9.53633 7.735 9.38533 7.888 9.05031 7.888C8.15828 7.888 5.99321 4.677 4.71016 1.002C4.45115 0.289 4.19815 0.000999928 3.52512 0.000999928H0.900031C0.151005 0.000999928 0 0.346 0 0.732C0 1.414 0.892031 4.805 4.14814 9.285C6.31822 12.343 9.37433 14 12.1544 14C13.8255 14 14.0295 13.632 14.0295 12.999C14.0295 10.077 13.8785 9.801 14.7155 9.801C15.1035 9.801 15.7715 9.993 17.3316 11.468C19.1147 13.217 19.4077 14 20.4057 14H23.0298C23.7778 14 24.1568 13.632 23.9388 12.906C23.4398 11.379 20.0677 8.238 19.9157 8.028Z"
+                                              fill="#6C6C70"/>
+                                    </svg>
+                                </a>
+                                <a class="sub-menu__item" href="#">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.2103 0H3.78967C1.70001 0 0 1.70001 0 3.78967V10.2104C0 12.3 1.70001 14 3.78967 14H10.2104C12.3 14 14 12.3 14 10.2104V3.78967C14 1.70001 12.3 0 10.2103 0V0ZM7 10.828C4.88919 10.828 3.17198 9.11081 3.17198 7C3.17198 4.88919 4.88919 3.17198 7 3.17198C9.11081 3.17198 10.828 4.88919 10.828 7C10.828 9.11081 9.11081 10.828 7 10.828ZM10.9196 4.07475C10.2958 4.07475 9.78842 3.5674 9.78842 2.94362C9.78842 2.31984 10.2958 1.81238 10.9196 1.81238C11.5433 1.81238 12.0508 2.31984 12.0508 2.94362C12.0508 3.5674 11.5433 4.07475 10.9196 4.07475Z"
+                                              fill="#6C6C70"/>
+                                        <path d="M6.99995 3.99316C5.34181 3.99316 3.99268 5.34219 3.99268 7.00044C3.99268 8.65858 5.34181 10.0077 6.99995 10.0077C8.6582 10.0077 10.0072 8.65858 10.0072 7.00044C10.0072 5.34219 8.6582 3.99316 6.99995 3.99316Z"
+                                              fill="#6C6C70"/>
+                                    </svg>
+                                </a>
+                                <a class="sub-menu__item" href="#">
+                                    <svg width="7" height="14" viewBox="0 0 7 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.7225 2.32458H7.00058V0.0985833C6.78008 0.06825 6.02175 0 5.13858 0C3.29583 0 2.0335 1.15908 2.0335 3.28942V5.25H0V7.7385H2.0335V14H4.52667V7.73908H6.47792L6.78767 5.25058H4.52608V3.53617C4.52667 2.81692 4.72033 2.32458 5.7225 2.32458Z"
+                                              fill="#6C6C70"/>
+                                    </svg>
+                                </a>
+                                <a class="sub-menu__item" href="#">
+                                    <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.67066 9.22694L6.38945 13.1357C6.79179 13.1357 6.96604 12.9649 7.17501 12.7598L9.06134 10.9783L12.97 13.807C13.6869 14.2018 14.1919 13.9939 14.3853 13.1553L16.951 1.27498L16.9517 1.27428C17.179 0.227083 16.5684 -0.182415 15.87 0.0744835L0.789228 5.78015C-0.240005 6.17495 -0.224421 6.74195 0.614266 6.99885L4.46982 8.18394L13.4255 2.64627C13.847 2.37047 14.2302 2.52307 13.915 2.79887L6.67066 9.22694Z"
+                                              fill="#6C6C70"/>
+                                    </svg>
+                                </a>
+                                <a class="sub-menu__item" href="#">
+                                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.5834 2.19067C19.353 1.33405 18.6776 0.658786 17.8212 0.428126C16.2564 0 9.99749 0 9.99749 0C9.99749 0 3.73878 0 2.17407 0.411894C1.33405 0.64231 0.642188 1.33417 0.411772 2.19067C0 3.75525 0 7 0 7C0 7 0 10.2611 0.411772 11.8093C0.642432 12.6658 1.31757 13.3411 2.17419 13.5718C3.75525 14 9.99773 14 9.99773 14C9.99773 14 16.2564 14 17.8212 13.5881C18.6778 13.3576 19.353 12.6823 19.5837 11.8258C19.9953 10.2611 19.9953 7.01648 19.9953 7.01648C19.9953 7.01648 20.0118 3.75525 19.5834 2.19067ZM8.00478 9.99761V4.00239L13.2094 7L8.00478 9.99761Z"
+                                              fill="#6C6C70"/>
+                                    </svg>
+                                </a>
+                                <a class="sub-menu__item" href="#">
+                                    <svg width="11" height="14" viewBox="0 0 11 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.14341 7.51357C0.734745 8.21649 1.19874 8.5525 2.25741 9.1265C3.15741 9.61301 4.40074 9.79093 5.19941 9.86209C4.87208 10.1374 6.37208 8.87508 2.05208 12.511C1.13608 13.2793 2.61074 14.5119 3.52608 13.76L6.00408 11.6687C6.95274 12.4673 7.86208 13.2326 8.48208 13.7629C9.39808 14.5177 10.8721 13.2956 9.96608 12.514C9.89808 12.4574 6.60808 9.69584 6.80874 9.86501C7.61741 9.79384 8.84208 9.60543 9.73141 9.12942L9.73074 9.12884C10.7894 8.55191 11.2534 8.21649 10.8507 7.51357C10.6074 7.11456 9.95141 6.78089 9.07808 7.35781C9.07808 7.35781 7.89875 8.14824 5.99675 8.14824C4.09408 8.14824 2.91541 7.35781 2.91541 7.35781C2.04274 6.77797 1.38408 7.11456 1.14341 7.51357Z"
+                                              fill="#6C6C70"/>
+                                        <path d="M5.99538 7.08293C8.31405 7.08293 10.2074 5.49741 10.2074 3.54555C10.2074 1.58552 8.31405 0 5.99538 0C3.67605 0 1.78271 1.58552 1.78271 3.54555C1.78271 5.49741 3.67605 7.08293 5.99538 7.08293ZM5.99538 1.79611C7.13472 1.79611 8.06405 2.57837 8.06405 3.54555C8.06405 4.50456 7.13472 5.28682 5.99538 5.28682C4.85605 5.28682 3.92671 4.50456 3.92671 3.54555C3.92605 2.57779 4.85538 1.79611 5.99538 1.79611Z"
+                                              fill="#6C6C70"/>
+                                    </svg>
+                                </a>
+                            </span></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="./board.html">Электронное табло</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="auth__modal modal fade auth__modal" id="authModal" tabindex="-1" aria-labelledby="#authModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header border-0">
+                    <h5 class="modal-title subtitle" id="passModalLabel">
+                        Вход
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="auth__login show withPass">
+                        <div class="input-group">
+                            <input id="email" type="email" class="text-gray fs-sm-9 fs-11 input w-100"
+                                   placeholder="Email">
+                        </div>
+                        <div class="input-group mt-2">
+                            <input id="passwordOld" type="password"
+                                   class="col text-gray fs-sm-9 fs-11 input js-input-pass"
+                                   placeholder="Пароль">
+                            <button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+                                <img src="./img/lk/el_eye-open.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="input-group flex-column">
+                            <div class="form-label text-gray fs-sm-9 fs-11">Придумайте новый пароль</div>
+                        </div>
+                        <div class="input-group">
+                            <input id="passwordNew" type="password"
+                                   class="col text-gray fs-sm-9 fs-11 input js-input-pass"
+                                   placeholder="Пароль">
+                            <button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+                                <img src="./img/lk/el_eye-open.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="input-group mt-2">
+                            <input id="passwordNewRepeat" type="password"
+                                   class="col text-gray fs-sm-9 fs-11 input js-input-pass"
+                                   placeholder="Повторите пароль">
+                            <button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+                                <img src="./img/lk/el_eye-open.svg" alt="">
+                            </button>
+                        </div>
+                        <a href="#" class="noLink link-primary align-self-end fs-11 pt-sm-1" id="passwordReset">Забыли
+                            пароль?</a>
+                    </div>
+                    <div class="auth__login show withCode">
+                        <div class="input-group flex-column">
+                            <input id="mobilePhone" type="tel" class="text-gray fs-sm-9 fs-11 input w-100"
+                                   placeholder="Телефон">
+                        </div>
+                        <div class="input-group flex-column">
+                            <div class="form-label text-gray fs-sm-9 fs-11">Мы отправили сообщение с кодом на телефон
+                                <span
+                                        id="mobilePhoneFromInput">79606395345</span>,
+                                введите код из SMS
+                            </div>
+                            <input id="smsCode" type="tel" class="text-gray fs-sm-9 fs-11 input w-100"
+                                   placeholder="Введите код">
+                            <div class="text-gray mt-1 fs-sm-9 fs-11">
+                                Отправить код повторно можно через <span id="timerForRepeatCode">00:23</span>
+                            </div>
+                            <a href="#" class="noLink link link-blue text-uppercase mt-1 fw-600 small" id="smsCodeNew">Отправить
+                                код повторно</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between flex-sm-row flex-column border-0">
+                    <button type="button" class="auth__login-btn btn btn-blue">Войти</button>
+                    <button type="button" class="auth__login-btn btn btn-blue disabled">Войти</button>
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <a href="#" class="noLink link link-primary text-uppercase mt-sm-0 mt-4 fw-600 small"
+                           id="authLoginToggle">Войти по номеру
+                            телефона</a>
+                        <a href="#" class="noLink link link-blue text-uppercase mt-sm-2 mt-4 fw-600 small" id="newUser">Я
+                            новый пользователь</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

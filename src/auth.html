@@ -1,0 +1,64 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="bg-light-2">
+	<section class="container">
+		<button type="button" class="btn btn-outline-primary lk__user-edit" data-bs-toggle="modal" data-bs-target="#passModal">Сменить пароль</button>
+		<div class="modal fade" id="passModal" tabindex="-1" aria-labelledby="passModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header border-0">
+						<h5 class="modal-title subtitle" id="passModalLabel">
+							Смена пароля
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="lk__user-row row">
+							<label for="currentPass" class="col-3 text-gray fs-11 form-label">
+								Текущий пароль
+							</label>
+							<div class="input-group">
+								<input id="currentPass" type="password" class="col text-gray fs-9 input js-input-pass">
+								<button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+									<img src="./img/lk/el_eye-open.svg" alt="">
+								</button>
+							</div>
+						</div>
+						<div class="lk__user-row row">
+							<label for="newPass" class="col-3 text-gray fs-11 form-label">
+								Новый пароль
+							</label>
+							<div class="input-group">
+								<input id="newPass" type="password" class="col text-gray fs-9 input js-input-pass">
+								<button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+									<img src="./img/lk/el_eye-open.svg" alt="">
+								</button>
+							</div>
+						</div>
+						<div class="lk__user-row row">
+							<label for="repeatNewPass" class="col-5 text-gray fs-11 form-label">
+								Повторите новый пароль
+							</label>
+							<div class="input-group">
+								<input id="repeatNewPass" type="password" class="col text-gray fs-9 input js-input-pass">
+								<button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+									<img src="./img/lk/el_eye-open.svg" alt="">
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-start border-0">
+						<button type="button" class="btn btn-yellow">
+							Сохранить
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include('./html__include/_footer.html')

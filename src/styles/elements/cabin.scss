@@ -1,0 +1,89 @@
+.cabin {
+
+  padding-bottom: 64px;
+
+  @include for-mobile {
+    padding-bottom: 16px;
+  }
+
+  & .accordion-body {
+    padding: 24px !important;
+  }
+
+  &__item {
+
+    &-title {
+      @extend .fs-7, .fw-700;
+    }
+
+    &-text {
+      @extend .fs-9, .text-gray, .mt-3;
+    }
+  }
+
+  &__facilities {
+    @extend .mt-7;
+
+    &-item {
+      @extend .fs-11, .text-gray, .mb-5;
+
+      & img {
+        @extend .me-1;
+      }
+    }
+  }
+
+  & hr {
+    @extend .my-7;
+  }
+
+  &__nav {
+    &.lk__nav {
+      background-color: #F9F9F9;
+
+      & .nav-pills {
+        & .nav-link {
+          color: #000033;
+          font-weight: 500;
+          font-size: 14px;
+          padding-left: 11px !important;
+
+          &.active {
+            background-color: #EDEDEE;
+          }
+        }
+      }
+    }
+  }
+}
+
+//@include for-mobile {
+//	.detail__accordion {
+//		display: block;
+//	}
+//	.cabin__item {
+//		display: none;
+//	}
+//}
+//
+//@include for-tablet-l {
+//	.detail__accordion {
+//		display: none;
+//	}
+//	.cabin__item {
+//		display: block;
+//	}
+//}
+
+//.detail__cabin {
+//
+//	@include for-mobile {
+//		.accordion-button {
+//			display: none;
+//		}
+//
+//		.accordion-body {
+//			display: block;
+//		}
+//	}
+//}

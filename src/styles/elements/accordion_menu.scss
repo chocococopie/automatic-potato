@@ -1,0 +1,46 @@
+.accordion-item {
+  /* background-color: #FFFFFF; */
+  /* border: 1px solid rgba(0, 0, 0, 0.125); */
+}
+
+@include for-mobile {
+
+  .nav .sub-menu__list.ships-list .sub-menu__item {
+    display: block;
+  }
+
+  .nav .sub-menu__list.ships-list {
+    column-count: 1;
+  }
+
+  .nav .sub-menu__list.ships-list {
+    min-width: auto;
+  }
+
+  .nav .sub-menu__list .sub-menu__item {
+    display: block;
+  }
+
+  .nav .sub-menu__list {
+    column-count: 1;
+  }
+
+  .nav .sub-menu__list {
+    min-width: auto;
+  }
+
+}
+
+@include for-mobile {
+
+  .accordion {
+
+    &-button {
+      padding: 16px !important;
+    }
+
+    &-body {
+      padding: 16px !important;
+    }
+  }
+}

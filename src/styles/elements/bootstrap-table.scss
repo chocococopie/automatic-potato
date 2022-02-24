@@ -1,0 +1,44 @@
+@import "./node_modules/bootstrap-table/src/bootstrap-table";
+
+$hover-bg: #FFEBCC !important;
+
+.table {
+	&	tbody tr {
+		&.selected td {
+			background-color: $hover-bg;
+		}
+	}
+}
+
+.bootstrap-table {
+
+	& .btn.btn-outline-light {
+		@extend .text-primary, .text-uppercase;
+	}
+
+	& .dropdown-item.active,
+	& .dropdown-item:active {
+		@extend .text-white;
+	}
+
+	& .page-item.active .page-link {
+		@extend .text-white;
+	}
+
+	& .pagination-detail {
+		@extend .fs-11, .text-gray;
+	}
+
+	& .fixed-table-pagination {
+		@extend .d-flex, .justify-content-end, .align-items-center;
+
+		& .pagination {
+			@extend .ms-3;
+		}
+	}
+
+	& thead {
+		@extend .bg-light;
+	}
+
+}

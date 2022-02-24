@@ -1,0 +1,247 @@
+.compare {
+
+  &__subtitle {
+    @include for-mobile {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: #6C6C70;
+      margin-bottom: 17px;
+    }
+  }
+
+  & .container {
+    @include for-mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__wrap {
+    @extend .position-relative;
+    padding: 24px 32px;
+    margin-top: 40px;
+
+    @include for-mobile {
+      padding: 16px 15px;
+      margin-top: 16px;
+    }
+
+
+    & .controls {
+      @extend .justify-content-between, .position-absolute;
+      display: flex;
+      z-index: 1;
+      top: 100px;
+      left: 22%;
+      right: 45px;
+
+      @include for-mobile {
+        display: none;
+      }
+
+      & button {
+        width: 36px;
+        height: 36px;
+
+        @extend .btn, .btn-light, .align-items-center, .justify-content-center;
+
+        &.show {
+          @extend .d-flex;
+        }
+      }
+    }
+  }
+
+  &__form {
+
+    & .form-check {
+      &-label {
+        @extend .fs-9;
+      }
+
+      &:not(:first-child) {
+        @extend .mt-3;
+      }
+
+      &:last-child {
+        margin-top: 32px;
+
+        @include for-mobile {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__card {
+
+    &-name {
+      @extend .d-flex, .justify-content-between, .align-items-center, .mt-3, .fw-600;
+    }
+
+    &-title {
+      letter-spacing: 0.13px;
+    }
+  }
+
+  &__list {
+    @extend .d-flex, .justify-content-between, .align-items-start, .position-relative;
+    left: 0;
+    transition: $transition-base;
+
+    & .card__price-new {
+      @include for-mobile {
+        margin-left: 0;
+      }
+    }
+
+    &-wrap {
+      overflow: hidden;
+      padding-left: 0;
+      padding-right: 0;
+
+      @include for-mobile {
+        overflow: auto;
+      }
+    }
+
+    &-item {
+      width: 33%;
+      padding-right: 32px;
+      flex-shrink: 0;
+
+      @include for-mobile {
+        width: calc(50% + 30px);
+        padding-right: 30px;
+      }
+
+      & .card__list {
+        @include for-mobile {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      &-count {
+        @include for-mobile {
+          width: 100%;
+        }
+
+        & span {
+          @include for-mobile {
+            left: 50%;
+          }
+        }
+
+        & button {
+          @include for-mobile {
+            margin-left: auto;
+            padding: 0;
+          }
+        }
+      }
+
+      & .accordion {
+
+        &-item {
+          @extend .border-0;
+        }
+
+        &-button {
+          @extend .px-0;
+
+          &:not(.collapsed) {
+            @extend .shadow-none;
+          }
+
+          &:after {
+            @extend .ms-1;
+          }
+        }
+
+        &-body {
+          @extend .p-0;
+        }
+      }
+
+      & .card__price {
+        .card__price-new {
+          margin-left: 0.25rem !important;
+          margin-right: 0 !important;
+          letter-spacing: -0.6px !important;
+        }
+        .card__price-old {
+          letter-spacing: -0.6px !important;
+        }
+        .card__price-ordinary {
+          letter-spacing: -0.6px !important;
+        }
+      }
+    }
+  }
+
+  & .card {
+
+    &-title {
+      @extend .fs-8, .mt-1;
+    }
+  }
+
+  &__cabin {
+
+    &-category {
+      @extend .fs-9;
+    }
+
+    & .card {
+
+      &__price {
+        @extend .mt-1;
+
+        &-new {
+          @extend .me-0, .fs-7;
+        }
+      }
+    }
+
+    & .cabin {
+
+      &__facilities {
+        @extend .mt-2;
+
+        &-item {
+          @extend .mb-1;
+        }
+      }
+    }
+  }
+
+  &__service {
+
+    &-item {
+      & .compare {
+        &__list {
+          &-item {
+            text-align: center;
+          }
+        }
+      }
+
+      &:not(:first-child) {
+        @extend .mt-5;
+      }
+
+    }
+  }
+
+  &__checkbox {
+    & .form-check {
+      padding-left: 0 !important;
+    }
+
+    & .checkbox-text {
+      margin-top: 4px;
+    }
+  }
+}

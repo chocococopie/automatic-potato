@@ -1,0 +1,2084 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="compare container-mt bg-light-2">
+    <section class="container">
+        <div class="breadcrumb__container d-sm-block d-none">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item active"><a href="./river.html">Речные круизы</a></li>
+                <li class="breadcrumb-item active">Сравнение</li>
+            </ol>
+        </div>
+        <h1 class="title mb-3 mb-sm-5 mb-lg-13 pt-5 pt-sm-7">Сравнение круизов</h1>
+    </section>
+    <section class="container">
+        <div class="bg-white compare__wrap">
+            <div class="controls">
+                <button class="controls__left d-none" id="prevCompareBtn">
+                    <img src="./img/swiper-icon/arrow-left.svg" alt="">
+                </button>
+                <button class="controls__right d-none" id="nextCompareBtn">
+                    <img src="./img/swiper-icon/arrow-right.svg" alt="">
+                </button>
+            </div>
+            <div class="row compare__checkbox px-sm-0 px-2">
+                <div class="col-12 col-sm-3">
+                    <form action="" method="get" class="row flex-column compare__form">
+                        <div class="form-check">
+                            <label class="form-check-label d-flex align-items-center" for="cruiseDescription">
+                                <input class="checkbox-cruise" type="checkbox" value=""
+                                       id="cruiseDescription">
+                                <span class="checkbox-fake"></span>
+                                <span class="checkbox-text">Описание круиза</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label d-flex align-items-center" for="cruisePlace">
+                                <input class="checkbox-cruise" type="checkbox" value=""
+                                       id="cruisePlace">
+                                <span class="checkbox-fake"></span>
+                                <span class="checkbox-text">Каюты</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label d-flex align-items-center" for="cruiseService">
+                                <input class="checkbox-cruise" type="checkbox" value=""
+                                       id="cruiseService">
+                                <span class="checkbox-fake"></span>
+                                <span class="checkbox-text">Сервис</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label d-flex align-items-center" for="cruiseDiff">
+                                <input class="checkbox-cruise" type="checkbox" value=""
+                                       id="cruiseDiff">
+                                <span class="checkbox-fake"></span>
+                                <span class="checkbox-text">Показать различия</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="compare__list-wrap col-sm-9 col-12 mt-sm-0 mt-5">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <div class="d-flex align-items-sm-start align-items-stretch flex-sm-row flex-column-reverse">
+                                <div class="compare__card-img">
+                                    <img class="img-fluid" src="./img/result/shipofresult.png" alt="">
+                                </div>
+                                <div class="d-sm-block d-flex align-items-center position-relative compare__list-item-count">
+                                    <span class="d-sm-none d-block flex-grow-1 text-center position-absolute translate-middle-x">2 / 4</span>
+                                    <button class="btn btn-delete">
+                                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M6.9375 3.62H6.75C6.85313 3.62 6.9375 3.539 6.9375 3.44V3.62H14.0625V3.44C14.0625 3.539 14.1469 3.62 14.25 3.62H14.0625V5.24H15.75V3.44C15.75 2.64575 15.0773 2 14.25 2H6.75C5.92266 2 5.25 2.64575 5.25 3.44V5.24H6.9375V3.62ZM18.75 5.24H2.25C1.83516 5.24 1.5 5.56175 1.5 5.96V6.68C1.5 6.779 1.58437 6.86 1.6875 6.86H3.10312L3.68203 18.6275C3.71953 19.3948 4.38047 20 5.17969 20H15.8203C16.6219 20 17.2805 19.397 17.318 18.6275L17.8969 6.86H19.3125C19.4156 6.86 19.5 6.779 19.5 6.68V5.96C19.5 5.56175 19.1648 5.24 18.75 5.24ZM15.6398 18.38H5.36016L4.79297 6.86H16.207L15.6398 18.38Z"
+                                                    fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Княжна Анастасия</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="d-flex align-items-sm-start align-items-stretch flex-sm-row flex-column-reverse">
+                                <div class="compare__card-img">
+                                    <img class="img-fluid" src="./img/result/shipofresult.png" alt="">
+                                </div>
+                                <div class="d-sm-block d-flex align-items-center position-relative compare__list-item-count">
+                                    <span class="d-sm-none d-block flex-grow-1 text-center position-absolute translate-middle-x">2 / 4</span>
+                                    <button class="btn btn-delete">
+                                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M6.9375 3.62H6.75C6.85313 3.62 6.9375 3.539 6.9375 3.44V3.62H14.0625V3.44C14.0625 3.539 14.1469 3.62 14.25 3.62H14.0625V5.24H15.75V3.44C15.75 2.64575 15.0773 2 14.25 2H6.75C5.92266 2 5.25 2.64575 5.25 3.44V5.24H6.9375V3.62ZM18.75 5.24H2.25C1.83516 5.24 1.5 5.56175 1.5 5.96V6.68C1.5 6.779 1.58437 6.86 1.6875 6.86H3.10312L3.68203 18.6275C3.71953 19.3948 4.38047 20 5.17969 20H15.8203C16.6219 20 17.2805 19.397 17.318 18.6275L17.8969 6.86H19.3125C19.4156 6.86 19.5 6.779 19.5 6.68V5.96C19.5 5.56175 19.1648 5.24 18.75 5.24ZM15.6398 18.38H5.36016L4.79297 6.86H16.207L15.6398 18.38Z"
+                                                    fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Княжна Анастасия</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="d-flex align-items-sm-start align-items-stretch flex-sm-row flex-column-reverse">
+                                <div class="compare__card-img">
+                                    <img class="img-fluid" src="./img/result/shipofresult.png" alt="">
+                                </div>
+                                <div class="d-sm-block d-flex align-items-center position-relative compare__list-item-count">
+                                    <span class="d-sm-none d-block flex-grow-1 text-center position-absolute translate-middle-x">2 / 4</span>
+                                    <button class="btn btn-delete">
+                                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M6.9375 3.62H6.75C6.85313 3.62 6.9375 3.539 6.9375 3.44V3.62H14.0625V3.44C14.0625 3.539 14.1469 3.62 14.25 3.62H14.0625V5.24H15.75V3.44C15.75 2.64575 15.0773 2 14.25 2H6.75C5.92266 2 5.25 2.64575 5.25 3.44V5.24H6.9375V3.62ZM18.75 5.24H2.25C1.83516 5.24 1.5 5.56175 1.5 5.96V6.68C1.5 6.779 1.58437 6.86 1.6875 6.86H3.10312L3.68203 18.6275C3.71953 19.3948 4.38047 20 5.17969 20H15.8203C16.6219 20 17.2805 19.397 17.318 18.6275L17.8969 6.86H19.3125C19.4156 6.86 19.5 6.779 19.5 6.68V5.96C19.5 5.56175 19.1648 5.24 18.75 5.24ZM15.6398 18.38H5.36016L4.79297 6.86H16.207L15.6398 18.38Z"
+                                                    fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Княжна Анастасия</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="d-flex align-items-sm-start align-items-stretch flex-sm-row flex-column-reverse">
+                                <div class="compare__card-img">
+                                    <img class="img-fluid" src="./img/result/shipofresult.png" alt="">
+                                </div>
+                                <div class="d-sm-block d-flex align-items-center position-relative compare__list-item-count">
+                                    <span class="d-sm-none d-block flex-grow-1 text-center position-absolute translate-middle-x">2 / 4</span>
+                                    <button class="btn btn-delete">
+                                        <svg width="21" height="22" viewBox="0 0 21 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                    d="M6.9375 3.62H6.75C6.85313 3.62 6.9375 3.539 6.9375 3.44V3.62H14.0625V3.44C14.0625 3.539 14.1469 3.62 14.25 3.62H14.0625V5.24H15.75V3.44C15.75 2.64575 15.0773 2 14.25 2H6.75C5.92266 2 5.25 2.64575 5.25 3.44V5.24H6.9375V3.62ZM18.75 5.24H2.25C1.83516 5.24 1.5 5.56175 1.5 5.96V6.68C1.5 6.779 1.58437 6.86 1.6875 6.86H3.10312L3.68203 18.6275C3.71953 19.3948 4.38047 20 5.17969 20H15.8203C16.6219 20 17.2805 19.397 17.318 18.6275L17.8969 6.86H19.3125C19.4156 6.86 19.5 6.779 19.5 6.68V5.96C19.5 5.56175 19.1648 5.24 18.75 5.24ZM15.6398 18.38H5.36016L4.79297 6.86H16.207L15.6398 18.38Z"
+                                                    fill="currentColor"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Княжна Анастасия</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light opacity-100">
+            <div class="row flex-sm-nowrap align-items-start gx-5">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Класс т/х
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <div class="card__class text-uppercase fs-9">
+                                Премиум
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="card__class text-uppercase fs-9">
+                                Премиум
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="card__class text-uppercase fs-9">
+                                Премиум
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="card__class text-uppercase fs-9">
+                                Премиум
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 mt-3">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Цена
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <div class="card__price">
+                                <span class="card__price-old fs-8">95 000<sup>₽</sup></span>
+                                <span class="card__price-new fs-8 order-first order-sm-0">от 65 000<sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="card__price">
+                                <span class="card__price-ordinary-small">от 95 000<sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="card__price">
+                                <span class="card__price-ordinary-small">от 95 000<sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="card__price">
+                                <span class="card__price-ordinary-small">от 95 000<sup>₽</sup></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 mt-3">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Дата
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <div class="d-flex flex-column result__list-item-date">
+                                <div class="d-flex flex-column flex-sm-row">
+                                    <span class="fs-sm-8 fs-11">25 июля -&nbsp</span>
+                                    <span class="fs-sm-8 fs-11">31 июля 2021</span>
+                                </div>
+                                <span class="mt-sm-1 text-gray fs-11 fw-500">7 дней</span>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="d-flex flex-column result__list-item-date">
+                                <div class="d-flex flex-column flex-sm-row">
+                                    <span class="fs-sm-8 fs-11">25 июля -&nbsp</span>
+                                    <span class="fs-sm-8 fs-11">31 июля 2021</span>
+                                </div>
+                                <span class="mt-sm-1 text-gray fs-11 fw-500">7 дней</span>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="d-flex flex-column result__list-item-date">
+                                <div class="d-flex flex-column flex-sm-row">
+                                    <span class="fs-sm-8 fs-11">25 июля -&nbsp</span>
+                                    <span class="fs-sm-8 fs-11">31 июля 2021</span>
+                                </div>
+                                <span class="mt-sm-1 text-gray fs-11 fw-500">7 дней</span>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="d-flex flex-column result__list-item-date">
+                                <div class="d-flex flex-column flex-sm-row">
+                                    <span class="fs-sm-8 fs-11">25 июля -&nbsp</span>
+                                    <span class="fs-sm-8 fs-11">31 июля 2021</span>
+                                </div>
+                                <span class="mt-sm-1 text-gray fs-11 fw-500">7 дней</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 mt-3">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Маршрут по дням
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <div class="row flex-column align-items-start">
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="accordion accordion-flush" id="accordion0">
+                                        <div class="accordion-item">
+                                            <div id="collapse0" class="accordion-collapse collapse"
+                                                 aria-labelledby="heading0" data-bs-parent="#accordion0">
+                                                <div class="accordion-body">
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="accordion-header" id="heading0">
+                                            <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse0"
+                                                    aria-expanded="true" aria-controls="collapse0">
+                                                Показать все
+                                            </button>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="row flex-column align-items-start">
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="accordion accordion-flush" id="accordion3">
+                                        <div class="accordion-item">
+                                            <div id="collapse3" class="accordion-collapse collapse"
+                                                 aria-labelledby="heading3" data-bs-parent="#accordion3">
+                                                <div class="accordion-body">
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="accordion-header" id="heading3">
+                                            <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                                    aria-expanded="true" aria-controls="collapse3">
+                                                Показать все
+                                            </button>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="row flex-column align-items-start">
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-sm-6 col-12">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                            <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-sm-block d-none">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="accordion accordion-flush" id="accordion1">
+                                        <div class="accordion-item">
+                                            <div id="collapse1" class="accordion-collapse collapse"
+                                                 aria-labelledby="heading1" data-bs-parent="#accordion2">
+                                                <div class="accordion-body">
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-sm-6 col-12">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                14 августа
+                                                                <span class="fs-sm-9 fs-11 d-sm-none">Москва</span>
+                                                                <span class="text-gray fs-11 mb-sm-0 mb-1">12:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-sm-block d-none">
+                                                            <div class="fs-8">Москва</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="accordion-header" id="heading1">
+                                            <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                                                    aria-expanded="true" aria-controls="collapse1">
+                                                Показать все
+                                            </button>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare__list-item">
+                            <div class="row flex-column align-items-start">
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-6">
+                                        <div class="d-flex flex-column fs-9">
+                                            14 августа
+                                            <span class="text-gray fs-11">12:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="fs-8">Москва</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-6">
+                                        <div class="d-flex flex-column fs-9">
+                                            15 августа
+                                            <span class="text-gray fs-11">13:30-16:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="fs-8">Мышкин
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-6">
+                                        <div class="d-flex flex-column fs-9">
+                                            16 августа
+                                            <span class="text-gray fs-11">9:30-13:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="fs-8">Кузино</div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-start flex-nowrap">
+                                    <div class="col-6">
+                                        <div class="d-flex flex-column fs-9">
+                                            17 августа
+                                            <span class="text-gray fs-11">15:30-22:30</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="fs-8">Петрозаводск</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="accordion accordion-flush" id="accordion2">
+                                        <div class="accordion-item">
+                                            <div id="collapse4" class="accordion-collapse collapse"
+                                                 aria-labelledby="heading4" data-bs-parent="#accordion4">
+                                                <div class="accordion-body">
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-6">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                17 августа
+                                                                <span class="text-gray fs-11">15:30-22:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="fs-8">Петрозаводск</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-6">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                17 августа
+                                                                <span class="text-gray fs-11">15:30-22:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="fs-8">Петрозаводск</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-start flex-nowrap">
+                                                        <div class="col-6">
+                                                            <div class="d-flex flex-column fs-9">
+                                                                17 августа
+                                                                <span class="text-gray fs-11">15:30-22:30</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="fs-8">Петрозаводск</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="accordion-header" id="heading4">
+                                            <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                                    aria-expanded="true" aria-controls="collapse4">
+                                                Показать все
+                                            </button>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light opacity-100">
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__cabin">
+                <div class="compare__subtitle col-sm-3 col-12">
+                    Типы кают
+                </div>
+                <div class="col-sm-9 col-12 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item imgAlt">
+                            <div class="row gx-1">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin2.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin3.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="accordion accordion-flush" id="accordionType1">
+                                    <div class="accordion-item">
+                                        <div id="collapseType1" class="accordion-collapse collapse"
+                                             aria-labelledby="headingType1" data-bs-parent="#accordionType1">
+                                            <div class="accordion-body">
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="accordion-header" id="headingType1">
+                                        <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseType1"
+                                                aria-expanded="true" aria-controls="collapseType1">
+                                            Показать все
+                                        </button>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare__list-item imgAlt">
+                            <div class="row gx-1">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin2.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin3.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="accordion accordion-flush" id="accordionType2">
+                                    <div class="accordion-item">
+                                        <div id="collapseType2" class="accordion-collapse collapse"
+                                             aria-labelledby="headingType2" data-bs-parent="#accordionType2">
+                                            <div class="accordion-body">
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="accordion-header" id="headingType2">
+                                        <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseType2"
+                                                aria-expanded="true" aria-controls="collapseType2">
+                                            Показать все
+                                        </button>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare__list-item imgAlt">
+                            <div class="row gx-1">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin2.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin3.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="accordion accordion-flush" id="accordionType3">
+                                    <div class="accordion-item">
+                                        <div id="collapseType3" class="accordion-collapse collapse"
+                                             aria-labelledby="headingType3" data-bs-parent="#accordionType3">
+                                            <div class="accordion-body">
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="accordion-header" id="headingType3">
+                                        <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseType3"
+                                                aria-expanded="true" aria-controls="collapseType3">
+                                            Показать все
+                                        </button>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="compare__list-item imgAlt">
+                            <div class="row gx-1">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin2.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gx-1 mt-3">
+                                <div class="col-sm-4 col-12 compare__cabin-img">
+                                    <img class="img-fluid" src="./img/compare/cabin3.jpg" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="row flex-column">
+                                        <div class="compare__cabin-category">
+                                            Категория Л
+                                        </div>
+                                        <div class="card__price">
+                                            <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="compare__cabin-facilities">
+                                            <div class="cabin__facilities row gx-1">
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-conder.svg" alt="Кондиционер">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-tv.svg" alt="Телевизор">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-froz.svg" alt="Холодильник">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-shower.svg" alt="Душевая кабина">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-phone.svg"
+                                                         alt="Внутренняя телефонная связь">
+                                                </div>
+                                                <div class="col-3 text-nowrap cabin__facilities-item">
+                                                    <img src="./img/detail/icon-room.svg" alt="ROOM-сервис">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="accordion accordion-flush" id="accordionType4">
+                                    <div class="accordion-item">
+                                        <div id="collapseType4" class="accordion-collapse collapse"
+                                             aria-labelledby="headingType4" data-bs-parent="#accordionType4">
+                                            <div class="accordion-body">
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row gx-1 mt-3">
+                                                    <div class="col-sm-4 col-12 compare__cabin-img">
+                                                        <img class="img-fluid" src="./img/compare/cabin1.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row flex-column">
+                                                            <div class="compare__cabin-category">
+                                                                Категория Л
+                                                            </div>
+                                                            <div class="card__price">
+                                                                <span class="card__price-ordinary-small">от 95 000 <sup>₽</sup></span>
+                                                            </div>
+                                                            <div class="compare__cabin-facilities">
+                                                                <div class="cabin__facilities row gx-1">
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-conder.svg"
+                                                                             alt="Кондиционер">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-tv.svg"
+                                                                             alt="Телевизор">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-froz.svg"
+                                                                             alt="Холодильник">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-shower.svg"
+                                                                             alt="Душевая кабина">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-phone.svg"
+                                                                             alt="Внутренняя телефонная связь">
+                                                                    </div>
+                                                                    <div class="col-3 text-nowrap cabin__facilities-item">
+                                                                        <img src="./img/detail/icon-room.svg"
+                                                                             alt="ROOM-сервис">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 class="accordion-header" id="headingType4">
+                                        <button class="accordion-button collapsed link-blue small fw-600 text-uppercase"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseType4"
+                                                aria-expanded="true" aria-controls="collapseType4">
+                                            Показать все
+                                        </button>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light opacity-100">
+            <div class="row flex-nowrap align-items-start gx-5">
+                <div class="col-3 fw-sm-700 fw-500">
+                    Сервис
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Открытый бассейн
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    СПА-салон или массажный салон
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Сауна
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Кофе-станция (круглосуточно)
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    "Утренняя чашечка"
+                    Чай и кофе бесплатно утром до завтрака
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    "Встреча на борту" чай или напиток бесплатно после экскурсии
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                        <div class="compare__list-item">
+                            -
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Выборное меню ресторана
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Рум-сервис
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Бар
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Музыкальный салон
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Сейф у администратора
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                        <div class="compare__list-item">
+                            <span class="text-red fs-7">₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Прокат спортинвентаря
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-sm-nowrap align-items-start gx-5 compare__service-item">
+                <div class="compare__subtitle col-12 col-sm-3">
+                    Гладильная комната
+                </div>
+                <div class="col-12 col-sm-9 overflow-hidden">
+                    <div class="compare__list">
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                        <div class="compare__list-item">
+                            <img src="./img/compare/icon-done.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html__include/_footer.html')

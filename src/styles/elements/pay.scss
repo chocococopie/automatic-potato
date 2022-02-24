@@ -1,0 +1,80 @@
+$box-shadow-pay: 2px 2px 8px rgba(155, 155, 155, 0.59);
+
+.pay {
+
+  &__option {
+
+    &-label {
+      @extend .d-flex, .flex-column, .align-items-start, .pt-2, .ps-2, .pe-1, .pb-1, .border-transparent;
+      justify-content: space-between;
+      border: 2px solid;
+      width: 250px;
+      box-shadow: $box-shadow-pay;
+      transition: $transition-base;
+
+      @include for-mobile {
+        height: 136px;
+        justify-content: flex-start;
+      }
+
+      &:not(:last-child) {
+        @extend .me-4;
+      }
+
+      & .subtitle {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px !important;
+        line-height: 22px;
+
+        @include for-mobile {
+          font-size: 16px !important;
+        }
+      }
+    }
+
+    & .btn-check:checked + .pay__option-label {
+      @extend .border-blue;
+    }
+  }
+
+  &__discount {
+
+    &-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.6px;
+    }
+
+    & .input-group {
+      @include for-mobile {
+        flex-direction: column;
+      }
+
+      & .input {
+        @include for-mobile {
+          width: 100%;
+          height: 44px;
+        }
+      }
+
+      & button {
+        @include for-mobile {
+          height: 44px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    &.reserved__shadow {
+      padding: 0 !important;
+
+      & .accordion-body {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}
+

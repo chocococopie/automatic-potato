@@ -1,0 +1,71 @@
+//.sorting-cabin {
+//
+//  & .sorting-cabin-title {
+//    //position: absolute;
+//  }
+//
+//  & .sorting-cabin-content {
+//    max-width: 155px;
+//    position: relative;
+//    top: 0;
+//    left: 0;
+//    z-index: 1000000;
+//    background-color: #FFFFFF;
+//    border: 1px solid #EDEDEE;
+//    box-sizing: border-box;
+//  }
+//
+//  & .form-check {
+//    margin: 0 !important;
+//    padding: 6px !important;
+//    width: 100%;
+//
+//    &:hover {
+//      background-color: #E9F7FF;
+//    }
+//  }
+//}
+
+.result__options-compare {
+  position: relative;
+}
+
+.cabin__sort-title {
+  cursor: pointer;
+}
+
+.cabin__sort-check {
+  text-transform: none;
+  width: 155px !important;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  color: #000033;
+  display: none;
+  border: 1px solid #EDEDEE;
+
+  & .form-check {
+    align-items: center;
+    padding: 6px;
+    width: 100%;
+
+    &:hover {
+      background-color: #E9F7FF;
+    }
+
+    & .form-check-label {
+      display: flex;
+      align-items: center;
+    }
+
+    & .checkbox-text {
+      padding-left: 6px;
+    }
+  }
+}

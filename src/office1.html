@@ -1,0 +1,44 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="compare container-mt pb-sm-15 pb-7 bg-light-2">
+    <section class="container">
+        <div class="breadcrumb__container d-sm-block d-none">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item active">Офис на Белорусской</li>
+            </ol>
+        </div>
+        <h1 class="title ps-sm-0 ps-3 mb-3 mb-sm-5 mb-lg-13 pt-5 pt-sm-7">Офис на Белорусской</h1>
+    </section>
+    <section class="office d-grid">
+        <div class="col-12">
+            <span class="fs-sm-7 fs-10 text-gray mb-1 d-block">Адрес:</span>
+            <span class="fs-sm-7 fs-10 mb-sm-4 mb-3 d-block">Бутырский Вал, дом 2, 3-й этаж, офис №2<br>Вход в здание под вывеской «КОПИРКА»</span>
+            <span class="fs-sm-7 fs-10 text-gray mb-1 d-block">Часы работы:</span>
+            <span class="fs-sm-7 fs-10 mb-sm-4 mb-3 d-block">Ежедневно с 09-00 до 21-00 (без обеда)</span>
+            <span class="fs-sm-7 fs-10 text-gray mb-1 d-block">Телефон:</span>
+            <span class="fs-sm-7 fs-10 mb-sm-4 mb-3 d-block">+7 (495) 22-17-222, доб. 1401, 1402, 1403, 1248</span>
+            <span class="fs-sm-7 fs-10 text-gray mb-1 d-block">E-mail:</span>
+            <span class="fs-sm-7 fs-10 mb-5 d-block">info@mosturflot.ru</span>
+        </div>
+        <div class="col-12 order-last order-sm-0 align-self-end mt-sm-0 mt-5">
+            <div><a href="./office2.html" class="d-inline-block mb-3 fs-sm-8 fs-10">Офис на Таганской</a></div>
+            <div><a href="./office3.html" class="d-inline-block mb-sm-0 mb-1 fs-sm-8 fs-10">Северный речной вокзал</a></div>
+        </div>
+        <div class="col-12 office__photo"><img src="./img/office/office1.png" class="h-100 w-100"></div>
+        <div class="office__map align-self-end" style="position:relative;overflow:hidden;"><a
+                href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+                style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a
+                href="https://yandex.ru/maps/213/moscow/house/ulitsa_butyrskiy_val_2/Z04Ycw9lS0IPQFtvfXt2d3VrZw==/?indoorLevel=1&ll=37.585278%2C55.776983&utm_medium=mapframe&utm_source=maps&z=16"
+                style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Бутырский Вал, 2 на карте Москвы,
+            ближайшее метро Белорусская — Яндекс.Карты</a>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCUyRTdg1B" width="100%" height="100%" frameborder="1"
+                    allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+    </section>
+</main>
+
+@@include('./html__include/_footer.html')

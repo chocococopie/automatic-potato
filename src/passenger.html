@@ -1,0 +1,1833 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="reserved container-mt">
+    <section class="container d-sm-block d-none">
+        <div class="breadcrumb__container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="./river.html">Речные круизы</a></li>
+                <li class="breadcrumb-item"><a href="./detail.html">Описание круиза</a></li>
+                <li class="breadcrumb-item active">Бронирование</li>
+            </ol>
+        </div>
+        <div class="row flex-column justify-content-center align-items-center position-relative reserved__timer">
+            <a href="./detail.html" class="link-primary link-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M11 19L4 12L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="col text-center fs-7 fw-700 reserved__timer-title">Укажите данные пассажиров</div>
+            <div class="col text-center fs-9 mt-1">Бронь на каюты автоматически аннулируется через <span
+                    class="text-red fw-700" id="reservedTimer">14:59</span> минут
+            </div>
+        </div>
+    </section>
+    <section class="bg-light-2 pt-11 pb-15">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-12">
+                    <form action="/" method="post" class="reserved__shadow pb-sm-12">
+                        <div class="fs-sm-7 fs-8 fw-700 text-gray pb-5">Укажите данные пассажиров</div>
+                        <h5 class="subtitle">
+                            Каюта 429
+                        </h5>
+                        <ul class="d-flex align-items-center text-gray fs-9 reserved__description">
+                            <li>П/Люкс</li>
+                            <li>2х местная</li>
+                            <li>Шлюпочная палуба</li>
+                        </ul>
+                        <label for="pass1-ask" class="fs-8 fw-700 reserved__pass-label pb-3 mt-sm-6 mt-3">Место
+                            основное</label>
+                        <div class="row passenger-data-ask">
+                            <div class="col-sm-5 col-12 passenger__doc passenger__doc-select-new">
+                                <div class="passenger__doc-select">
+                                    <select name="pass-ask" id="pass1-ask" class="select2 select2ForNewPassenger"
+                                            data-placeholder="Выбрать пассажира">
+                                        <option value=""></option>
+                                        <option value="1">Александров Александр Александрович</option>
+                                        <option value="2">Добавить нового пассажира</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 col-12 fs-11 fw-500 mt-sm-0 mt-1">
+                                Вы можете выбрать ранее сохраненного пассажира или добавить нового
+                            </div>
+                        </div>
+                        <div class="passenger-data">
+                            <div class="fio row d-flex flex-row align-items-center mt-1">
+                                <div class="col-5 d-flex flex-column passenger__doc">
+                                    <label for="pass1" class="fs-11 pb-1 text-gray">Пассажир*</label>
+                                    <div class="passenger__doc-select passenger__doc-select4">
+                                        <select name="pass1" id="pass1" class="select2 select2AddPassengerName"
+                                                data-placeholder="">
+                                            <option value=""></option>
+                                            <option value="1">Александров Александр Александрович</option>
+                                            <option value="2">Александров Александр Александрович</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4 d-flex flex-column passenger__doc">
+                                    <label for="document1" class="fs-11 pb-1 text-gray">Документ*</label>
+                                    <div class="passenger__doc-select passenger__doc-select4">
+                                        <select name="document1" id="document1"
+                                                class="select2 select2AddPassengerDocument"
+                                                data-placeholder="">
+                                            <option value=""></option>
+                                            <option value="1">Паспорт РФ</option>
+                                            <option value="2">Паспорт РФ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <a href="passenger.html"><img class="" src="./img/passenger/edit.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="fs-8 mt-1 fw-600">Тариф</div>
+                                <div class="fs-11 mt-3 text-gray">Выберите тариф</div>
+                                <div class="col-sm-4 mt-1 passenger__doc">
+                                    <div class="passenger__doc-select3">
+                                        <select name="rate1" id="rate1" class="select2 select2AddPassenger"
+                                                data-placeholder="">
+                                            <option value="1" selected>Взрослый</option>
+                                            <option value="2">Взрослый</option>
+                                            <option value="3">Взрослый</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="fs-8 mt-1 fw-600">Питание</div>
+                                <div class="col-6 col-sm-4 d-flex flex-column passenger__doc">
+                                    <label for="meal1" class="fs-11 mt-3 pb-1 text-gray">Выберите питание</label>
+                                    <div class="passenger__doc-select">
+                                        <select name="meal1" id="meal1" class="select2 select2ForDocuments"
+                                                data-placeholder="3х разовое питание">
+                                            <option value=""></option>
+                                            <option value="1">3х разовое питание</option>
+                                            <option value="2">3х разовое питание</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 d-flex flex-column passenger__doc">
+                                    <label for="mealType1" class="fs-11 mt-3 pb-1 text-gray">Вид питания</label>
+                                    <div class="passenger__doc-select">
+                                        <select name="mealType1" id="mealType1" class="select2 select2ForDocuments"
+                                                data-placeholder="Стандартное">
+                                            <option value=""></option>
+                                            <option value="1">Стандартное</option>
+                                            <option value="2">Стандартное</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12 d-flex flex-column passenger__doc">
+                                    <div class="form-check">
+                                        <label class="form-check-label d-flex align-items-center" for="cabinFilter1">
+                                            <input class="checkbox-cruise" type="checkbox" value=""
+                                                   id="cabinFilter1">
+                                            <span class="checkbox-fake"></span>
+                                            <span class="checkbox-text">Без питания</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fs-8 mt-1 fw-600">Экскурсии</div>
+                            <div class="col-9">
+                                <div class="row">
+                                    <span class="mt-3 fs-9">Основная экскурсия входит в стоимость круиза</span>
+                                    <span class="more-info mt-2" data-bs-toggle="modal" data-bs-target="#toursModal1">Подробнее</span>
+                                    <div class="tours__modal tours__modal--base modal fade" id="toursModal1" tabindex="-1"
+                                         aria-labelledby="toursModalLabel1"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header pt-5 pe-5">
+                                                    <button type="button" class="d-flex btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="modal-headeralike flex-row justify-content-between">
+                                                        <h5 class="pb-5">Основные экскурсии</h5>
+                                                    </div>
+                                                    <div class="row justify-content-between">
+                                                        <div class="row pb-3 chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="text-gray pb-3 fs-11">Дата</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="text-gray pb-3 fs-11">Место стоянки</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="text-gray pb-3 fs-11">Прибытие</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="text-gray pb-3 fs-11">Отправление</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <span class="text-gray ms-5 pb-3 fs-11">Описание</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9 fw-700">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="my-5 hr-gray opacity-100">
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9">2 экскурсии на выбор :</div>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="my-5 hr-gray opacity-100">
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9">3 экскурсии на выбор :</div>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="my-5 hr-gray opacity-100">
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9">4 экскурсии на выбор :</div>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mt-5">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <div class="lk__docs-add mt-1">
+                                                <button type="button"
+                                                        class="btn btn-link link-blue fw-600 text-uppercase"
+                                                        data-bs-toggle="modal" data-bs-target="#extraToursModal1">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                                d="M20 2H8C6.897 2 6 2.897 6 4V16C6 17.103 6.897 18 8 18H20C21.103 18 22 17.103 22 16V4C22 2.897 21.103 2 20 2ZM8 16V4H20L20.002 16H8Z"
+                                                                fill="currentColor"/>
+                                                        <path d="M4 8H2V20C2 21.103 2.897 22 4 22H16V20H4V8ZM15 6H13V9H10V11H13V14H15V11H18V9H15V6Z"
+                                                              fill="currentColor"/>
+                                                    </svg>
+                                                    Дополнительные экскурсии
+                                                </button>
+                                                <div class="tours__modal tours__modal--extra modal fade" id="extraToursModal1" tabindex="-1"
+                                                     aria-labelledby="extraToursModalLabel1"
+                                                     aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header pt-5 pe-5">
+                                                                <button type="button" class="d-flex btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="modal-headeralike flex-row justify-content-between">
+                                                                    <h5 class="pb-3 tickets__extra-subtitle">Дополнительные экскурсии</h5>
+                                                                </div>
+                                                                <p class="fs-9 mb-5">Экскурсионная программа предварительная. Стоимость дополнительных экскурсий указана за 2021 год.
+                                                                    Дополнительные экскурсии не входят в стоимость путевки и приобретаются на борту теплохода у дирекции круиза.
+                                                                    Компания оставляет за собой право на изменения  расписания и экскурсионной программы круизов.</p>
+                                                                <div class="row justify-content-between">
+                                                                    <div class="row pb-3 chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="text-gray pb-3 fs-11">Дата</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="text-gray pb-3 fs-11">Место стоянки</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="text-gray pb-3 fs-11">Прибытие</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="text-gray pb-3 fs-11">Отправление</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <span class="text-gray ms-5 pb-3 fs-11">Описание</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour1">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour11">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour2">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour12">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour3">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour13">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour4">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour14">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour5">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour15">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour6">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour16">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour7">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour17">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour8">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour18">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour9">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour19">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour10">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour110">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour11">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour111">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour12">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour112">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour13">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour113">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour14">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour114">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <div class="chosen-seat__info flex-row d-flex">
+                                                                    <div class="">
+                                                                        <div class="fs-11">Общая стоимость</div>
+                                                                        <div class="fs-6 text-yellow">37 500 ₽</div>
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <a href="./passenger.html" class="card__link text-uppercase ms-7 me-4 btn btn-blue opacity-50">Выбрать экскурсии</a>
+                                                                    <div class="ms-7 reserved__warning">Выберите экскурсии</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mt-1">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <div class="form-check">
+                                                <label class="form-check-label d-flex align-items-center"
+                                                       for="withoutBeverages1">
+                                                    <input class="checkbox-cruise" type="checkbox" value=""
+                                                           id="withoutBeverages1">
+                                                    <span class="checkbox-fake"></span>
+                                                    <span class="checkbox-text">Без экскурсий</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="pass2-ask" class="fs-8 fw-700 reserved__pass-label pb-3 mt-6">Место верхнее</label>
+                        <div class="row passenger-data-ask">
+                            <div class="col-sm-5 col-12 passenger__doc passenger__doc-select-new">
+                                <div class="passenger__doc-select">
+                                    <select name="pass-ask" id="pass2-ask" class="select2 select2ForNewPassenger"
+                                            data-placeholder="Выбрать пассажира">
+                                        <option value=""></option>
+                                        <option value="1">Александров Александр Александрович</option>
+                                        <option value="2">Добавить нового пассажира</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 col-12 fs-11 fw-500 mt-sm-0 mt-1">
+                                Вы можете выбрать ранее сохраненного пассажира или добавить нового
+                            </div>
+                        </div>
+                        <div class="passenger-data">
+                            <div class="fio row d-flex flex-row align-items-center mt-1">
+                                <div class="col-5 d-flex flex-column passenger__doc">
+                                    <label for="pass2" class="fs-11 pb-1 text-gray">Пассажир*</label>
+                                    <div class="passenger__doc-select passenger__doc-select4">
+                                        <select name="pass2" id="pass2" class="select2 select2AddPassengerName"
+                                                data-placeholder="">
+                                            <option value=""></option>
+                                            <option value="1">Александров Александр Александрович</option>
+                                            <option value="2">Александров Александр Александрович</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4 d-flex flex-column passenger__doc">
+                                    <label for="document2" class="fs-11 pb-1 text-gray">Документ*</label>
+                                    <div class="passenger__doc-select passenger__doc-select4">
+                                        <select name="document2" id="document2"
+                                                class="select2 select2AddPassengerDocument"
+                                                data-placeholder="">
+                                            <option value=""></option>
+                                            <option value="1">Паспорт РФ</option>
+                                            <option value="2">Паспорт РФ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <a href="passenger.html"><img class="" src="./img/passenger/edit.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="fs-8 mt-1 fw-600">Тариф</div>
+                                <div class="fs-11 mt-3 text-gray">Выберите тариф</div>
+                                <div class="col-sm-4 mt-1 passenger__doc">
+                                    <div class="passenger__doc-select3">
+                                        <select name="rate2" id="rate2" class="select2 select2AddPassenger"
+                                                data-placeholder="">
+                                            <option value="1" selected>Взрослый</option>
+                                            <option value="2">Взрослый</option>
+                                            <option value="3">Взрослый</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="fs-8 mt-1 fw-600">Питание</div>
+                                <div class="col-6 col-sm-4 d-flex flex-column passenger__doc">
+                                    <label for="meal2" class="fs-11 mt-3 pb-1 text-gray">Выберите питание</label>
+                                    <div class="passenger__doc-select">
+                                        <select name="meal2" id="meal2" class="select2 select2ForDocuments"
+                                                data-placeholder="3х разовое питание">
+                                            <option value=""></option>
+                                            <option value="1">3х разовое питание</option>
+                                            <option value="2">3х разовое питание</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 d-flex flex-column passenger__doc">
+                                    <label for="mealType2" class="fs-11 mt-3 pb-1 text-gray">Вид питания</label>
+                                    <div class="passenger__doc-select">
+                                        <select name="mealType2" id="mealType2" class="select2 select2ForDocuments"
+                                                data-placeholder="Стандартное">
+                                            <option value=""></option>
+                                            <option value="1">Стандартное</option>
+                                            <option value="2">Стандартное</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-12 d-flex flex-column passenger__doc">
+                                    <div class="form-check">
+                                        <label class="form-check-label d-flex align-items-center" for="cabinFilter2">
+                                            <input class="checkbox-cruise" type="checkbox" value=""
+                                                   id="cabinFilter2">
+                                            <span class="checkbox-fake"></span>
+                                            <span class="checkbox-text">Без питания</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fs-8 mt-1 fw-600">Экскурсии</div>
+                            <div class="col-9">
+                                <div class="row">
+                                    <span class="mt-3 fs-9">Основная экскурсия входит в стоимость круиза</span>
+                                    <span class="more-info mt-2" data-bs-toggle="modal" data-bs-target="#toursModal2">Подробнее</span>
+                                    <div class="tours__modal tours__modal--base modal fade" id="toursModal2" tabindex="-1"
+                                         aria-labelledby="toursModalLabel2"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header pt-5 pe-5">
+                                                    <button type="button" class="d-flex btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="modal-headeralike flex-row justify-content-between">
+                                                        <h5 class="pb-5">Основные экскурсии</h5>
+                                                    </div>
+                                                    <div class="row justify-content-between">
+                                                        <div class="row pb-3 chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="text-gray pb-3 fs-11">Дата</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="text-gray pb-3 fs-11">Место стоянки</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="text-gray pb-3 fs-11">Прибытие</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="text-gray pb-3 fs-11">Отправление</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <span class="text-gray ms-5 pb-3 fs-11">Описание</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9 fw-700">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="my-5 hr-gray opacity-100">
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9">2 экскурсии на выбор :</div>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="my-5 hr-gray opacity-100">
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9">3 экскурсии на выбор :</div>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="my-5 hr-gray opacity-100">
+                                                        <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                            <div class="col-5">
+                                                                <div class="row">
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">07.05</span>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <span class="fs-9">Дубна</span>
+                                                                    </div>
+                                                                    <div class="col-2 me-3">
+                                                                        <span class="fs-9">09:30</span>
+                                                                    </div>
+                                                                    <div class="col-2">
+                                                                        <span class="fs-9">13:00</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="ms-5 fs-9">4 экскурсии на выбор :</div>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                <div class="ms-5 fs-9 fw-700 mt-1">Прогулка по «старой» части города</div>
+                                                                <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col mt-5">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <div class="lk__docs-add mt-1">
+                                                <button type="button"
+                                                        class="btn btn-link link-blue fw-600 text-uppercase"
+                                                        data-bs-toggle="modal" data-bs-target="#extraToursModal2">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                                d="M20 2H8C6.897 2 6 2.897 6 4V16C6 17.103 6.897 18 8 18H20C21.103 18 22 17.103 22 16V4C22 2.897 21.103 2 20 2ZM8 16V4H20L20.002 16H8Z"
+                                                                fill="currentColor"/>
+                                                        <path d="M4 8H2V20C2 21.103 2.897 22 4 22H16V20H4V8ZM15 6H13V9H10V11H13V14H15V11H18V9H15V6Z"
+                                                              fill="currentColor"/>
+                                                    </svg>
+                                                    Дополнительные экскурсии
+                                                </button>
+                                                <div class="tours__modal tours__modal--extra modal fade" id="extraToursModal2" tabindex="-1"
+                                                     aria-labelledby="extraToursModalLabel2"
+                                                     aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header pt-5 pe-5">
+                                                                <button type="button" class="d-flex btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="modal-headeralike flex-row justify-content-between">
+                                                                    <h5 class="pb-3 tickets__extra-subtitle">Дополнительные экскурсии</h5>
+                                                                </div>
+                                                                <p class="fs-9 mb-5">Экскурсионная программа предварительная. Стоимость дополнительных экскурсий указана за 2021 год.
+                                                                    Дополнительные экскурсии не входят в стоимость путевки и приобретаются на борту теплохода у дирекции круиза.
+                                                                    Компания оставляет за собой право на изменения  расписания и экскурсионной программы круизов.</p>
+                                                                <div class="row justify-content-between">
+                                                                    <div class="row pb-3 chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="text-gray pb-3 fs-11">Дата</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="text-gray pb-3 fs-11">Место стоянки</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="text-gray pb-3 fs-11">Прибытие</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="text-gray pb-3 fs-11">Отправление</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <span class="text-gray ms-5 pb-3 fs-11">Описание</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour1">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour21">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour2">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour22">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour3">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour23">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour4">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour24">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour5">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour25">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour6">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour26">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour27">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour7">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour28">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour8">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour29">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour9">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour210">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour10">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour11">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour211">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour12">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour212">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="my-5 hr-gray opacity-100">
+                                                                    <div class="row chosen-seat__info chosen-seat__info--favorites">
+                                                                        <div class="col-5">
+                                                                            <div class="row">
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">07.05</span>
+                                                                                </div>
+                                                                                <div class="col-4">
+                                                                                    <span class="fs-9">Дубна</span>
+                                                                                </div>
+                                                                                <div class="col-2 me-3">
+                                                                                    <span class="fs-9">09:30</span>
+                                                                                </div>
+                                                                                <div class="col-2">
+                                                                                    <span class="fs-9">13:00</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7">
+                                                                            <div class="form-check">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour13">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour213">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-check mt-5">
+                                                                                <label class="form-check-label d-flex"
+                                                                                       for="extraTour14">
+                                                                                    <input class="checkbox-cruise"
+                                                                                           type="checkbox" value=""
+                                                                                           id="extraTour214">
+                                                                                    <span class="checkbox-fake"></span>
+                                                                                    <span class="checkbox-text fs-9 fw-700">Автобусная экскурсия по городу с посещением музея истории создания крылатых ракет</span>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="text-gray ms-5 fs-9">Во время экскурсии Вы увидите образцы военной техники, такие как П-15 – первая крылатая ракета морского базирования с жидкостным ракетным двигателем и первая ракета, которая приняла участие в боевых операциях. Продолжительность экскурсии 3,0-3,5 часа.</div>
+                                                                            <span class="more-info ms-5 mt-2">Подробнее</span>
+                                                                            <div class="row ms-5 mt-3">
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/duration-icon.svg">
+                                                                                    3 - 3,5 часа
+                                                                                </div>
+                                                                                <div class="col-5 p-0 fs-9">
+                                                                                    <img src="img/favorites/group-count-icon.svg">
+                                                                                    Группа от 10 человек
+                                                                                </div>
+                                                                                <div class="col-3 p-0 fs-9">
+                                                                                    <img src="img/favorites/cost-icon.svg">
+                                                                                    5 000 ₽
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <div class="chosen-seat__info flex-row d-flex">
+                                                                    <div class="">
+                                                                        <div class="fs-11">Общая стоимость</div>
+                                                                        <div class="fs-6 text-yellow">37 500 ₽</div>
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <a href="./passenger.html" class="card__link text-uppercase ms-7 me-4 btn btn-blue opacity-50">Выбрать экскурсии</a>
+                                                                        <div class="ms-7 reserved__warning">Выберите экскурсии</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 mt-1">
+                                        <div class="d-flex flex-column align-items-start">
+                                            <div class="form-check">
+                                                <label class="form-check-label d-flex align-items-center"
+                                                       for="withoutBeverages1">
+                                                    <input class="checkbox-cruise" type="checkbox" value=""
+                                                           id="withoutBeverages2">
+                                                    <span class="checkbox-fake"></span>
+                                                    <span class="checkbox-text">Без экскурсий</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-9 d-flex flex-column mt-11">
+                                <label for="wishes" class="fs-11 pb-1 text-gray">Пожелания клиента</label>
+                                <textarea class="textarea" name="wishes" id="wishes"
+                                          placeholder="Напишите пожелания..."></textarea>
+                            </div>
+                            <div class="col-9 d-flex flex-column mt-11">
+                                <div class="fs-11 pb-1 text-gray">Загрузите документы для предоставления скидки на
+                                    круиз
+                                </div>
+                                <div class="dropzone p-0 border-0 bg-light-2">
+                                    <div class="dz-message" data-dz-message>
+                                        <div class="d-flex flex-column text-center justify-content-center align-items-center">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.4906 20.6562C16.514 20.6861 16.5439 20.7103 16.578 20.7269C16.6121 20.7435 16.6496 20.7522 16.6875 20.7522C16.7254 20.7522 16.7629 20.7435 16.797 20.7269C16.8311 20.7103 16.861 20.6861 16.8844 20.6562L20.3844 16.2281C20.5125 16.0656 20.3969 15.825 20.1875 15.825H17.8719V5.25C17.8719 5.1125 17.7594 5 17.6219 5H15.7469C15.6094 5 15.4969 5.1125 15.4969 5.25V15.8219H13.1875C12.9781 15.8219 12.8625 16.0625 12.9906 16.225L16.4906 20.6562ZM28.125 19.5625H26.25C26.1125 19.5625 26 19.675 26 19.8125V24.625H7.375V19.8125C7.375 19.675 7.2625 19.5625 7.125 19.5625H5.25C5.1125 19.5625 5 19.675 5 19.8125V26C5 26.5531 5.44687 27 6 27H27.375C27.9281 27 28.375 26.5531 28.375 26V19.8125C28.375 19.675 28.2625 19.5625 28.125 19.5625Z"
+                                                      fill="#6C6C70"/>
+                                            </svg>
+                                            <span class="fs-9">Загрузка файлов</span>
+                                            <span class="fs-11 text-gray fw-500">Перетащите ваши файлы в область</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="reserved__shadow">
+                        <div class="fs-11 fw-500 text-gray">Т/Х</div>
+                        <h5 class="fs-6 fw-500 py-1">Андрей РУБЛЕВ</h5>
+                        <div class="card__text">
+                            <ul class="card__list">
+                                <li>Москва (СРВ)</li>
+                                <li>Мышкин</li>
+                                <li>Ярославль</li>
+                                <li>Плёс</li>
+                                <li>Кострома</li>
+                                <li>Коприно</li>
+                                <li>Углич</li>
+                                <li>Тверь</li>
+                                <li>Хвойный бор</li>
+                                <li>Москва (СРВ)</li>
+                            </ul>
+                        </div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Дата</div>
+                        <div class="fs-8">25 июля 17:00 - 31 июля 7:30</div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Количество дней</div>
+                        <div class="fs-8">7</div>
+                        <div class="pricee">
+                            <div class="d-flex justify-content-between align-items-center mt-6">
+                                <div class="fs-8">Стоимость за тариф</div>
+                                <div class="card__price">
+                                    <span class="text-primary fs-7">58 000 <sup>₽</sup></span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-9">
+                                <div class="fs-7 fw-700">Стоимость круиза</div>
+                                <div class="card__price">
+                                    <span class="text-yellow fs-6">86 966 <sup>₽</sup></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./pay.html" class="btn btn-blue opacity-50 py-2 w-100 mt-9 fs-8 fw-600 text-uppercase">Перейти
+                            к оплате</a>
+                        <div class="reserved__warning">Выберите пассажиров</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html__include/_footer.html')

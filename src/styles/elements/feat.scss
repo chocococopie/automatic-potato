@@ -1,0 +1,45 @@
+.feat {
+  padding: 48px 0 64px;
+
+  @include for-mobile {
+    padding-top: 31px;
+    padding-bottom: 24px;
+  }
+
+  &__slide {
+    @extend .bg-white;
+
+    &-body {
+      padding: 24px 24px 24px 0;
+      @extend .d-flex, .flex-column, .align-items-start;
+
+      @include for-mobile {
+        padding: 16px 8px 54px;
+      }
+
+      & p {
+        @extend .m-0, .text-gray, .fs-9;
+      }
+
+      & > *:not(:last-child) {
+        @extend .mb-3;
+      }
+
+      & h5 {
+        @extend .fw-600;
+      }
+    }
+
+    &-img {
+      @extend .position-relative;
+
+      &:before {
+        content: '';
+        @extend .position-absolute, .w-100, .h-100;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 51, 0.15);
+      }
+    }
+  }
+}

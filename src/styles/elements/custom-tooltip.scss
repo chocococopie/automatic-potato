@@ -1,0 +1,16 @@
+.custom-tooltip {
+
+	border: 1px solid;
+	box-shadow: $box-shadow-tooltip;
+	z-index: 10;
+	text-align: left;
+	@extend .border-light, .bg-white;
+
+	& .tooltip {
+
+		&-inner {
+			text-align: left;
+			@extend .d-flex, .flex-column, .align-items-start;
+		}
+	}
+}

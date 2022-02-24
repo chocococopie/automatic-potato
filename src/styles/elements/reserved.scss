@@ -1,0 +1,78 @@
+$box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.25);
+
+.reserved {
+
+	&__timer {
+		padding-top: 40px;
+		padding-bottom: 16px;
+
+		& .link-back {
+			transition: $transition-base;
+			top: 50%;
+			left: 0;
+			width: auto;
+			@extend .position-absolute, .translate-middle-y;
+		}
+
+		&-title {
+			letter-spacing: 0.25px;
+		}
+	}
+
+	&__shadow {
+		box-shadow: $box-shadow;
+		padding: 24px 32px 16px;
+		@extend .bg-white;
+
+		@include for-mobile {
+			padding: 16px 16px 27px;
+		}
+
+		& .subtitle {
+			@extend .h5;
+		}
+	}
+
+	&__description {
+		list-style-type: none;
+		@extend .p-0, .m-0, .mt-1;
+
+		& li {
+
+			&:not(:last-child) {
+				@extend .me-2;
+			}
+		}
+	}
+
+	&__drink {
+		&-list {
+			@extend .p-0, .mt-3, .fs-9, .text-gray;
+			list-style-position: inside;
+		}
+	}
+
+	& .form-check {
+		padding: 16px 0;
+		font-size: 13px;
+	}
+
+	&__warning {
+		margin-top: 4px;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 16px;
+		color: #FF3519;
+	}
+}
+
+.beverages__button-add {
+	padding: 24px;
+	border: 1px solid #EDEDEE;
+	box-shadow: 2px 2px 3px rgba(155, 155, 155, 0.08);
+	height: 88px;
+
+	& svg {
+		margin-top: -4px;
+	}
+}

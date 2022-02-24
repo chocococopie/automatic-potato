@@ -1,0 +1,111 @@
+.auth {
+
+	&__modal {
+
+		& .modal-dialog {
+			max-width: 472px !important;
+
+			@include for-mobile {
+				margin: 0;
+				width: 100%;
+			}
+
+			& .modal-content {
+				@include for-mobile {
+					border: none;
+					height: 100%;
+					overflow: hidden;
+				}
+			}
+		}
+
+		& .input {
+			height: 51px;
+
+			&:focus {
+				box-shadow: none;
+			}
+
+			@include for-mobile {
+				height: 40px;
+			}
+		}
+
+		& .btn.btn-yellow {
+			@extend .p-2;
+		}
+
+		& .lk {
+
+			&__user {
+
+				&-eye {
+					height: 100%;
+				}
+			}
+		}
+
+		& .modal {
+			&-header {
+				padding: 24px 24px 0;
+				height: auto;
+
+				@include for-mobile {
+					padding: 16px 16px 0;
+				}
+
+				& .modal-title {
+					&.subtitle {
+						font-weight: 500;
+						font-size: 30px;
+						line-height: 37px;
+						letter-spacing: -2px;
+						color: #000033;
+
+						@include for-mobile {
+							font-weight: 600;
+							font-size: 21px;
+							line-height: 28px;
+							letter-spacing: -0.6px;
+						}
+					}
+				}
+			}
+
+			&-body {
+				& .password__link {
+					align-self: flex-end;
+					color: #000033;
+
+					&:hover {
+						color: #0066FF;
+					}
+				}
+			}
+
+			&-footer {
+				padding: 0 24px 24px;
+				height: auto;
+
+				@include for-mobile {
+					padding: 0 16px 16px;
+				}
+			}
+		}
+	}
+
+	&__login {
+		@extend .d-none;
+
+		&.show {
+			@extend .d-flex, .flex-column;
+		}
+
+		&-btn {
+			@include for-mobile {
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+}

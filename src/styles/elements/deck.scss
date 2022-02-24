@@ -1,0 +1,71 @@
+.deck {
+
+	& .accordion-body {
+		padding: 16px !important;
+	}
+
+	&__item {
+		@extend .bg-white, .px-9, .py-5, .d-flex, .flex-column, .align-items-start;
+
+		&:not(:first-child) {
+			@extend .mt-5;
+		}
+	}
+
+	&__img {
+		@extend .mt-9;
+		align-self: center;
+	}
+
+	&__list {
+		list-style-type: none;
+		column-count: 3;
+		margin: 32px 0 0 0;
+		padding: 0;
+
+		@include for-mobile {
+			column-count: 1;
+			margin-top: 25px;
+		}
+
+		&-item {
+			@extend .d-flex, .align-items-center, .text-gray, .fs-11, .fw-500, .mb-1, .me-9;
+
+
+			& span {
+				width: 18px;
+				height: 18px;
+				border: 1px solid;
+				@extend .border-breadcrumb-color, .d-inline-block, .me-1;
+			}
+		}
+	}
+}
+
+.empty-cabin {
+	@extend .bg-lightgreen;
+
+	&.selected-cabin {
+		@extend .bg-blue;
+	}
+}
+
+.busy-cabin {
+	@extend .bg-breadcrumb-color;
+}
+
+.reserved-cabin {
+	@extend .bg-pink;
+}
+
+.empty-seats {
+	@extend .bg-lightyellow;
+
+	&.selected-cabin {
+		@extend .bg-blue;
+	}
+}
+
+.selected-cabin {
+	@extend .bg-blue;
+}

@@ -1,0 +1,1310 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": "header__white"
+})
+
+<main class="home">
+    <section class="home__slider">
+        <div class="swiper-container mainSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/home-slider/ship-mob.png" class="d-sm-none d-block w-100" alt="">
+                    <img src="./img/home-slider/ship.png" class="d-sm-block d-none w-100" alt="">
+                    <div class="carousel-caption">
+                        <h2 class="h1">Скидки до 25% на т/х класса Люкс</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/home-slider/ship-mob.png" class="d-sm-none d-block w-100" alt="">
+                    <img src="./img/home-slider/ship.png" class="d-sm-block d-none w-100" alt="">
+                    <div class="carousel-caption">
+                        <h2 class="h1">Скидки до 30% на т/х класса Люкс</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/home-slider/ship-mob.png" class="d-sm-none d-block w-100" alt="">
+                    <img src="./img/home-slider/ship.png" class="d-sm-block d-none w-100" alt="">
+                    <div class="carousel-caption">
+                        <h2 class="h1">Скидки до 40% на т/х класса Люкс</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/home-slider/ship-mob.png" class="d-sm-none d-block w-100" alt="">
+                    <img src="./img/home-slider/ship.png" class="d-sm-block d-none w-100" alt="">
+                    <div class="carousel-caption">
+                        <h2 class="h1">Скидки до 50% на т/х класса Люкс</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="swiper-button-prev">
+                    <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M1.93934 10.9393C1.35355 11.5251 1.35355 12.4749 1.93934 13.0607L11.4853 22.6066C12.0711 23.1924 13.0208 23.1924 13.6066 22.6066C14.1924 22.0208 14.1924 21.0711 13.6066 20.4853L5.12132 12L13.6066 3.51472C14.1924 2.92893 14.1924 1.97919 13.6066 1.3934C13.0208 0.807613 12.0711 0.807613 11.4853 1.3934L1.93934 10.9393ZM4 10.5L3 10.5L3 13.5L4 13.5L4 10.5Z"
+                                fill="#EDEDEE"/>
+                    </svg>
+                </button>
+                <button class="swiper-button-next">
+                    <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M1.93934 10.9393C1.35355 11.5251 1.35355 12.4749 1.93934 13.0607L11.4853 22.6066C12.0711 23.1924 13.0208 23.1924 13.6066 22.6066C14.1924 22.0208 14.1924 21.0711 13.6066 20.4853L5.12132 12L13.6066 3.51472C14.1924 2.92893 14.1924 1.97919 13.6066 1.3934C13.0208 0.807613 12.0711 0.807613 11.4853 1.3934L1.93934 10.9393ZM4 10.5L3 10.5L3 13.5L4 13.5L4 10.5Z"
+                                fill="#EDEDEE"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="home__search-cruise container">
+        <form action="/" method="get" class="search-cruise">
+            <div class="search-cruise__base">
+                <div class="row gx-0 h-100 align-items-center">
+                    <div class="col-12 col-xl-2">
+                        <div class="search-cruise__item search-cruise__wrap search-cruise__item--separator-horizontal">
+                            <select name="city" id="city"
+                                    class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                <option></option>
+                                <option value="1">Любой</option>
+                                <option value="2">Астрахань</option>
+                                <option value="3">Казань</option>
+                                <option value="4">Москва</option>
+                                <option value="5">Муром</option>
+                                <option value="6">Нижнекамск</option>
+                                <option value="6">Санкт-Петербург</option>
+                                <option value="7">Устье</option>
+                            </select>
+                            <label class="search-cruise-select__label" for="city">Город отправления</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-2">
+                        <div class="search-cruise__item search-cruise__wrap search-cruise__item--separator-horizontal">
+                            <select name="directions" id="directions"
+                                    class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                <option></option>
+                                <option value="1">Любой</option>
+                                <option value="2">Астрахань</option>
+                                <option value="3">Казань</option>
+                                <option value="4">Москва</option>
+                                <option value="5">Муром</option>
+                                <option value="6">Нижнекамск</option>
+                                <option value="6">Санкт-Петербург</option>
+                                <option value="7">Устье</option>
+                            </select>
+                            <label class="search-cruise-select__label" for="directions">Направления</label>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-2">
+                        <div class="search-cruise__item search-cruise__item--separator-vertical search-cruise__wrap">
+                            <input id="dateFrom" type="text" placeholder="" class="datepicker-here"
+                                   autocomplete="off">
+                            <label class="search-cruise-select__label" for="dateFrom">Дата круиза от</label>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-2">
+                        <div class="search-cruise__item search-cruise__item--separator-horizontal">
+                            <input id="dateTo" type="text" placeholder="" class="datepicker-here"
+                                   autocomplete="off">
+                            <label class="search-cruise-select__label" for="dateTo">Дата круиза до</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-2">
+                        <div class="search-cruise__item search-cruise__item--separator search-cruise__wrap">
+                            <select name="ship" id="ship"
+                                    class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                <option></option>
+                                <option value="1">Любой</option>
+                                <option value="2">Александр Грин</option>
+                                <option value="3">Княжна Виктория</option>
+                                <option value="4">Андрей РУБЛЕВ</option>
+                                <option value="5">Сергей ЕСЕНИН</option>
+                            </select>
+                            <label class="search-cruise-select__label" for="ship">Теплоходы</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-2">
+                        <button type="submit"
+                                class="px-4 search-cruise__btn btn btn-blue btn-text">
+                            Найти круиз
+                            <svg width="34" height="17" viewBox="0 0 34 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.3937 3.6875H20.4523C20.241 3.6875 20.0383 3.60354 19.8889 3.4541C19.7394 3.30466 19.6555 3.10197 19.6555 2.89062C19.6555 2.67928 19.7394 2.47659 19.8889 2.32715C20.0383 2.17771 20.241 2.09375 20.4523 2.09375H22.2346L21.8937 1.62505C21.8198 1.5234 21.7228 1.44068 21.6108 1.38364C21.4988 1.32661 21.3749 1.29687 21.2492 1.29688H16.9992C16.8356 1.29689 16.676 1.34724 16.5421 1.44109C16.4081 1.53494 16.3062 1.66775 16.2504 1.82148L15.3789 4.21875H23.78L23.3937 3.6875Z"
+                                      fill="white"/>
+                                <path d="M25.8479 8.63702C26.0693 8.52661 26.3132 8.46901 26.5606 8.46875H29.0836L27.2442 5.40251C27.1733 5.28447 27.0731 5.18679 26.9534 5.11899C26.8336 5.05119 26.6982 5.01558 26.5606 5.01563H5.31058C5.15132 5.01562 4.9957 5.06334 4.86382 5.15262C4.73194 5.2419 4.62983 5.36866 4.57068 5.51653L2.96484 9.53125H24.0593L25.8479 8.63702ZM7.96683 7.9375H7.03714C6.8258 7.9375 6.62311 7.85354 6.47366 7.7041C6.32422 7.55466 6.24027 7.35197 6.24027 7.14062C6.24027 6.92928 6.32422 6.72659 6.47366 6.57715C6.62311 6.42771 6.8258 6.34375 7.03714 6.34375H7.96683C8.17817 6.34375 8.38086 6.42771 8.5303 6.57715C8.67975 6.72659 8.7637 6.92928 8.7637 7.14062C8.7637 7.35197 8.67975 7.55466 8.5303 7.7041C8.38086 7.85354 8.17817 7.9375 7.96683 7.9375ZM12.1504 7.9375H11.0879C10.8766 7.9375 10.6739 7.85354 10.5244 7.7041C10.375 7.55466 10.291 7.35197 10.291 7.14062C10.291 6.92928 10.375 6.72659 10.5244 6.57715C10.6739 6.42771 10.8766 6.34375 11.0879 6.34375H12.1504C12.3618 6.34375 12.5645 6.42771 12.7139 6.57715C12.8633 6.72659 12.9473 6.92928 12.9473 7.14062C12.9473 7.35197 12.8633 7.55466 12.7139 7.7041C12.5645 7.85354 12.3618 7.9375 12.1504 7.9375ZM16.5996 7.9375H15.3379C15.1266 7.9375 14.9239 7.85354 14.7744 7.7041C14.625 7.55466 14.541 7.35197 14.541 7.14062C14.541 6.92928 14.625 6.72659 14.7744 6.57715C14.9239 6.42771 15.1266 6.34375 15.3379 6.34375H16.5996C16.811 6.34375 17.0137 6.42771 17.1631 6.57715C17.3126 6.72659 17.3965 6.92928 17.3965 7.14062C17.3965 7.35197 17.3126 7.55466 17.1631 7.7041C17.0137 7.85354 16.811 7.9375 16.5996 7.9375ZM20.7168 7.9375H19.6543C19.443 7.9375 19.2403 7.85354 19.0909 7.7041C18.9414 7.55466 18.8575 7.35197 18.8575 7.14062C18.8575 6.92928 18.9414 6.72659 19.0909 6.57715C19.2403 6.42771 19.443 6.34375 19.6543 6.34375H20.7168C20.9282 6.34375 21.1309 6.42771 21.2803 6.57715C21.4297 6.72659 21.5137 6.92928 21.5137 7.14062C21.5137 7.35197 21.4297 7.55466 21.2803 7.7041C21.1309 7.85354 20.9282 7.9375 20.7168 7.9375ZM23.1075 7.14062C23.1075 6.92928 23.1914 6.72659 23.3409 6.57715C23.4903 6.42771 23.693 6.34375 23.9043 6.34375H25.166C25.3774 6.34375 25.5801 6.42771 25.7295 6.57715C25.879 6.72659 25.9629 6.92928 25.9629 7.14062C25.9629 7.35197 25.879 7.55466 25.7295 7.7041C25.5801 7.85354 25.3774 7.9375 25.166 7.9375H23.9043C23.693 7.9375 23.4903 7.85354 23.3409 7.7041C23.1914 7.55466 23.1075 7.35197 23.1075 7.14062Z"
+                                      fill="white"/>
+                                <path d="M33.697 9.82138C33.6458 9.66011 33.5446 9.51933 33.4081 9.41941C33.2715 9.31949 33.1067 9.26563 32.9375 9.26562H26.5625C26.4388 9.26563 26.3168 9.29444 26.2062 9.34976L24.2494 10.3281H1.06251C0.92667 10.3281 0.793089 10.3628 0.674447 10.429C0.555805 10.4951 0.456042 10.5905 0.384631 10.7061C0.31322 10.8216 0.272531 10.9535 0.266429 11.0892C0.260328 11.2249 0.289015 11.3599 0.349768 11.4814L2.47477 15.7314C2.54095 15.8638 2.64269 15.9751 2.76857 16.0529C2.89446 16.1307 3.03952 16.1719 3.18751 16.1719H27.3594C27.5074 16.1719 27.6524 16.1307 27.7783 16.0529C27.9042 15.9751 28.0059 15.8638 28.0721 15.7314C28.869 14.1372 32.1863 11.5687 33.3972 10.7135C33.5354 10.6159 33.6389 10.4768 33.6928 10.3164C33.7467 10.156 33.7482 9.98265 33.697 9.82138Z"
+                                      fill="white"/>
+                                <path d="M11.4219 3.15625H7.70312V4.21875H11.4219V3.15625Z" fill="white"/>
+                                <path d="M11.4219 1.5625C11.4219 1.35116 11.3379 1.14847 11.1885 0.999025C11.039 0.849582 10.8363 0.765625 10.625 0.765625H8.5C8.28866 0.765625 8.08597 0.849582 7.93652 0.999025C7.78708 1.14847 7.70313 1.35116 7.70312 1.5625V2.09375H11.4219V1.5625Z"
+                                      fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </form>
+    </section>
+    <section class="container home__catalog catalog">
+        <div class="row">
+            <div class="col-12 col-xl-4">
+                <div class="catalog__item catalog__item--price">
+                    <div class="catalog__item-text text-center">
+                        <h4>Расписание и цены</h4>
+                        <a href="./river.html" class="btn btn-blue hover-white stretched-link">Круизные цены</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-4 mt-xl-0 mt-3">
+                <div class="catalog__item catalog__item--cruises">
+                    <div class="catalog__item-text text-center">
+                        <h4>Все круизы на 2021 год</h4>
+                        <a href="#" class="btn btn-blue hover-white stretched-link">Каталог круизов</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-4 mt-xl-0 mt-3">
+                <div class="catalog__item catalog__item--low">
+                    <div class="catalog__item-text text-center">
+                        <h4>Круизный лоукостер</h4>
+                        <a href="#" class="btn btn-blue hover-white stretched-link">Речной круизный лоукостер</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container section-block recommend">
+        <div class="news__head">
+            <h2 class="title">
+                Скидки
+            </h2>
+        </div>
+        <div class="swiper-container discount discountSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="card__date text-gray">04 мая - 10 мая 2021</span>
+                            <h5 class="card-title">Леонид КРАСИН</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                            <div class="card__price-wrap mt-3">
+                                <span class="card__price-discount">-14%</span>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="card__price">
+                                        <span class="card__price-new">18 100 <sup>₽</sup></span>
+                                        <span class="card__price-old">20 643 <sup>₽</sup></span>
+                                    </div>
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="card__date text-gray">04 мая - 10 мая 2021</span>
+                            <h5 class="card-title">Леонид КРАСИН</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                            <div class="card__price-wrap mt-3">
+                                <span class="card__price-discount">-14%</span>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="card__price">
+                                        <span class="card__price-new">18 100 <sup>₽</sup></span>
+                                        <span class="card__price-old">20 643 <sup>₽</sup></span>
+                                    </div>
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="card__date text-gray">04 мая - 10 мая 2021</span>
+                            <h5 class="card-title">Леонид КРАСИН</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                            <div class="card__price-wrap mt-3">
+                                <span class="card__price-discount">-14%</span>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="card__price">
+                                        <span class="card__price-new">18 100 <sup>₽</sup></span>
+                                        <span class="card__price-old">20 643 <sup>₽</sup></span>
+                                    </div>
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="card__date text-gray">04 мая - 10 мая 2021</span>
+                            <h5 class="card-title">Леонид КРАСИН</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                            <div class="card__price-wrap mt-3">
+                                <span class="card__price-discount">-14%</span>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="card__price">
+                                        <span class="card__price-new">18 100 <sup>₽</sup></span>
+                                        <span class="card__price-old">20 643 <sup>₽</sup></span>
+                                    </div>
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="card__date text-gray">04 мая - 10 мая 2021</span>
+                            <h5 class="card-title">Леонид КРАСИН</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                            <div class="card__price-wrap mt-3">
+                                <span class="card__price-discount">-14%</span>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="card__price">
+                                        <span class="card__price-new">18 100 <sup>₽</sup></span>
+                                        <span class="card__price-old">20 643 <sup>₽</sup></span>
+                                    </div>
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="card__date text-gray">04 мая - 10 мая 2021</span>
+                            <h5 class="card-title">Леонид КРАСИН</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                            <div class="card__price-wrap mt-3">
+                                <span class="card__price-discount">-14%</span>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="card__price">
+                                        <span class="card__price-new">18 100 <sup>₽</sup></span>
+                                        <span class="card__price-old">20 643 <sup>₽</sup></span>
+                                    </div>
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="card__date text-gray">04 мая - 10 мая 2021</span>
+                            <h5 class="card-title">Леонид КРАСИН</h5>
+                            <div class="card__text">
+                                <ul class="card__list">
+                                    <li>Москва (СРВ)</li>
+                                    <li>Мышкин</li>
+                                    <li>Ярославль</li>
+                                    <li>Плёс</li>
+                                    <li>Кострома</li>
+                                    <li>Коприно</li>
+                                    <li>Углич</li>
+                                    <li>Тверь</li>
+                                    <li>Хвойный бор</li>
+                                    <li>Москва (СРВ)</li>
+                                </ul>
+                            </div>
+                            <div class="card__price-wrap mt-3">
+                                <span class="card__price-discount">-14%</span>
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="card__price">
+                                        <span class="card__price-new">18 100 <sup>₽</sup></span>
+                                        <span class="card__price-old">20 643 <sup>₽</sup></span>
+                                    </div>
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls pt-3">
+                <a href="" class="recommend__link-more btn btn-blue btn-text-s">Все скидки</a>
+                <button class="swiper-button-prev">
+                    <img src="./img/swiper-icon/arrow-left.svg" alt="">
+                </button>
+                <button class="swiper-button-next">
+                    <img src="./img/swiper-icon/arrow-right.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="news__head">
+            <h2 class="title">
+                Акции
+            </h2>
+        </div>
+        <div class="swiper-container sale stockSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <span class="card__stock-discount">15 - 35%</span>
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Акция с 24 июня!</h5>
+                            <div class="card__text">
+                                Еще один летний подарок любителям круизов! Спешите воспользоваться нашим
+                                предложением и совершить увлекательное путешествие по сниженной цене! Начало июля в
+                                северной столице — вы еще успеете застать «белые ночи»...
+                            </div>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                        class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <span class="card__stock-discount">15 - 35%</span>
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Акция с 24 июня!</h5>
+                            <div class="card__text">
+                                Еще один летний подарок любителям круизов! Спешите воспользоваться нашим
+                                предложением и совершить увлекательное путешествие по сниженной цене! Начало июля в
+                                северной столице — вы еще успеете застать «белые ночи»...
+                            </div>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                        class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <span class="card__stock-discount">15 - 35%</span>
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Акция с 24 июня!</h5>
+                            <div class="card__text">
+                                Еще один летний подарок любителям круизов! Спешите воспользоваться нашим
+                                предложением и совершить увлекательное путешествие по сниженной цене! Начало июля в
+                                северной столице — вы еще успеете застать «белые ночи»...
+                            </div>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                        class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <span class="card__stock-discount">15 - 35%</span>
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Акция с 24</h5>
+                            <div class="card__text">
+                                Еще один летний подарок любителям круизов! Спешите воспользоваться нашим
+                                предложением и совершить увлекательное путешествие по сниженной цене! Начало июля в
+                                северной столице — вы еще успеете застать «белые ночи»...
+                            </div>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                        class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <span class="card__stock-discount">15 - 35%</span>
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Акция с 24 июня!</h5>
+                            <div class="card__text">
+                                Еще один летний подарок любителям круизов! Спешите воспользоваться нашим
+                                предложением и совершить увлекательное путешествие по сниженной цене! Начало июля в
+                                северной столице — вы еще успеете застать «белые ночи»...
+                            </div>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                        class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <span class="card__stock-discount">15 - 35%</span>
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Акция с 24 июня!</h5>
+                            <div class="card__text">
+                                Еще один летний подарок любителям круизов! Спешите воспользоваться нашим
+                                предложением и совершить увлекательное путешествие по сниженной цене! Начало июля в
+                                северной столице — вы еще успеете застать «белые ночи»...
+                            </div>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                        class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card card__stock">
+                        <span class="card__stock-discount">15 - 35%</span>
+                        <div class="card__img-wrap">
+                            <img src="./img/recommend/rship1.png" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Акция с 24 июня!</h5>
+                            <div class="card__text">
+                                Еще один летний подарок любителям круизов! Спешите воспользоваться нашим
+                                предложением и совершить увлекательное путешествие по сниженной цене! Начало июля в
+                                северной столице — вы еще успеете застать «белые ночи»...
+                            </div>
+                            <div class="d-flex justify-content-end pt-3">
+                                <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                        class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <a href="" class="recommend__link-more btn btn-blue btn-text-s">Все акции</a>
+                <button class="swiper-button-prev">
+                    <img src="./img/swiper-icon/arrow-left.svg" alt="">
+                </button>
+                <button class="swiper-button-next">
+                    <img src="./img/swiper-icon/arrow-right.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="container popular section-block">
+        <h2 class="title">Популярные направления</h2>
+        <div class="popular__list">
+            <div class="popular__list-top">
+                <a href="#" class="popular__item popular__item-spb">
+				<span class="popular__item-title">
+					Санкт-Петербург
+				</span>
+                </a>
+            </div>
+            <div class="popular__list-mid">
+                <a href="#" class="popular__item popular__item-kareliya">
+				<span class="popular__item-title">
+					Карелия. Остров
+				</span>
+                </a>
+                <div class="d-flex flex-column align-items-start">
+                    <a href="#" class="popular__item popular__item-solovetskie">
+				<span class="popular__item-title">
+					Cоловецкие острова
+				</span>
+                    </a>
+                    <a href="#" class="popular__item popular__item-oka">
+				<span class="popular__item-title">
+					Ока
+				</span>
+                    </a>
+                </div>
+            </div>
+            <div class="popular__list-bottom">
+                <a href="#" class="popular__item popular__item-kzn">
+				<span class="popular__item-title">
+					Казань
+				</span>
+                </a>
+                <a href="#" class="popular__item popular__item-astrakhan">
+				<span class="popular__item-title">
+					Астрахань
+				</span>
+                </a>
+                <a href="#" class="d-sm-flex d-none popular__item popular__item-more more-link">
+                    <span class="more-link__title">Все направления</span>
+                    <span class="more-link__amount">317</span>
+                    <span class="more-link__subtitle">Речных круизов</span>
+                </a>
+            </div>
+            <a href="#" class="mt-1 popular__item popular__item-more more-link d-sm-none d-flex justify-content-center">
+                <span class="more-link__title">Все направления</span>
+                <span class="more-link__amount">317</span>
+                <span class="more-link__subtitle">Речных круизов</span>
+            </a>
+        </div>
+    </section>
+    <section class="news section-block bg-light">
+        <div class="container">
+            <div class="news__head flex-column flex-sm-row">
+                <h2 class="title">Новости компании</h2>
+                <div class="news__head-links d-flex flex-sm-row flex-column">
+                    <a href="#">Изменения в расписании</a>
+                    <a href="#">Все новости</a>
+                </div>
+            </div>
+            <div class="news__list row swiper-container newsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="col-sm col-12 swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-date">21 июня 2021</p>
+                                <h5 class="card-title">Круизы-2022: «Суриков», «Репин», «Есенин», «Рублёв»</h5>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-12 swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-date">21 июня 2021</p>
+                                <h5 class="card-title">Круизы-2022: «Суриков», «Репин», «Есенин», «Рублёв»</h5>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-12 swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-date">21 июня 2021</p>
+                                <h5 class="card-title">Круизы-2022: «Суриков», «Репин», «Есенин», «Рублёв»</h5>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm col-12 swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-date">21 июня 2021</p>
+                                <h5 class="card-title">Круизы-2022: «Суриков», «Репин», «Есенин», «Рублёв»</h5>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feat bg-light-2">
+        <div class="container">
+            <div class="swiper-container featSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="feat__slide row flex-sm-row flex-column">
+                            <div class="col">
+                                <div class="feat__slide-img">
+                                    <img src="./img/feat/mostur.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="feat__slide-body">
+                                    <h5 class="h3 d-sm-flex d-none">Преимущества</h5>
+                                    <p>Тур по воде – это захватывающее увлекательное путешествие по привлекательной
+                                        цене. Вы сможете
+                                        увидеть и узнать много нового о родной стране, показать её красоты своим
+                                        родственникам и друзьям
+                                        из-за рубежа.</p>
+                                    <p>Мы гарантируем комфорт и безопасность путешествий. В круизе от фирмы "Мостурфлот"
+                                        вам не придется
+                                        скучать!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feat__slide row flex-sm-row flex-column">
+                            <div class="col">
+                                <div class="feat__slide-img">
+                                    <img src="./img/feat/mostur.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="feat__slide-body">
+                                    <h5 class="h3 d-sm-flex d-none">Преимущества</h5>
+                                    <p>Тур по воде – это захватывающее увлекательное путешествие по привлекательной
+                                        цене. Вы сможете
+                                        увидеть и узнать много нового о родной стране, показать её красоты своим
+                                        родственникам и друзьям
+                                        из-за рубежа.</p>
+                                    <p>Мы гарантируем комфорт и безопасность путешествий. В круизе от фирмы "Мостурфлот"
+                                        вам не придется
+                                        скучать!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feat__slide row flex-sm-row flex-column">
+                            <div class="col">
+                                <div class="feat__slide-img">
+                                    <img src="./img/feat/mostur.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="feat__slide-body">
+                                    <h5 class="h3 d-sm-flex d-none">Преимущества</h5>
+                                    <p>Тур по воде – это захватывающее увлекательное путешествие по привлекательной
+                                        цене. Вы сможете
+                                        увидеть и узнать много нового о родной стране, показать её красоты своим
+                                        родственникам и друзьям
+                                        из-за рубежа.</p>
+                                    <p>Мы гарантируем комфорт и безопасность путешествий. В круизе от фирмы "Мостурфлот"
+                                        вам не придется
+                                        скучать!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feat__slide row flex-sm-row flex-column">
+                            <div class="col">
+                                <div class="feat__slide-img">
+                                    <img src="./img/feat/mostur.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="feat__slide-body">
+                                    <h5 class="h3 d-sm-flex d-none">Преимущества</h5>
+                                    <p>Тур по воде – это захватывающее увлекательное путешествие по привлекательной
+                                        цене. Вы сможете
+                                        увидеть и узнать много нового о родной стране, показать её красоты своим
+                                        родственникам и друзьям
+                                        из-за рубежа.</p>
+                                    <p>Мы гарантируем комфорт и безопасность путешествий. В круизе от фирмы "Мостурфлот"
+                                        вам не придется
+                                        скучать!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="swiper-button-prev">
+                        <img src="./img/swiper-icon/arrow-left.svg" alt="">
+                    </button>
+                    <button class="swiper-button-next">
+                        <img src="./img/swiper-icon/arrow-right.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info bg-light">
+        <div class="container">
+            <h2 class="title">Информация</h2>
+            <div class="swiper-container info__slider infoSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__img-wrap">
+                                <img src="./img/info/info1.png" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Первый раз в круиз. Советы новичкам.</h5>
+                                <div class="card__text">
+                                    Почему круиз? Для чего миллионы людей во всем мире каждый…
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__img-wrap">
+                                <img src="./img/info/info2.png" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Всё лучшее — детям!</h5>
+                                <div class="card__text">
+                                    Самым юным путешественникам - полный вперед! Любой сотрудник нашей компании,…
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__img-wrap">
+                                <img src="./img/info/info3.png" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Развлекательные программы</h5>
+                                <div class="card__text">
+                                    Наши аниматоры, музыканты и приглашенные артисты никому не дадут скучать…
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__img-wrap">
+                                <img src="./img/info/info1.png" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Первый раз в круиз. Советы новичкам.</h5>
+                                <div class="card__text">
+                                    Почему круиз? Для чего миллионы людей во всем мире каждый…
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__img-wrap">
+                                <img src="./img/info/info1.png" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Первый раз в круиз. Советы новичкам.</h5>
+                                <div class="card__text">
+                                    Почему круиз? Для чего миллионы людей во всем мире каждый…
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__img-wrap">
+                                <img src="./img/info/info2.png" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Первый раз в круиз. Советы новичкам.</h5>
+                                <div class="card__text">
+                                    Почему круиз? Для чего миллионы людей во всем мире каждый…
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card__img-wrap">
+                                <img src="./img/info/info3.png" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Первый раз в круиз. Советы новичкам.</h5>
+                                <div class="card__text">
+                                    Почему круиз? Для чего миллионы людей во всем мире каждый…
+                                </div>
+                                <div class="d-flex justify-content-end pt-3">
+                                    <a href="#" class="card__link stretched-link link text-decoration-none"><img
+                                            class="card-img--size" src="./img/search-cruise/arrow.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="swiper-button-prev">
+                        <img src="./img/swiper-icon/arrow-left.svg" alt="">
+                    </button>
+                    <button class="swiper-button-next">
+                        <img src="./img/swiper-icon/arrow-right.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    <section class="modal__section-small">-->
+<!--        <div class="chosen-seat__header">-->
+<!--            <button class="chosen-seat__button" type="button" data-bs-toggle="offcanvas"-->
+<!--                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">-->
+<!--                Выбранные каюты (2)<img class="ps-1" src="img/favorites/chevron-up.svg">-->
+<!--            </button>-->
+<!--            <div class="chosen-seat__header-right">-->
+<!--                <a class="chosen-seat__link&#45;&#45;right " href="#" data-bs-toggle="modal"-->
+<!--                   data-bs-target="#favoritesModal"><img src="img/favorites/icon-selected.svg">Избранное</a>-->
+<!--                <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/ship-blue.png">Забронировать</a>-->
+<!--                <span>75 000 ₽</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="offcanvas offcanvas-bottom chosen-seat__body" tabindex="-1" id="offcanvasBottom"-->
+<!--             data-bs-scroll="true"-->
+<!--             data-bs-backdrop="false" aria-labelledby="offcanvasBottomLabel">-->
+<!--            <div class="offcanvas-body small">-->
+<!--                <div class="chosen-seat__header&#45;&#45;inside">-->
+<!--                    <button type="button" class="chosen-seat__button" id="offcanvasBottomLabel"-->
+<!--                            data-bs-dismiss="offcanvas"-->
+<!--                            aria-label="Close">-->
+<!--                        Свернуть Выбранные каюты (10)<img class="ps-1" src="img/favorites/chevron-down.svg">-->
+<!--                    </button>-->
+<!--                    <a class="chosen-seat__link&#45;&#45;right d-sm-flex d-none align-items-center ms-12" href="#"-->
+<!--                       data-bs-toggle="modal"-->
+<!--                       data-bs-target="#favoritesModal"><img src="img/favorites/icon-selected.svg">Избранное</a>-->
+<!--                </div>-->
+<!--                <div class="row justify-content-between">-->
+<!--                    <div class="col-sm-9 col-12">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                        <hr class="my-5 hr-gray opacity-100">-->
+<!--                        <div class="row pb-5 chosen-seat__info">-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выбранные каюты</span>-->
+<!--                                <span class="fs-8 favorites__selected">356</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Категория</span>-->
+<!--                                <span class="fs-8">П/люкс</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Кол-во мест</span>-->
+<!--                                <span class="fs-8">2</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Выберите место</span>-->
+<!--                                <span class="fs-8">Основное</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Палуба</span>-->
+<!--                                <span class="fs-8">Шлюпочная</span>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 col-12">-->
+<!--                                <span class="text-gray pb-3 fs-11">Цена</span>-->
+<!--                                <span class="fs-8">37 500 ₽</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/bin.svg">Удалить каюту</a>-->
+<!--                        <a class="chosen-seat__link&#45;&#45;right" href="#"><img src="img/favorites/icon-delete.svg">Удалить из-->
+<!--                            избранного</a>-->
+<!--                    </div>-->
+<!--                    <div class="col-3 p-0">-->
+<!--                        <div class="row chosen-seat__info chosen-seat__pay-bottom">-->
+<!--                            <div class="col-sm-6 col-12 d-sm-block d-flex flex-row justify-content-between align-items-center">-->
+<!--                                <div class="fs-11 pb-sm-2 text-none">Общая стоимость</div>-->
+<!--                                <div class="fs-6 text-yellow">158 000 ₽</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-6 col-12 py-sm-0 pt-6 pb-1">-->
+<!--                                <a href="./passenger.html"-->
+<!--                                   class="card__link text-uppercase chosen-seat__pay&#45;&#45;btn btn-blue">Забронировать</a>-->
+<!--                                <a href="" class="chosen-seat__pay&#45;&#45;favorites"><img-->
+<!--                                        src="img/favorites/icon-selected.svg"></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+</main>
+
+@@include('./html__include/_footer.html')

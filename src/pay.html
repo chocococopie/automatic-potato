@@ -1,0 +1,360 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="pay container-mt">
+    <section class="container">
+        <div class="breadcrumb__container d-none d-sm-block">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="./river.html">Речные круизы</a></li>
+                <li class="breadcrumb-item"><a href="./detail.html">Описание круиза</a></li>
+                <li class="breadcrumb-item active">Бронирование</a></li>
+            </ol>
+        </div>
+        <div class="row d-lg-flex d-none flex-column justify-content-center align-items-center position-relative reserved__timer">
+            <a href="./detail.html" class="pt-5 link-primary link-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 12L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M11 19L4 12L11 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="col text-center">Выберите способ оплаты</div>
+        </div>
+    </section>
+    <section class="bg-light-2 pt-11 pb-15">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-12">
+                    <div class="reserved__shadow">
+                        <div class="row">
+                            <div class="col-sm-8 col-12 fs-9">
+                                Заявка будет действительна <span class="text-red">до 25 июля</span>
+                                <p>Для увелечения срока оплаты обратитесь к менеджеру.</p>
+                            </div>
+                        </div>
+                        <form action="/" method="post" class="pay__option d-flex flex-sm-row flex-column">
+                            <input type="radio" class="btn-check" name="payOption" id="payCard" autocomplete="off"
+                                   value="payCard"
+                                   checked>
+                            <label class="pay__option-label mb-sm-0 mb-1" for="payCard">
+                                <div class="d-flex flex-column">
+                                    <span class="subtitle">Оплата банковской картой</span>
+                                    <span class="text-gray fs-sm-9 fs-11 mt-1">Оплата банковской картой онлайн</span>
+                                </div>
+                                <div class="pb-1">
+                                    <img class="pe-2 pt-sm-2 pt-1" src="./img/pay/logos_visa.png">
+                                    <img class="pe-2 pt-sm-2 pt-1" src="./img/pay/logos_mastercard.png">
+                                    <img class="pe-2 pt-sm-2 pt-1" src="./img/pay/logos_mir.png">
+                                </div>
+                            </label>
+                            <input type="radio" class="btn-check" name="payOption" id="payOffice" autocomplete="off"
+                                   value="payOption">
+                            <label class="pay__option-label mb-sm-0 mb-1" for="payOffice">
+                                <div class="d-flex flex-column">
+                                    <span class="subtitle">Оплата в офисе</span>
+                                    <span class="text-gray fs-sm-9 fs-11 mt-1">Вы можете оплатить круиз удобным для вас способом в одном из наших офисов</span>
+                                </div>
+                                <div class="pb-1">
+                                    <img class="pe-2 pt-sm-2 pt-0" src="./img/pay/logos_cash.png">
+                                    <img class="pe-2 pt-sm-2 pt-0" src="./img/pay/logos_card.png">
+                                </div>
+                            </label>
+                            <input type="radio" class="btn-check" name="payOption" id="payInvoice" autocomplete="off"
+                                   value="payCard">
+                            <label class="pay__option-label" for="payInvoice">
+                                <div class="d-flex flex-column">
+                                    <span class="subtitle">Оплата по счету</span>
+                                    <span class="text-gray fs-sm-9 fs-11 mt-1">Оплата по расчетному счету</span>
+                                </div>
+                                <div class="pb-1">
+                                    <img class="pe-2 pt-sm-2 pt-1" src="./img/pay/logos_bill.png">
+                                </div>
+                            </label>
+                        </form>
+                        <div class="row pay__discount mt-9">
+                            <div class="col">
+                                <div class="row flex-column">
+                                    <div class="pay__discount-title">Использовать промокод</div>
+                                    <form action="" method="post" class="mt-sm-3 mt-1 input-group">
+                                        <input type="email" class="input" id="promo" placeholder="Промокод"
+                                               aria-label="Промокод">
+                                        <button class="btn btn-blue text-uppercase mb-sm-0 mb-5" type="button">Применить</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row flex-column">
+                                    <div class="pay__discount-title">Воспользоваться бонусами</div>
+                                    <form action="" method="post" class="mt-sm-3 mt-1 input-group">
+                                        <input type="email" class="input" id="bonus"
+                                               placeholder="Использовать 0 из 2000"
+                                               aria-label="Использовать 0 из 2000">
+                                        <button class="btn btn-blue text-uppercase" type="button">Применить</button>
+                                    </form>
+                                    <div class="fs-9 text-gray mt-1">У вас <span class="text-primary">2000</span>
+                                        бонусов
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush detail" id="accordionInfo">
+                        <div class="reserved__shadow mt-5 pay__info">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="info-heading1">
+                                    <button class="accordion-button collapsed d-sm-none" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#info-collapse1" aria-expanded="false"
+                                            aria-controls="info-collapse1">
+                                        Информация о вашем круизе
+                                    </button>
+                                </h2>
+                                <div id="info-collapse1" class="accordion-collapse collapse d-sm-block"
+                                     aria-labelledby="info-heading1"
+                                     data-bs-parent="#accordionInfo">
+                                    <div class="accordion-body">
+                                        <div class="d-sm-block d-none fs-7 fw-700">Информация о вашем круизе</div>
+                                        <div class="row mt-sm-5 mt-0">
+                                            <div class="col-sm-3 col-12">
+                                                <div class="fs-11 fw-500 text-gray">Т/Х</div>
+                                                <h5 class="fs-sm-8 fs-10 fw-500">Андрей РУБЛЕВ</h5>
+                                            </div>
+                                            <div class="col">
+                                                <div class="fs-11 fw-500 text-gray">Дата</div>
+                                                <div class="fs-sm-8 fs-10">25 июля 17:00 - 31 июля 7:30</div>
+                                            </div>
+                                            <div class="col-sm-3 col-12">
+                                                <div class="fs-11 fw-500 text-gray">Количество дней</div>
+                                                <div class="fs-sm-8 fs-10">7</div>
+                                            </div>
+                                        </div>
+                                        <div class="row flex-column mt-3">
+                                            <div class="fs-11 text-gray pb-sm-2 fw-500">Маршрут</div>
+                                            <div class="card__text">
+                                                <ul class="card__list">
+                                                    <li>Москва (СРВ)</li>
+                                                    <li>Мышкин</li>
+                                                    <li>Ярославль</li>
+                                                    <li>Плёс</li>
+                                                    <li>Кострома</li>
+                                                    <li>Коприно</li>
+                                                    <li>Углич</li>
+                                                    <li>Тверь</li>
+                                                    <li>Хвойный бор</li>
+                                                    <li>Москва (СРВ)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <hr class="bg-light opacity-100">
+                                        <div class="row">
+                                            <div class="col-sm-3 col-12 mb-sm-0 mb-2">
+                                                <div class="fs-11 fw-500 text-gray">Номер каюты</div>
+                                                <h5 class="fs-sm-8 fs-10">429</h5>
+                                            </div>
+                                            <div class="col-sm-3 col-12 mb-sm-0 mb-2">
+                                                <div class="fs-11 fw-500 text-gray">Категория каюты</div>
+                                                <div class="fs-sm-8 fs-10">П/Люкс</div>
+                                            </div>
+                                            <div class="col-sm-3 col-12 mb-sm-0 mb-2 mb-sm-0 mb-2">
+                                                <div class="fs-11 fw-500 text-gray">Пассажиры</div>
+                                                <div class="fs-sm-8 fs-10">2 взрослых</div>
+                                            </div>
+                                            <div class="col-sm-3 col-12">
+                                                <div class="fs-11 fw-500 text-gray">Палуба</div>
+                                                <div class="fs-sm-8 fs-10">Шлюпочная</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-sm-6 col-12 mb-sm-0 mb-2">
+                                                <div class="fs-11 fw-500 text-gray">Место Основное</div>
+                                                <div class="fs-sm-8 fs-10">Александров Александр Александрович</div>
+                                            </div>
+                                            <div class="col-sm-6 col-12">
+                                                <div class="fs-11 fw-500 text-gray">Место Верхнее</div>
+                                                <div class="fs-sm-8 fs-10">Иванов Иван Иванович</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-sm-3 col-12 mb-sm-0 mb-2">
+                                                <div class="fs-11 fw-500 text-gray">Питание</div>
+                                                <h5 class="fs-sm-8 fs-10">3-х разовое</h5>
+                                            </div>
+                                            <div class="col-sm-3 col-12 mb-sm-0 mb-2">
+                                                <div class="fs-11 fw-500 text-gray">Экскурсии</div>
+                                                <div class="fs-sm-8 fs-10">Полный пакет</div>
+                                            </div>
+                                            <div class="col-sm-3 col-12 mb-sm-0 mb-2">
+                                                <div class="fs-11 fw-500 text-gray">Питание</div>
+                                                <div class="fs-sm-8 fs-10">3-х разовое</div>
+                                            </div>
+                                            <div class="col-sm-3 col-12">
+                                                <div class="fs-11 fw-500 text-gray">Экскурсии</div>
+                                                <div class="fs-sm-8 fs-10">Полный пакет</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                    <div class="reserved__shadow mt-5 pay__info">-->
+<!--                        <div class="fs-7 fw-700">Информация о вашем круизе</div>-->
+<!--                        <div class="row mt-5">-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Т/Х</div>-->
+<!--                                <h5 class="fs-8 fw-500">Андрей РУБЛЕВ</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Дата</div>-->
+<!--                                <div class="fs-8">25 июля 17:00 - 31 июля 7:30</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Количество дней</div>-->
+<!--                                <div class="fs-8">7</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row flex-column mt-3">-->
+<!--                            <div class="fs-11 text-gray pb-2 fw-500">Маршрут</div>-->
+<!--                            <div class="card__text">-->
+<!--                                <ul class="card__list">-->
+<!--                                    <li>Москва (СРВ)</li>-->
+<!--                                    <li>Мышкин</li>-->
+<!--                                    <li>Ярославль</li>-->
+<!--                                    <li>Плёс</li>-->
+<!--                                    <li>Кострома</li>-->
+<!--                                    <li>Коприно</li>-->
+<!--                                    <li>Углич</li>-->
+<!--                                    <li>Тверь</li>-->
+<!--                                    <li>Хвойный бор</li>-->
+<!--                                    <li>Москва (СРВ)</li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <hr class="bg-light opacity-100">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Номер каюты</div>-->
+<!--                                <h5 class="fs-8">429</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Категория каюты</div>-->
+<!--                                <div class="fs-8">П/Люкс</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Пассажиры</div>-->
+<!--                                <div class="fs-8">2 взрослых</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Палуба</div>-->
+<!--                                <div class="fs-8">Шлюпочная</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row mt-3">-->
+<!--                            <div class="col-6">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Место Основное</div>-->
+<!--                                <div class="fs-8">Александров Александр Александрович</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-6">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Место Верхнее</div>-->
+<!--                                <div class="fs-8">Иванов Иван Иванович</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row mt-3">-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Питание</div>-->
+<!--                                <h5 class="fs-8">3-х разовое</h5>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Экскурсии</div>-->
+<!--                                <div class="fs-8">Полный пакет</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Питание</div>-->
+<!--                                <div class="fs-8">3-х разовое</div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <div class="fs-11 fw-500 text-gray">Экскурсии</div>-->
+<!--                                <div class="fs-8">Полный пакет</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+                <div class="col-4">
+                    <div class="reserved__shadow">
+                        <div class="fs-11 fw-500 text-gray">Т/Х</div>
+                        <h5 class="fs-6 fw-500 py-1">Андрей РУБЛЕВ</h5>
+                        <div class="card__text">
+                            <ul class="card__list">
+                                <li>Москва (СРВ)</li>
+                                <li>Мышкин</li>
+                                <li>Ярославль</li>
+                                <li>Плёс</li>
+                                <li>Кострома</li>
+                                <li>Коприно</li>
+                                <li>Углич</li>
+                                <li>Тверь</li>
+                                <li>Хвойный бор</li>
+                                <li>Москва (СРВ)</li>
+                            </ul>
+                        </div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Дата</div>
+                        <div class="fs-8">25 июля 17:00 - 31 июля 7:30</div>
+                        <div class="fs-11 fw-500 text-gray mt-3">Количество дней</div>
+                        <div class="fs-8">7</div>
+                        <div class="d-flex justify-content-between align-items-center mt-6">
+                            <div class="fs-8">Стоимость за тариф</div>
+                            <div class="card__price">
+                                <span class="text-primary fs-7">58 000 <sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="fs-8">Стоимость доп. услуг</div>
+                            <div class="card__price">
+                                <span class="text-primary fs-7">28 966 <sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div class="fs-8">Скидка</div>
+                            <div class="card__price">
+                                <span class="text-yellow fs-7">-3 000 <sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-9">
+                            <div class="fs-7 fw-700">Стоимость круиза</div>
+                            <div class="card__price">
+                                <span class="text-yellow fs-6">86 966 <sup>₽</sup></span>
+                            </div>
+                        </div>
+                        <a href="./pay.html" class="btn btn-blue py-2 w-100 mt-9 fs-8 fw-600 text-uppercase">Перейти к оплате</a>
+                        <div class="reserved__warning">Выберите способ оплаты</div>
+                        <div class="row search-cruise__extend-check">
+                            <div class="col">
+                                <div class="d-flex flex-column align-items-start">
+                                    <div class="form-check ps-0 mt-3">
+                                        <label class="form-check-label text-gray fs-11" for="agree">
+                                            <input class="checkbox-cruise" type="checkbox" value=""
+                                                   id="agree">
+                                            <span class="checkbox-fake"></span>
+                                            <span class="checkbox-text ps-1">Ознакомлен и подтверждаю согласие с типовыми условиями договора</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-outline-primary text-uppercase mt-5 w-100">Оформить в кредит</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html__include/_footer.html')

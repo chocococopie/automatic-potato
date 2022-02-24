@@ -1,0 +1,36 @@
+.press {
+  background-color: #FFFFFF;
+  margin: 0 72px;
+  padding: 42px 40px 48px;
+  box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.25);
+
+  @include for-mobile {
+    margin: 0 15px;
+    padding: 16px 16px 32px;
+  }
+
+  & * {
+    @include for-mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    & li:before {
+      content: '';
+      display: inline-block;
+      height: 3px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%;
+      background-color: #000033;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+  }
+}

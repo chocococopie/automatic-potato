@@ -1,0 +1,64 @@
+.home {
+
+	&__slider {
+		//margin-top: 46px;
+
+		@include for-mobile {
+			//margin-top: 61px;
+		}
+
+		& .swiper {
+
+			&-container {
+				& .controls {
+					@include for-mobile {
+						display: none !important;
+					}
+				}
+			}
+
+			&-slide {
+
+				@extend .bg-primary;
+
+				& .carousel-caption {
+					left: 10%;
+					right: 10%;
+
+					@extend
+					.d-flex,
+					.align-items-center,
+					.top-50,
+					.translate-middle-y;
+
+					& > .container {
+
+						@extend .d-flex,
+						.align-items-center;
+					}
+
+					& h2 {
+
+						@extend .px-0,
+						.text-start;
+						max-width: 750px;
+						letter-spacing: -1px;
+					}
+				}
+			}
+		}
+	}
+
+	&__search-cruise {
+		//position: relative;
+		margin-top: -54px
+	}
+
+	&__catalog {
+		margin-top: 48px;
+
+		@include for-mobile {
+			margin-top: 0;
+		}
+	}
+}

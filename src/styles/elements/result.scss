@@ -1,0 +1,230 @@
+.result {
+
+	&__view {
+		display: none;
+
+		&.show {
+			display: block;
+		}
+	}
+
+	&__options {
+		@extend .justify-content-between, .align-items-end, .pt-5, .pb-7;
+
+		&-compare {
+			text-transform: uppercase;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 16px;
+			@extend .d-flex, .align-items-center, .text-navy;
+
+			& svg {
+				@extend .me-1;
+			}
+		}
+
+		&-toggle {
+			border: 1px solid;
+			@extend .border-light, .d-flex, .align-items-center, .me-3;
+
+			& .btn {
+				width: 2.75rem;
+				height: 2.75rem;
+				transition: $transition-base;
+
+				@extend .d-flex, .align-items-center, .justify-content-center, .p-0, .bg-white, .text-gray;
+
+				&:hover {
+					color: $body-color !important;
+				}
+
+				&:active,
+				&:focus {
+					@extend .bg-light, .position-relative;
+					z-index: 1;
+				}
+
+				&.active {
+					@extend .bg-light, .text-primary;
+				}
+			}
+		}
+
+		&-sort {
+
+			border: 1px solid #EDEDEE;
+			width: 258px;
+			//@extend .w-100;
+
+			&--img {
+				background-image: url("./img/search-cruise/sort-down.png");
+			}
+
+			& .select2 {
+				&-container {
+					max-width: 100%;
+					@extend .w-100;
+
+					& .select2-selection--single .select2-selection__rendered {
+						padding-left: 0;
+					}
+				}
+			}
+
+			& .select2.select2-container.select2-container--default .selection .select2-selection.select2-selection--single .select2-selection__rendered {
+				font-family: Montserrat;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 15px;
+				line-height: 44px;
+				padding: 0 18px 0 16px;
+				cursor: pointer;
+
+				//&::before {
+				//	content: "";
+				//	position: absolute;
+				//	transform: translate(-50%, -50%);
+				//	top: 50%;
+				//	left: 25px;
+				//	background-image: url("./img/search-cruise/inc-date.png");
+				//	width: 20px;
+				//	height: 20px;
+				//	margin-right: 12px;
+				//}
+
+				&::after {
+					position: absolute;
+					transform: translateY(-50%);
+					top: 50%;
+					right: 20px;
+					content: "";
+					background-image: url("./img/search-cruise/vector.png");
+					background-repeat: no-repeat;
+					background-position: center;
+					width: 10px;
+					height: 6px;
+					//margin-right: 12px;
+				}
+			}
+		}
+	}
+
+	&__list {
+
+		& .form-check {
+			padding-left: 0;
+		}
+
+		&-item {
+
+			& .card {
+				box-shadow: none;
+				border: none;
+
+				@include for-mobile {
+					border: 1px solid rgba(0, 0, 0, 0.125);
+				}
+
+				&:hover {
+					top: 0 !important;
+				}
+
+				&-body {
+					padding: 24px 40px 16px 32px;
+
+					@include for-mobile {
+						padding: 16px 12px 16px 8px;
+					}
+				}
+
+				&-title {
+					@extend .fs-7;
+				}
+
+				&__price {
+					flex-direction: column;
+					align-items: center;
+
+					@include for-mobile {
+						flex-direction: row;
+						align-items: flex-start;
+					}
+
+					&-new {
+						@extend .me-0;
+					}
+				}
+
+				&__cash {
+
+					@extend .fs-11, .fw-500, .pb-1;
+				}
+
+				&__link {
+					&.btn {
+						padding: 16px 24px;
+
+						@include for-mobile {
+							padding: 14px 24px;
+						}
+					}
+				}
+			}
+
+			&-date {
+
+
+				&--interval {
+					letter-spacing: -0.6px;
+
+					@extend .fs-7;
+				}
+			}
+
+			&--discount {
+				@extend .position-absolute, .fs-5, .text-white, .bg-yellow, .px-2, .py-3;
+
+				top: 0;
+				right: 0;
+				letter-spacing: -0.6px;
+			}
+		}
+	}
+
+	&__table {
+		@extend .fw-500, .fs-11;
+
+		&.table {
+			& th {
+				@extend .text-center, .text-gray;
+			}
+		}
+
+		& ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			& li {
+				display: inline-block;
+
+				& + li {
+					&:before {
+						content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="13" height="13" class="specials-item__arrow-right"><path fill="currentColor" d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg>');
+						display: inline-block;
+						vertical-align: middle;
+						@extend .mx-1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.img-flag {
+	margin-right: 12px;
+}

@@ -1,0 +1,38 @@
+.office {
+  margin: 0 72px;
+  padding: 42px 40px 48px;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.25);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto) 440px;
+  align-items: flex-start;
+
+  @include for-mobile {
+    margin: 0 15px;
+    padding: 16px;
+    grid-template-rows: repeat(2, auto) 282px auto;
+    grid-template-columns: repeat(1, 100%);
+    gap: 0;
+  }
+
+  &__photo {
+    grid-column: 2 / 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    @include for-mobile {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+
+  &__map {
+    height: 400px;
+    grid-column: 1 / 3;
+
+    @include for-mobile {
+      grid-column: 1 / 2;
+      height: 258px;
+    }
+  }
+}

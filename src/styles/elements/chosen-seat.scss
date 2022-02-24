@@ -1,0 +1,247 @@
+.chosen-seat {
+  padding: 16px 50px;
+
+  &__pay {
+    &--favorites {
+      display: none;
+
+      @include for-mobile {
+        display: flex;
+      }
+
+      &img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__link {
+    &--right {
+      padding-right: 24px;
+      display: inline;
+
+      @include for-mobile {
+        display: block;
+      }
+
+      & img {
+        padding-right: 4px;
+      }
+    }
+  }
+
+  &__header {
+    background-color: #FFFFFF;
+    width: 95%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding: 16px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border: 1px solid #EDEDEE;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+    z-index: 1000;
+
+    @include for-mobile {
+      width: 100%;
+      flex-direction: column;
+      padding: 8px 16px;
+    }
+
+    &--inside {
+      padding: 0 0 16px 0;
+      display: flex;
+      text-transform: uppercase;
+      align-items: center;
+    }
+
+    & button.btn {
+      padding: 0;
+    }
+
+    &-right {
+      display: block;
+
+      @include for-mobile {
+        display: none;
+      }
+
+      & > a {
+        font-weight: 600;
+        font-size: 14px;
+        align-items: center;
+
+        & * img {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+  }
+
+  &__body {
+    &.offcanvas.offcanvas-bottom {
+      padding-top: 18px;
+      width: 95%;
+      height: 33%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 1px solid #EDEDEE;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+
+      @include for-mobile {
+        height: 75%;
+        width: 100%;
+      }
+
+      & * a {
+        padding: 16px 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+
+    & .offcanvas-body {
+      padding: 0 50px 20px 50px;
+      overflow-x: hidden;
+
+      & .chosen-seat__info div {
+        display: flex;
+        flex-direction: column;
+
+        & span {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__info {
+    margin: 0;
+
+    &-btn {
+      padding: 16px 24px;
+
+      @include for-mobile {
+        padding: 14px 59px;
+      }
+    }
+
+    &.chosen-seat__info--favorites {
+      margin-left: 24px;
+    }
+
+    & > div {
+      padding: 0;
+    }
+
+    & .favorites__selected,
+    & .favorites__unselected {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -24px;
+        content: "";
+
+        background-size: 16px 16px;
+        height: 16px;
+        width: 16px;
+      }
+    }
+
+    & .favorites__selected {
+      &::before {
+        background-image: url("../../img/favorites/icon-selected.svg");
+      }
+    }
+
+    & .favorites__unselected {
+      &::before {
+        background-image: url("../../img/favorites/icon-unselected.svg");
+      }
+    }
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    color: #0066FF;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0;
+  }
+}
+
+.favorites__modal {
+  z-index: 1054;
+  & .modal-dialog-scrollable .modal-body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.modal-backdrop.fade {
+  z-index: 1053;
+}
+
+.tours__modal {
+  & .modal-body {
+    padding-top: 0;
+  }
+
+  & .modal-dialog-scrollable .modal-body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  & .form-check {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  & .chosen-seat__info.chosen-seat__info--favorites {
+    margin-left: 0;
+  }
+
+  & .modal-dialog {
+    min-width: 75%;
+  }
+
+  &.tours__modal--extra {
+    & .modal-footer {
+      padding: 1.25rem;
+      border: 1px solid #EDEDEE;
+      box-shadow: 2px 2px 8px rgba(155, 155, 155, 0.25);
+      height: auto;
+    }
+  }
+}
+
+.more-info {
+  color: #0066FF;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.text-none {
+  text-transform: none;
+}
+
+.modal__section-full {
+  & .chosen-seat__body.offcanvas.offcanvas-bottom {
+    height: 95%;
+    z-index: 1052;
+  }
+}

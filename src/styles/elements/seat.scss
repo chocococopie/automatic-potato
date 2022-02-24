@@ -1,0 +1,34 @@
+.seat {
+
+	margin-left: -4px;
+	margin-top: -8px;
+
+	@extend .d-flex, .align-items-center, .flex-wrap;
+
+	&__item {
+		width: 58px;
+		height: 32px;
+		margin-left: 4px;
+		margin-right: 4px;
+		margin-top: 8px;
+		cursor: default;
+		border: 1px solid;
+		transition: $transition-base;
+		@extend .border-breadcrumb-color, .fs-11, .fw-500, .d-flex, .justify-content-center, .align-items-center;
+
+		&.busy-cabin {
+			@extend .text-white;
+		}
+
+		&:not(.busy-cabin):not(.reserved-cabin):hover {
+			border-color: #0066FF !important;
+			cursor: pointer;
+		}
+
+		&.selected-cabin {
+			&:hover {
+				background-color: #0066FF !important;
+			}
+		}
+	}
+}

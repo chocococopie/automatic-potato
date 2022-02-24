@@ -1,0 +1,44 @@
+$theme-colors: (
+        "primary": #000033,
+        "gray": #6C6C70,
+        "gray-hover": #86868D,
+        "gray-press": #606064,
+        "light": #EDEDEE,
+        "light-2": #F9F9F9,
+        "lightgreen": #C9FFCE,
+        "green": #169B1B,
+        "red": #FF3333,
+        "navy": #000033,
+        "blue": #0066FF,
+        "dodger-blue": #1E78FF,
+        "sky-blue": #005DE9,
+        "alice-blue": #E9F7FF,
+        "white": #FFFFFF,
+        "yellow": #FF9900,
+        "yellow-hover": #FFAD33,
+        "yellow-press": #F29100,
+        "gray-2": #EFEFF1,
+        "border-1": #E2E2E2,
+        "transparent": transparent,
+        "separator": #E1E1E1,
+        "separator-2": #C4C4C4,
+        "breadcrumb-color": #9F9FA2,
+        "outlined-press": #F2F2FF,
+        "pink": #FFC9C9,
+        "lightyellow": #FFDDBD,
+);
+
+$body-bg: #FFFFFF;
+$body-color: #000033;
+$yellow: #FF9900;
+$blue: #0066FF;
+$white: #FFFFFF;
+
+$tooltip-font-size: 1rem;
+$tooltip-max-width: 350px;
+$tooltip-bg: $white;
+$tooltip-color: $body-color;
+$tooltip-border-radius: 0;
+$tooltip-opacity: 1;
+$tooltip-padding-x: 1rem;
+$tooltip-padding-y: 1rem;

@@ -1,0 +1,790 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="bg-light-2">
+	<section class="container">
+		<div class="breadcrumb__container">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+				<li class="breadcrumb-item active">Личный кабинет</li>
+			</ol>
+		</div>
+		<h1 class="title">Личный кабинет</h1>
+	</section>
+	<section class="container lk mt-9 pb-15">
+		<div class="row gx-0">
+			<div class="col-2">
+				<div class="lk__nav bg-gray h-100">
+					<a href="" class="lk__nav-back btn btn-transparent d-flex align-items-center justify-content-end">
+						<img src="./img/lk/arrow-left.svg" alt="">
+					</a>
+					<div class="nav flex-column nav-pills align-items-stretch" id="v-pills-tab" role="tablist"
+							 aria-orientation="vertical">
+						<button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+										type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+							<img src="./img/lk/ant-design_user-outlined.svg" alt="">
+							Аккаунт
+						</button>
+						<button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+										type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+							<img src="./img/lk/bx_bx-time.svg" alt="">
+							История заказов
+						</button>
+						<button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+										type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+							<img src="./img/lk/ant-design_star-outlined.svg" alt="">
+							Бонусы
+						</button>
+						<button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings"
+										type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+							<img src="./img/lk/carbon_friendship.svg" alt="">
+							Пассажиры
+						</button>
+						<button class="nav-link" id="v-pills-docs-tab" data-bs-toggle="pill" data-bs-target="#v-pills-docs"
+										type="button" role="tab" aria-controls="v-pills-docs" aria-selected="false">
+							<img src="./img/lk/carbon_document.svg" alt="">
+							Документы
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="lk__content h-100 px-7 pt-5 pb-13">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<div class="row gx-0 justify-content-between">
+								<div class="col-5">
+									<div class="lk__bonus-card bonus-card py-7 px-3">
+										<div class="bonus-card__group d-flex">
+											<p class="bonus-card-title fs-11 text-muted me-3">
+												Бонусная карта
+											</p>
+											<p class="fs-9">
+												№23234234234
+											</p>
+										</div>
+										<div class="bonus-card__group d-flex">
+											<p class="bonus-card-title fs-11 text-muted me-3">
+												Уровень привилегий
+											</p>
+											<p class="fs-9">
+												Gold
+											</p>
+										</div>
+										<div class="bonus-card__group d-flex">
+											<p class="bonus-card-title fs-11 text-muted me-3">
+												Уровень скидки
+											</p>
+											<p class="fs-9">
+												10%
+											</p>
+										</div>
+										<div class="bonus-card__group d-flex">
+											<p class="bonus-card-title fs-11 text-muted me-3">
+												Количество баллов
+											</p>
+											<p class="fs-9">
+												100
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-2">
+									<div class="lk__lang d-flex flex-column align-items-end">
+										<div class="text-muted">
+											Язык / language
+										</div>
+										<div class="lk__lang-switch d-flex align-items-center border-gray">
+											<button type="button" class="js-toggle btn fs-9 p-0 shadow-none d-flex align-items-center justify-content-center position-relative" id="langRu">En</button>
+											<button type="button" class="js-toggle btn active fs-9 p-0 shadow-none d-flex align-items-center justify-content-center position-relative" id="langEn">Ru</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<form action="/" method="post" name="" class="pt-9 d-flex flex-column lk__user-form">
+								<div class="lk__user">
+									<div class="lk__user-info">
+										<div class="lk__user-row row">
+											<div class="col-2 text-gray fs-11 form-label">
+												Логин
+											</div>
+											<div class="col text-gray fs-9">
+												Wrangell1797
+											</div>
+										</div>
+										<div class="lk__user-row row">
+											<div class="col-2 text-gray fs-11 form-label">
+												Пароль
+											</div>
+											<div class="col text-primary fs-9">
+												<button type="button" class="btn btn-outline-primary lk__user-edit" data-bs-toggle="modal" data-bs-target="#passModal">Сменить пароль</button>
+												<div class="modal fade" id="passModal" tabindex="-1" aria-labelledby="passModalLabel" aria-hidden="true">
+													<div class="modal-dialog modal-dialog-centered">
+														<div class="modal-content">
+															<div class="modal-header border-0">
+																<h5 class="modal-title subtitle" id="passModalLabel">
+																	Смена пароля
+																</h5>
+																<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+															</div>
+															<div class="modal-body">
+																<div class="lk__user-row row">
+																	<label for="currentPass" class="col-3 text-gray fs-11 form-label">
+																		Текущий пароль
+																	</label>
+																	<div class="input-group">
+																		<input id="currentPass" type="password" class="col text-gray fs-9 input js-input-pass">
+																		<button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+																			<img src="./img/lk/el_eye-open.svg" alt="">
+																		</button>
+																	</div>
+																</div>
+																<div class="lk__user-row row">
+																	<label for="newPass" class="col-3 text-gray fs-11 form-label">
+																		Новый пароль
+																	</label>
+																	<div class="input-group">
+																		<input id="newPass" type="password" class="col text-gray fs-9 input js-input-pass">
+																		<button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+																			<img src="./img/lk/el_eye-open.svg" alt="">
+																		</button>
+																	</div>
+																</div>
+																<div class="lk__user-row row">
+																	<label for="repeatNewPass" class="col-5 text-gray fs-11 form-label">
+																		Повторите новый пароль
+																	</label>
+																	<div class="input-group">
+																		<input id="repeatNewPass" type="password" class="col text-gray fs-9 input js-input-pass">
+																		<button type="button" class="btn btn-outline-light border-0 lk__user-eye js-eye">
+																			<img src="./img/lk/el_eye-open.svg" alt="">
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="modal-footer justify-content-start border-0">
+																<button type="button" class="btn btn-yellow">
+																	Сохранить
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="lk__user-row row">
+											<div class="col-1">
+												<label for="userEmail" class="text-gray fs-11 form-label">
+													Email*
+												</label>
+											</div>
+											<div class="col-3">
+												<input id="userEmail" type="email" class="text-primary fs-9 form-control input" value="Wrangell1797@flot.ru">
+											</div>
+										</div>
+										<div class="lk__user-row row align-items-center">
+											<div class="col-1">
+												<label for="userMobile" class="text-gray fs-11 form-label">
+													Телефон
+												</label>
+											</div>
+											<div class="col-3">
+												<input id="userMobile" type="email" class="text-primary fs-9 form-control input" value="+7 (943) 132-32-00">
+											</div>
+										</div>
+										<div class="lk__user-row lk__user-row--edit lk__user-row-gap row">
+											<div class="col-3">
+												<label for="userSurname" class="text-gray fs-11 form-label">
+													Фамилия*
+												</label>
+												<input id="userSurname" type="email" class="text-primary fs-9 form-control input" value="Врангель">
+											</div>
+											<div class="col-3">
+												<label for="userName" class="text-gray fs-11 form-label">
+													Имя*
+												</label>
+												<input id="userName" type="email" class="text-primary fs-9 form-control input" value="Фердинанд ">
+											</div>
+											<div class="col-3">
+												<label for="userPatronymic" class="text-gray fs-11 form-label">
+													Отчество
+												</label>
+												<input id="userPatronymic" type="email" class="text-primary fs-9 form-control input" value="Петрович">
+											</div>
+										</div>
+										<div class="lk__user-row row">
+											<div class="col-2 text-gray fs-11 form-label">
+												Дата рождения*
+											</div>
+											<div class="row gx-0 lk__user-row-gap">
+												<div class="col-2">
+													<input id="birthDay" type="text" class="text-primary fs-9 form-control input" value="20">
+												</div>
+												<div class="col-2">
+													<select id="birthMouth" class="text-primary fs-9 form-control select2">
+														<option value="">Январь</option>
+														<option value="">Февраль</option>
+														<option value="">Март</option>
+														<option value="">Апрель</option>
+													</select>
+												</div>
+												<div class="col-2">
+													<input id="birthYear" type="number" class="text-primary fs-9 form-control input" value="1796">
+												</div>
+											</div>
+										</div>
+										<div class="lk__user-row row">
+											<div class="col-2 text-gray fs-11 form-label">
+												Пол*
+											</div>
+											<div class="col-2">
+												<select class="text-primary fs-9 form-control select2">
+													<option value="">Мужской</option>
+													<option value="">Женский</option>
+												</select>
+											</div>
+										</div>
+										<div class="lk__user-row row">
+											<div class="col-2 text-gray fs-11 form-label">
+												Документ
+											</div>
+											<div class="col text-primary fs-9 d-flex flex-column">
+												Паспорт РФ
+												<span class="text-gray">3244 433696</span>
+											</div>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-yellow lk__user-edit mt-13">
+										Сохранить
+									</button>
+								</div>
+								<h4 class="subtitle mt-15">
+									Действующие заявки на бронирование
+								</h4>
+								<div class="lk__reserve mt-9">
+									<div class="d-flex">
+										<div class="result__options-toggle">
+											<button type="button" class="btn" id="viewTableReserve">
+												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect y="3" width="20" height="2.22" fill="currentColor"></rect>
+													<rect y="8.55005" width="20" height="2.22" fill="currentColor"></rect>
+													<rect y="14.1001" width="20" height="2.22" fill="currentColor"></rect>
+												</svg>
+											</button>
+											<button type="button" class="btn active" id="viewCardReserve">
+												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<rect x="6" y="4" width="15" height="4" fill="currentColor"></rect>
+													<rect y="4" width="4" height="4" fill="currentColor"></rect>
+													<rect x="6" y="12" width="15" height="4" fill="currentColor"></rect>
+													<rect y="12" width="4" height="4" fill="currentColor"></rect>
+												</svg>
+											</button>
+										</div>
+										<div class="col-4">
+											<div class="result__options-sort">
+												<select name="" id="" class="select2">
+													<option value="1">По дате отправления</option>
+													<option value="2">По дате отправления</option>
+													<option value="3">По цене</option>
+													<option value="4">По цене</option>
+													<option value="5">По скидке</option>
+													<option value="6">По скидке</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="mt-5">
+										<div class="result__view lk__reserve-list show" id="cardListReserve">
+											<div class="lk__reserve-item">
+												<div class="row">
+													<div class="col">
+														<div class="text-gray fs-11">
+															Номер
+														</div>
+														<div class="fs-9">
+															123122
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Дата
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Отправление
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Срок оплаты
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col-3">
+														<div class="text-gray fs-11">
+															Теплоход
+														</div>
+														<div class="fs-9">
+															Николай Карамзин
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Сумма
+														</div>
+														<div class="fs-9">
+															5434628
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Статус
+														</div>
+														<div class="fs-9 text-green">
+															Оплачен
+														</div>
+													</div>
+												</div>
+												<div class="lk__accordion mt-3">
+													<div class="accordion accordion-flush" id="accordion">
+														<div class="accordion-item">
+															<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+																<div class="accordion-body">
+																	<div class="row">
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Путевка
+																			</div>
+																			<div class="fs-9">
+																				22.09.2020
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Каюты
+																			</div>
+																			<div class="fs-9">
+																				357, 352
+																			</div>
+																		</div>
+																		<div class="col-3">
+																			<div class="text-gray fs-11">
+																				Плательщик
+																			</div>
+																			<div class="fs-9">
+																				ООО "Круизная Компания "РЕЧТУРФЛОТ"[к]
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Скидка
+																			</div>
+																			<div class="fs-9">
+																				-100%
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h2 class="accordion-header" id="headingOne">
+															<button class="accordion-button collapsed link-blue small fw-600 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+																Подробнее
+															</button>
+														</h2>
+													</div>
+													<hr class="bg-light opacity-100">
+													<div class="lk__reserve-links d-flex align-items-center">
+														<a href="#" class="link-blue small text-uppercase fw-600">Продолжить оформление</a>
+														<a href="#" class="link-blue small text-uppercase fw-600 disabled">Оплатить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Отменить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Вложить документ</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Связаться с менеджером</a>
+													</div>
+												</div>
+											</div>
+											<div class="lk__reserve-item">
+												<div class="row">
+													<div class="col">
+														<div class="text-gray fs-11">
+															Номер
+														</div>
+														<div class="fs-9">
+															123122
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Дата
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Отправление
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Срок оплаты
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col-3">
+														<div class="text-gray fs-11">
+															Теплоход
+														</div>
+														<div class="fs-9">
+															Николай Карамзин
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Сумма
+														</div>
+														<div class="fs-9">
+															5434628
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Статус
+														</div>
+														<div class="fs-9 text-red">
+															Частично оплачено
+														</div>
+													</div>
+												</div>
+												<div class="lk__accordion mt-3">
+													<div class="accordion accordion-flush" id="accordion2">
+														<div class="accordion-item">
+															<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion2">
+																<div class="accordion-body">
+																	<div class="row">
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Путевка
+																			</div>
+																			<div class="fs-9">
+																				22.09.2020
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Каюты
+																			</div>
+																			<div class="fs-9">
+																				357, 352
+																			</div>
+																		</div>
+																		<div class="col-3">
+																			<div class="text-gray fs-11">
+																				Плательщик
+																			</div>
+																			<div class="fs-9">
+																				ООО "Круизная Компания "РЕЧТУРФЛОТ"[к]
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Скидка
+																			</div>
+																			<div class="fs-9">
+																				-100%
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h2 class="accordion-header" id="headingTwo">
+															<button class="accordion-button collapsed link-blue small fw-600 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+																Подробнее
+															</button>
+														</h2>
+													</div>
+													<hr class="bg-light opacity-100">
+													<div class="lk__reserve-links d-flex align-items-center">
+														<a href="#" class="link-blue small text-uppercase fw-600">Продолжить оформление</a>
+														<a href="#" class="link-blue small text-uppercase fw-600 disabled">Оплатить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Отменить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Вложить документ</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Связаться с менеджером</a>
+													</div>
+												</div>
+											</div>
+											<div class="lk__reserve-item">
+												<div class="row">
+													<div class="col">
+														<div class="text-gray fs-11">
+															Номер
+														</div>
+														<div class="fs-9">
+															123122
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Дата
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Отправление
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Срок оплаты
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col-3">
+														<div class="text-gray fs-11">
+															Теплоход
+														</div>
+														<div class="fs-9">
+															Николай Карамзин
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Сумма
+														</div>
+														<div class="fs-9">
+															5434628
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Статус
+														</div>
+														<div class="fs-9 text-green">
+															Оплачен
+														</div>
+													</div>
+												</div>
+												<div class="lk__accordion mt-3">
+													<div class="accordion accordion-flush" id="accordion3">
+														<div class="accordion-item">
+															<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion3">
+																<div class="accordion-body">
+																	<div class="row">
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Путевка
+																			</div>
+																			<div class="fs-9">
+																				22.09.2020
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Каюты
+																			</div>
+																			<div class="fs-9">
+																				357, 352
+																			</div>
+																		</div>
+																		<div class="col-3">
+																			<div class="text-gray fs-11">
+																				Плательщик
+																			</div>
+																			<div class="fs-9">
+																				ООО "Круизная Компания "РЕЧТУРФЛОТ"[к]
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Скидка
+																			</div>
+																			<div class="fs-9">
+																				-100%
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h2 class="accordion-header" id="headingThree">
+															<button class="accordion-button collapsed link-blue small fw-600 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+																Подробнее
+															</button>
+														</h2>
+													</div>
+													<hr class="bg-light opacity-100">
+													<div class="lk__reserve-links d-flex align-items-center">
+														<a href="#" class="link-blue small text-uppercase fw-600">Продолжить оформление</a>
+														<a href="#" class="link-blue small text-uppercase fw-600 disabled">Оплатить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Отменить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Вложить документ</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Связаться с менеджером</a>
+													</div>
+												</div>
+											</div>
+											<div class="lk__reserve-item">
+												<div class="row">
+													<div class="col">
+														<div class="text-gray fs-11">
+															Номер
+														</div>
+														<div class="fs-9">
+															123122
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Дата
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Отправление
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Срок оплаты
+														</div>
+														<div class="fs-9">
+															22.09.2020
+														</div>
+													</div>
+													<div class="col-3">
+														<div class="text-gray fs-11">
+															Теплоход
+														</div>
+														<div class="fs-9">
+															Николай Карамзин
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Сумма
+														</div>
+														<div class="fs-9">
+															5434628
+														</div>
+													</div>
+													<div class="col">
+														<div class="text-gray fs-11">
+															Статус
+														</div>
+														<div class="fs-9 text-gray">
+															Отменено
+														</div>
+													</div>
+												</div>
+												<div class="lk__accordion mt-3">
+													<div class="accordion accordion-flush" id="accordion4">
+														<div class="accordion-item">
+															<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordion4">
+																<div class="accordion-body">
+																	<div class="row">
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Путевка
+																			</div>
+																			<div class="fs-9">
+																				22.09.2020
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Каюты
+																			</div>
+																			<div class="fs-9">
+																				357, 352
+																			</div>
+																		</div>
+																		<div class="col-3">
+																			<div class="text-gray fs-11">
+																				Плательщик
+																			</div>
+																			<div class="fs-9">
+																				ООО "Круизная Компания "РЕЧТУРФЛОТ"[к]
+																			</div>
+																		</div>
+																		<div class="col-2">
+																			<div class="text-gray fs-11">
+																				Скидка
+																			</div>
+																			<div class="fs-9">
+																				-100%
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<h2 class="accordion-header" id="headingFour">
+															<button class="accordion-button collapsed link-blue small fw-600 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+																Подробнее
+															</button>
+														</h2>
+													</div>
+													<hr class="bg-light opacity-100">
+													<div class="lk__reserve-links d-flex align-items-center">
+														<a href="#" class="link-blue small text-uppercase fw-600">Продолжить оформление</a>
+														<a href="#" class="link-blue small text-uppercase fw-600 disabled">Оплатить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Отменить</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Вложить документ</a>
+														<a href="#" class="link-blue small text-uppercase fw-600">Связаться с менеджером</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<table class="result__view result__table" id="tableListReserve"></table>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">2
+						</div>
+						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							3
+						</div>
+						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							4
+						</div>
+						<div class="tab-pane fade" id="v-pills-docs" role="tabpanel" aria-labelledby="v-pills-docs-tab">5</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include('./html__include/_footer.html')

@@ -1,0 +1,497 @@
+@@include('./html__include/_head.html')
+@@include('./html__include/_header.html', {
+"headerWhite": ""
+})
+
+<main class="river container-mt bg-light-2">
+    <section class="container">
+        <div class="breadcrumb__container d-sm-block d-none">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
+                <li class="breadcrumb-item active">Речные круизы</li>
+            </ol>
+        </div>
+        <h1 class="title mb-3 mb-sm-5 mb-lg-13 pt-5 pt-sm-7">Расписание речных круизов</h1>
+        <form action="/" method="get" class="search-cruise">
+            <div class="search-cruise__base">
+                <div class="row gx-0 h-100 align-items-center">
+                    <div class="col-12 col-xl-2">
+                        <div class="search-cruise__item search-cruise__wrap search-cruise__item--separator-horizontal">
+                            <select name="city" id="city"
+                                    class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                <option></option>
+                                <option value="1">Любой</option>
+                                <option value="2">Астрахань</option>
+                                <option value="3">Казань</option>
+                                <option value="4">Москва</option>
+                                <option value="5">Муром</option>
+                                <option value="6">Нижнекамск</option>
+                                <option value="7">Устье</option>
+                            </select>
+                            <label class="search-cruise-select__label" for="city">Город отправления</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-2">
+                        <div class="search-cruise__item search-cruise__wrap search-cruise__item--separator-horizontal">
+                            <select name="directions" id="directions"
+                                    class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                <option></option>
+                                <option value="1">Любой</option>
+                                <option value="2">Астрахань</option>
+                                <option value="3">Казань</option>
+                                <option value="4">Москва</option>
+                                <option value="5">Муром</option>
+                                <option value="6">Нижнекамск</option>
+                                <option value="7">Устье</option>
+                            </select>
+                            <label class="search-cruise-select__label" for="directions">Направления</label>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-2">
+                        <div class="search-cruise__item search-cruise__wrap">
+                            <input id="dateFrom" type="text" placeholder="" class="datepicker-here"
+                                   autocomplete="off">
+                            <label class="search-cruise-select__label" for="dateFrom">Дата круиза от</label>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-2">
+                        <div class="search-cruise__item search-cruise__item--separator-horizontal">
+                            <input id="dateTo" type="text" placeholder="" class="datepicker-here"
+                                   autocomplete="off">
+                            <label class="search-cruise-select__label" for="dateTo">Дата круиза до</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-2">
+                        <div class="search-cruise__item search-cruise__wrap search-cruise__item--separator">
+                            <select name="ship" id="ship"
+                                    class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                <option></option>
+                                <option value="1">Любой</option>
+                                <option value="2">Александр Грин</option>
+                                <option value="3">Княжна Виктория</option>
+                                <option value="4">Андрей РУБЛЕВ</option>
+                                <option value="5">Сергей ЕСЕНИН</option>
+                            </select>
+                            <label class="search-cruise-select__label" for="ship">Теплоходы</label>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-2">
+                        <button type="submit"
+                                class="px-4 search-cruise__btn btn btn-blue btn-text">
+                            Найти круиз
+                            <svg width="34" height="17" viewBox="0 0 34 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.3937 3.6875H20.4523C20.241 3.6875 20.0383 3.60354 19.8889 3.4541C19.7394 3.30466 19.6555 3.10197 19.6555 2.89062C19.6555 2.67928 19.7394 2.47659 19.8889 2.32715C20.0383 2.17771 20.241 2.09375 20.4523 2.09375H22.2346L21.8937 1.62505C21.8198 1.5234 21.7228 1.44068 21.6108 1.38364C21.4988 1.32661 21.3749 1.29687 21.2492 1.29688H16.9992C16.8356 1.29689 16.676 1.34724 16.5421 1.44109C16.4081 1.53494 16.3062 1.66775 16.2504 1.82148L15.3789 4.21875H23.78L23.3937 3.6875Z"
+                                      fill="white"/>
+                                <path d="M25.8479 8.63702C26.0693 8.52661 26.3132 8.46901 26.5606 8.46875H29.0836L27.2442 5.40251C27.1733 5.28447 27.0731 5.18679 26.9534 5.11899C26.8336 5.05119 26.6982 5.01558 26.5606 5.01563H5.31058C5.15132 5.01562 4.9957 5.06334 4.86382 5.15262C4.73194 5.2419 4.62983 5.36866 4.57068 5.51653L2.96484 9.53125H24.0593L25.8479 8.63702ZM7.96683 7.9375H7.03714C6.8258 7.9375 6.62311 7.85354 6.47366 7.7041C6.32422 7.55466 6.24027 7.35197 6.24027 7.14062C6.24027 6.92928 6.32422 6.72659 6.47366 6.57715C6.62311 6.42771 6.8258 6.34375 7.03714 6.34375H7.96683C8.17817 6.34375 8.38086 6.42771 8.5303 6.57715C8.67975 6.72659 8.7637 6.92928 8.7637 7.14062C8.7637 7.35197 8.67975 7.55466 8.5303 7.7041C8.38086 7.85354 8.17817 7.9375 7.96683 7.9375ZM12.1504 7.9375H11.0879C10.8766 7.9375 10.6739 7.85354 10.5244 7.7041C10.375 7.55466 10.291 7.35197 10.291 7.14062C10.291 6.92928 10.375 6.72659 10.5244 6.57715C10.6739 6.42771 10.8766 6.34375 11.0879 6.34375H12.1504C12.3618 6.34375 12.5645 6.42771 12.7139 6.57715C12.8633 6.72659 12.9473 6.92928 12.9473 7.14062C12.9473 7.35197 12.8633 7.55466 12.7139 7.7041C12.5645 7.85354 12.3618 7.9375 12.1504 7.9375ZM16.5996 7.9375H15.3379C15.1266 7.9375 14.9239 7.85354 14.7744 7.7041C14.625 7.55466 14.541 7.35197 14.541 7.14062C14.541 6.92928 14.625 6.72659 14.7744 6.57715C14.9239 6.42771 15.1266 6.34375 15.3379 6.34375H16.5996C16.811 6.34375 17.0137 6.42771 17.1631 6.57715C17.3126 6.72659 17.3965 6.92928 17.3965 7.14062C17.3965 7.35197 17.3126 7.55466 17.1631 7.7041C17.0137 7.85354 16.811 7.9375 16.5996 7.9375ZM20.7168 7.9375H19.6543C19.443 7.9375 19.2403 7.85354 19.0909 7.7041C18.9414 7.55466 18.8575 7.35197 18.8575 7.14062C18.8575 6.92928 18.9414 6.72659 19.0909 6.57715C19.2403 6.42771 19.443 6.34375 19.6543 6.34375H20.7168C20.9282 6.34375 21.1309 6.42771 21.2803 6.57715C21.4297 6.72659 21.5137 6.92928 21.5137 7.14062C21.5137 7.35197 21.4297 7.55466 21.2803 7.7041C21.1309 7.85354 20.9282 7.9375 20.7168 7.9375ZM23.1075 7.14062C23.1075 6.92928 23.1914 6.72659 23.3409 6.57715C23.4903 6.42771 23.693 6.34375 23.9043 6.34375H25.166C25.3774 6.34375 25.5801 6.42771 25.7295 6.57715C25.879 6.72659 25.9629 6.92928 25.9629 7.14062C25.9629 7.35197 25.879 7.55466 25.7295 7.7041C25.5801 7.85354 25.3774 7.9375 25.166 7.9375H23.9043C23.693 7.9375 23.4903 7.85354 23.3409 7.7041C23.1914 7.55466 23.1075 7.35197 23.1075 7.14062Z"
+                                      fill="white"/>
+                                <path d="M33.697 9.82138C33.6458 9.66011 33.5446 9.51933 33.4081 9.41941C33.2715 9.31949 33.1067 9.26563 32.9375 9.26562H26.5625C26.4388 9.26563 26.3168 9.29444 26.2062 9.34976L24.2494 10.3281H1.06251C0.92667 10.3281 0.793089 10.3628 0.674447 10.429C0.555805 10.4951 0.456042 10.5905 0.384631 10.7061C0.31322 10.8216 0.272531 10.9535 0.266429 11.0892C0.260328 11.2249 0.289015 11.3599 0.349768 11.4814L2.47477 15.7314C2.54095 15.8638 2.64269 15.9751 2.76857 16.0529C2.89446 16.1307 3.03952 16.1719 3.18751 16.1719H27.3594C27.5074 16.1719 27.6524 16.1307 27.7783 16.0529C27.9042 15.9751 28.0059 15.8638 28.0721 15.7314C28.869 14.1372 32.1863 11.5687 33.3972 10.7135C33.5354 10.6159 33.6389 10.4768 33.6928 10.3164C33.7467 10.156 33.7482 9.98265 33.697 9.82138Z"
+                                      fill="white"/>
+                                <path d="M11.4219 3.15625H7.70312V4.21875H11.4219V3.15625Z" fill="white"/>
+                                <path d="M11.4219 1.5625C11.4219 1.35116 11.3379 1.14847 11.1885 0.999025C11.039 0.849582 10.8363 0.765625 10.625 0.765625H8.5C8.28866 0.765625 8.08597 0.849582 7.93652 0.999025C7.78708 1.14847 7.70313 1.35116 7.70312 1.5625V2.09375H11.4219V1.5625Z"
+                                      fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10">
+                <div class="search-cruise__extend">
+                    <div class="accordion accordion-flush" id="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed link-blue" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Расширенный поиск круиза
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                 data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <div class="search-cruise__base">
+                                        <div class="row gx-0 h-100 align-items-center">
+                                            <div class="col-12 col-sm-3">
+                                                <div class="search-cruise__item search-cruise__wrap search-cruise__item--separator-horizontal">
+                                                <select name="classOfShip" id="classOfShip"
+                                                        class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                                    <option></option>
+                                                        <option value="1">Все</option>
+                                                        <option value="2">Люкс</option>
+                                                        <option value="3">High</option>
+                                                        <option value="4">Премиум</option>
+                                                        <option value="5">Комфорт +</option>
+                                                        <option value="6">Комфорт ++</option>
+                                                        <option value="7">Комфорт +++</option>
+                                                </select>
+                                                <label class="search-cruise-select__label" for="classOfShip">Класс теплохода</label>
+                                            </div>
+                                            </div>
+                                            <div class="col-12 col-sm-3">
+                                                <div class="search-cruise__item from-to duration tableTooltip search-cruise__item--separator-horizontal"
+                                                     tabindex="0">
+                                                    <span class="d-flex align-items-center justify-content-sm-center justify-content-start search-cruise__item--tooltip">Продолжительность круиза</span>
+                                                    <label class="form-label tooltip-text w-100 justify-content-start form-label--title">Продолжительность
+                                                        круиза</label>
+                                                    <div class="row gx-3">
+                                                        <div class="col search-cruise__row">
+                                                            <label for="durationFrom"
+                                                                   class="text-gray fs-11 form-label tooltip-text form-label--date">
+                                                                от
+                                                            </label>
+                                                            <input id="durationFrom" type="text"
+                                                                   class="text-primary fs-9 form-control input input-placeholder--blue"
+                                                                   placeholder="-" autocomplete="off">
+                                                            <label for="durationFrom"
+                                                                   class="text-gray fs-11 tooltip-text form-label">
+                                                                дней
+                                                            </label>
+                                                        </div>
+                                                        <div class="col search-cruise__row">
+                                                            <label for="durationTo"
+                                                                   class="text-gray fs-11 form-label tooltip-text form-label--date">
+                                                                до
+                                                            </label>
+                                                            <input id="durationTo" type="text"
+                                                                   class="text-primary fs-9 form-control input input-placeholder--blue"
+                                                                   placeholder="-" autocomplete="off">
+                                                            <label for="durationFrom"
+                                                                   class="text-gray fs-11 tooltip-text form-label">
+                                                                дней
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-3">
+                                                <div class="search-cruise__item from-to cost tableTooltip2 search-cruise__item--separator-horizontal"
+                                                     tabindex="0">
+                                                    <span class="d-flex align-items-center justify-content-sm-center justify-content-start search-cruise__item--tooltip">Стоимость за 1 пассажира</span>
+                                                    <label class="form-label tooltip-text w-100 justify-content-start form-label--title">Стоимость
+                                                        за 1
+                                                        пассажира</label>
+                                                    <div class="row gx-3">
+                                                        <div class="col search-cruise__row">
+                                                            <label for="costFrom"
+                                                                   class="text-gray fs-11 form-label tooltip-text form-label--date">
+                                                                от
+                                                            </label>
+                                                            <input id="costFrom" type="text"
+                                                                   class="text-primary fs-9 form-control input input-placeholder--blue"
+                                                                   placeholder="-" autocomplete="off">
+                                                        </div>
+                                                        <div class="col search-cruise__row">
+                                                            <label for="costTo"
+                                                                   class="text-gray fs-11 form-label tooltip-text form-label--date">
+                                                                до
+                                                            </label>
+                                                            <input id="costTo" type="text"
+                                                                   class="text-primary fs-9 form-control input input-placeholder--blue"
+                                                                   placeholder="-" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-3">
+                                                <div class="search-cruise__item search-cruise__wrap">
+                                                    <select name="parking" id="parking"
+                                                            class="select2 select2WithCustomPosition search-cruise__select" data-placeholder="">
+                                                        <option></option>
+                                                        <option value="1">Великий Новгород</option>
+                                                        <option value="2">Mid</option>
+                                                        <option value="3">High</option>
+                                                        <option value="4">Lux</option>
+                                                        <option value="5">Vip</option>
+                                                    </select>
+                                                    <label class="search-cruise-select__label" for="parking">Стоянки</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search-cruise__extend-separator">
+                                        <hr class="dropdown-divider">
+                                    </div>
+                                    <div class="row search-cruise__extend-check">
+                                        <div class="col">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="cruiseWeekend">
+                                                        <input class="checkbox-cruise" type="checkbox" value=""
+                                                               id="cruiseWeekend">
+                                                        <span class="checkbox-fake"></span>
+                                                        <span class="checkbox-text">Круизы выходного дня</span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="cruiseForeign">
+                                                        <input class="checkbox-cruise" type="checkbox" value=""
+                                                               id="cruiseForeign">
+                                                        <span class="checkbox-fake"></span>
+                                                        <span class="checkbox-text">Предложения со скидкой</span>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="cruiseWithDiscount">
+                                                        <input class="checkbox-cruise" type="checkbox" value=""
+                                                               id="cruiseWithDiscount">
+                                                        <span class="checkbox-fake"></span>
+                                                        <span class="checkbox-text">Совместные с иностранными туристами</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <div class="col-2">
+                        <a href="" class="link-blue search-cruise__reset-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M10 11H7.101L7.102 10.991C7.23257 10.3516 7.48813 9.74434 7.854 9.20399C8.39845 8.4018 9.16215 7.77315 10.054 7.39299C10.356 7.26499 10.671 7.16699 10.992 7.10199C11.6579 6.96698 12.3441 6.96698 13.01 7.10199C13.967 7.29808 14.8451 7.7714 15.535 8.46299L16.951 7.05099C16.3128 6.41262 15.5578 5.90303 14.727 5.54999C14.3033 5.37062 13.8628 5.23394 13.412 5.14199C12.4818 4.953 11.5232 4.953 10.593 5.14199C10.1419 5.23432 9.70101 5.37133 9.277 5.55099C8.02753 6.08109 6.95793 6.96108 6.197 8.08499C5.68489 8.84284 5.32676 9.69398 5.143 10.59C5.115 10.725 5.1 10.863 5.08 11H2L6 15L10 11ZM14 13H16.899L16.898 13.008C16.6367 14.2897 15.8812 15.4171 14.795 16.146C14.2548 16.5122 13.6475 16.7677 13.008 16.898C12.3424 17.033 11.6566 17.033 10.991 16.898C10.3516 16.7674 9.74435 16.5119 9.204 16.146C8.93862 15.9665 8.69085 15.7622 8.464 15.536L7.05 16.95C7.68851 17.5882 8.44392 18.0974 9.275 18.45C9.699 18.63 10.142 18.767 10.59 18.858C11.5198 19.0471 12.4782 19.0471 13.408 18.858C15.2005 18.4859 16.7773 17.4294 17.803 15.913C18.3146 15.1557 18.6724 14.3053 18.856 13.41C18.883 13.275 18.899 13.137 18.919 13H22L18 8.99999L14 13Z"
+                                        fill="currentColor"/>
+                            </svg>
+                            Сбросить фильтры
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="river__result result container">
+        <h2 class="subtitle">Найдено 100 туров</h2>
+        <div class="result__options row">
+            <div class="col-12 col-sm-3">
+                <a href="compare.html" class="result__options-compare">
+                    <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="11" width="2.22" height="7" fill="currentColor"/>
+                        <rect x="9" y="6" width="2.22" height="12" fill="currentColor"/>
+                        <rect x="13" y="3" width="2.22" height="15" fill="currentColor"/>
+                        <rect x="17" y="8" width="2.22" height="10" fill="currentColor"/>
+                    </svg>
+                    Сравнение круизов
+                </a>
+            </div>
+            <div class="col-12 col-sm-4">
+                <div class="d-flex justify-content-sm-end justify-content-start  mt-sm-0 mt-4">
+                    <div class="result__options-toggle order-last order-sm-0 d-sm-flex d-none">
+                        <button type="button" class="btn" id="viewTable">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect y="3" width="20" height="2.22" fill="currentColor"/>
+                                <rect y="8.55005" width="20" height="2.22" fill="currentColor"/>
+                                <rect y="14.1001" width="20" height="2.22" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn active" id="viewCard">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="4" width="15" height="4" fill="currentColor"/>
+                                <rect y="4" width="4" height="4" fill="currentColor"/>
+                                <rect x="6" y="12" width="15" height="4" fill="currentColor"/>
+                                <rect y="12" width="4" height="4" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="result__options-sort">
+                        <select name="options-sort" class="select2 select2WithoutSearch">
+                            <option value="inc-date">По дате отправления</option>
+                            <option value="dec-date">По дате отправления</option>
+                            <option value="inc-price">По цене</option>
+                            <option value="dec-price">По цене</option>
+                            <option value="inc-sale">По скидке</option>
+                            <option value="dec-sale">По скидке</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result__list flex-column row gy-3 result__view show" id="cardList">
+            <div class="result__list-item">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-12 col-sm-4 position-relative">
+                            <img src="./img/result/shipofresult.png" class="w-100" alt="">
+                            <span class="result__list-item--discount">-15%</span>
+                        </div>
+                        <div class="col-12 col-sm-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-8">
+                                        <h5 class="card-title-river">Андрей Рублев</h5>
+                                        <div class="card__text">
+                                            <ul class="card__list">
+                                                <li>Москва (СРВ)</li>
+                                                <li>Мышкин</li>
+                                                <li>Ярославль</li>
+                                                <li>Плёс</li>
+                                                <li>Кострома</li>
+                                                <li>Коприно</li>
+                                                <li>Углич</li>
+                                                <li>Тверь</li>
+                                                <li>Хвойный бор</li>
+                                                <li>Москва (СРВ)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex mt-5 align-items-start">
+                                            <img class="me-2 flex-shrink-0" src="./img/result/calendar-big.svg" alt="">
+                                            <div class="d-flex flex-column result__list-item-date">
+                                                <span class="fs-sm-7 fs-10">25 июля - 31 июля 2021</span>
+                                                <span class="mt-1 text-gray fs-11 fw-500">7 дней</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mt-7">
+                                            <label class="form-check-label" for="addToCompare1">
+                                                <input class="checkbox-cruise" type="checkbox" value=""
+                                                       id="addToCompare1">
+                                                <span class="checkbox-fake"></span>
+                                                <span class="checkbox-text">Добавить к сравнению</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4 d-flex flex-column align-items-sm-end justify-content-start justify-content-sm-between">
+                                        <div class="card__price mt-sm-0 mt-4 mb-sm-0 mb-4 align-items-sm-end align-items-baseline">
+                                            <span class="card__price-new">от 18 100 <sup>₽</sup></span>
+                                            <span class="card__price-old-small ms-sm-0 ms-1">109 250 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-sm-end">
+                                            <span class="card__cash">20% Кэшбэк от Мостурфлота</span>
+                                            <a href="./detail.html"
+                                               class="card__link text-uppercase text-decoration-none btn btn-blue">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result__list-item">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-12 col-sm-4 position-relative">
+                            <img src="./img/result/shipofresult.png" class="w-100" alt="">
+                            <span class="result__list-item--discount">-15%</span>
+                        </div>
+                        <div class="col-12 col-sm-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-8">
+                                        <h5 class="card-title-river">Андрей Рублев</h5>
+                                        <div class="card__text">
+                                            <ul class="card__list">
+                                                <li>Москва (СРВ)</li>
+                                                <li>Мышкин</li>
+                                                <li>Ярославль</li>
+                                                <li>Плёс</li>
+                                                <li>Кострома</li>
+                                                <li>Коприно</li>
+                                                <li>Углич</li>
+                                                <li>Тверь</li>
+                                                <li>Хвойный бор</li>
+                                                <li>Москва (СРВ)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex mt-5 align-items-start">
+                                            <img class="me-2 flex-shrink-0" src="./img/result/calendar-big.svg" alt="">
+                                            <div class="d-flex flex-column result__list-item-date">
+                                                <span class="fs-sm-7 fs-10">25 июля - 31 июля 2021</span>
+                                                <span class="mt-1 text-gray fs-11 fw-500">7 дней</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mt-7">
+                                            <label class="form-check-label" for="addToCompare1">
+                                                <input class="checkbox-cruise" type="checkbox" value=""
+                                                       id="addToCompare2">
+                                                <span class="checkbox-fake"></span>
+                                                <span class="checkbox-text">Добавить к сравнению</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4 d-flex flex-column align-items-sm-end justify-content-start justify-content-sm-between">
+                                        <div class="card__price mt-sm-0 mt-4 mb-sm-0 mb-4 align-items-sm-end align-items-baseline">
+                                            <span class="card__price-new">от 18 100 <sup>₽</sup></span>
+                                            <span class="card__price-old-small ms-sm-0 ms-1">109 250 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-sm-end">
+                                            <span class="card__cash">20% Кэшбэк от Мостурфлота</span>
+                                            <a href="./detail.html"
+                                               class="card__link text-uppercase text-decoration-none btn btn-blue">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result__list-item">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-12 col-sm-4 position-relative">
+                            <img src="./img/result/shipofresult.png" class="w-100" alt="">
+                            <span class="result__list-item--discount">-15%</span>
+                        </div>
+                        <div class="col-12 col-sm-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-8">
+                                        <h5 class="card-title-river">Андрей Рублев</h5>
+                                        <div class="card__text">
+                                            <ul class="card__list">
+                                                <li>Москва (СРВ)</li>
+                                                <li>Мышкин</li>
+                                                <li>Ярославль</li>
+                                                <li>Плёс</li>
+                                                <li>Кострома</li>
+                                                <li>Коприно</li>
+                                                <li>Углич</li>
+                                                <li>Тверь</li>
+                                                <li>Хвойный бор</li>
+                                                <li>Москва (СРВ)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex mt-5 align-items-start">
+                                            <img class="me-2 flex-shrink-0" src="./img/result/calendar-big.svg" alt="">
+                                            <div class="d-flex flex-column result__list-item-date">
+                                                <span class="fs-sm-7 fs-10">25 июля - 31 июля 2021</span>
+                                                <span class="mt-1 text-gray fs-11 fw-500">7 дней</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-check mt-7">
+                                            <label class="form-check-label" for="addToCompare1">
+                                                <input class="checkbox-cruise" type="checkbox" value=""
+                                                       id="addToCompare3">
+                                                <span class="checkbox-fake"></span>
+                                                <span class="checkbox-text">Добавить к сравнению</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-4 d-flex flex-column align-items-sm-end justify-content-start justify-content-sm-between">
+                                        <div class="card__price mt-sm-0 mt-4 mb-sm-0 mb-4 align-items-sm-end align-items-baseline">
+                                            <span class="card__price-new">от 18 100 <sup>₽</sup></span>
+                                            <span class="card__price-old-small ms-sm-0 ms-1">109 250 <sup>₽</sup></span>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-sm-end">
+                                            <span class="card__cash">20% Кэшбэк от Мостурфлота</span>
+                                            <a href="./detail.html"
+                                               class="card__link text-uppercase text-decoration-none btn btn-blue">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="toolbarRiver"></div>
+        <div class="result__table result__view" id="tableList"></div>
+    </section>
+</main>
+
+@@include('./html__include/_footer.html')

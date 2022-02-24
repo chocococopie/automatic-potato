@@ -1,0 +1,422 @@
+//.nav__logo-subtitle {
+//  @include color-blue-white;
+//}
+
+.border-blue {
+  border-color: #0066FF !important;
+}
+
+.input:hover {
+  @extend .border-blue;
+}
+
+.input:active {
+  @extend .border-blue;
+}
+
+.btn-text-s {
+  @include btn-text-s;
+}
+
+.news__list .card:hover {
+  @extend .border-blue;
+}
+
+//.popular__item-more {
+//  background-color: #0066FF !important;
+//}
+
+//.popular__item-more.more-link {
+//  color: white !important;
+//}
+
+//.card__price-new {
+//  @extend .text-yellow;
+//}
+
+//.result__list-item--discount {
+//  @extend .bg-yellow;
+//}
+
+.line-through {
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+}
+
+//.card {
+//  height: 376px;
+//
+//  &__img--arrow {
+//    position: absolute;
+//    right: 19px;
+//    bottom: 25px;
+//  }
+//}
+
+
+.news__list {
+
+  & .card {
+    //height: 152px !important;
+  }
+
+  //& .card-title {
+  //  font-family: Montserrat;
+  //  font-style: normal;
+  //  font-weight: 500;
+  //  font-size: 16px !important;
+  //  line-height: 20px;
+  //  letter-spacing: -0.6px;
+  //  color: #000033;
+  //}
+
+  //& .card-date {
+  //  font-family: Montserrat;
+  //  font-style: normal;
+  //  font-weight: 600;
+  //  font-size: 12px !important;
+  //  line-height: 16px;
+  //  text-transform: uppercase;
+  //  color: #6C6C70;
+  //}
+}
+
+//.card-img--size {
+//  width: 24px;
+//  height: 24px;
+//}
+
+//.swiper-container .controls {
+//  margin-bottom: 0 !important;
+//}
+
+.home__slider .swiper-container .swiper-pagination-bullet-active {
+  background-color: #0066FF !important;
+}
+
+//.result__list .form-check {
+//  padding-left: 0;
+//}
+
+.bootstrap-table .fixed-table-container .table .bs-checkbox {
+  & label {
+    & input {
+      display: none;
+
+      &:checked + span:before {
+        opacity: 1;
+      }
+    }
+
+    & span {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #9F9FA2;
+      position: relative;
+      flex-shrink: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #0066FF;
+        opacity: 0;
+        transition: .2s;
+      }
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #1E78FF;;
+      }
+    }
+  }
+}
+
+//.river__result {
+//  & tbody tr {
+//    background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%);
+//  }
+//
+//  & thead tr {
+//    background-color: #EDEDEE;;
+//  }
+//}
+
+.bootstrap-table .fixed-table-container .table td {
+  vertical-align: top !important;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #E9F7FF;
+}
+
+.table-hover > tbody > tr:hover {
+  --bs-table-accent-bg: none;
+}
+
+.table tbody tr.selected td {
+  background-color: #E9F7FF !important;
+}
+
+.bootstrap-table .fixed-table-container .table thead th .sortable {
+  background-position: left;
+  padding-left: 20px;
+}
+
+//.leaf-size {
+//  width: 14.87px;
+//  height: 22.62px;
+//  max-width: none;
+//
+//  //& .river__result tbody tr {
+//  //  background: linear-gradient(180deg, #FDFFFC 0%, #F4FFE6 100%);
+//  //}
+//}
+
+//.nav .sub-menu__item {
+//  &:hover {
+//    color: #0066FF !important;
+//  }
+//}
+
+.dropdown-news {
+
+  & ul li {
+    margin: 0;
+
+    &:not(:last-child) {
+      padding-bottom: 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 430px;
+        background: #EDEDEE;
+      }
+    }
+  }
+
+  & .sub-menu__list {
+    padding: 32px 48px 24px !important;
+
+    & > li {
+      margin: 0 !important;
+    }
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000033;
+  }
+
+  &__date {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #6C6C70;
+    margin: 7px 0 10px 0;
+  }
+
+  &__all {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #0066FF !important;
+  }
+}
+
+.sub-menu.ships-padding .sub-menu__list.ships-list {
+  padding-bottom: 0 !important;
+}
+
+//.nav .sub-menu__list.ships-list {
+//  min-width: 681px;
+//  min-height: 384px;
+//  column-count: 3;
+//
+//  & > li {
+//    page-break-inside: avoid;
+//    break-inside: avoid;
+//    padding-bottom: 12px;
+//    margin-bottom: 0 !important;
+//  }
+//
+//  & .sub-menu__title {
+//    font-family: Montserrat;
+//    font-style: normal;
+//    font-weight: bold;
+//    font-size: 18px;
+//    line-height: 22px;
+//    color: #000033;
+//    padding-bottom: 16px;
+//  }
+//
+//  & .sub-menu__item {
+//    display: inline-block;
+//    font-family: Montserrat;
+//    font-style: normal;
+//    font-weight: 500;
+//    font-size: 16px;
+//    line-height: 21px;
+//    color: #6C6C70;
+//    padding-bottom: 12px;
+//  }
+//}
+
+
+.info {
+  & .swiper-slide {
+    height: auto;
+  }
+
+  & .card {
+    min-height: 100%;
+  }
+}
+
+.discount {
+  & .swiper-slide {
+    height: auto;
+  }
+
+  & .card {
+    min-height: 100%;
+  }
+}
+
+.sale {
+  & .swiper-slide {
+    height: auto;
+  }
+
+  & .card {
+    min-height: 100%;
+  }
+}
+
+//.search-cruise__btn {
+//  & svg {
+//    margin-left: 9px;
+//    margin-bottom: 5px;
+//  }
+//}
+
+.tooltip-text {
+  &.form-label {
+    margin-bottom: 0;
+  }
+
+  &.form-label--title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #9F9FA2;
+  }
+
+  &.form-label--date {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #9F9FA2;
+  }
+}
+
+.duration .search-cruise__row input {
+  position: relative;
+  bottom: -1px;
+}
+
+.cost .search-cruise__row input {
+  position: relative;
+  bottom: -1px;
+}
+
+.accordion {
+  &-body {
+    padding: 24px 35px;
+
+    & .search-cruise__base {
+      box-shadow: 0 0 0 1px #C4C4C4;
+      filter: drop-shadow(0px 4px 18px rgba(63, 63, 69, 0.16));
+
+      @include for-mobile {
+        box-shadow: none;
+        filter: none;
+      }
+    }
+  }
+
+  &-button {
+    padding: 16px 35px;
+  }
+}
+
+//.select2-container--default .select2-results__option--selected {
+//  background-color: blue;
+//  color: white;
+//}
+
+//.result__options {
+//  &-compare {
+//    text-transform: uppercase;
+//    //color: #000033;
+//    //font-family: Montserrat;
+//    font-style: normal;
+//    font-weight: 600;
+//    font-size: 12px;
+//    line-height: 16px;
+//  }
+//
+//  &-sort {
+//    border: 1px solid #EDEDEE;
+//  }
+//}
+
+//.river__result {
+//  & .card-title {
+//    font-family: Montserrat;
+//    font-style: normal;
+//    font-weight: 500;
+//    font-size: 22px;
+//    line-height: 28px;
+//    letter-spacing: -0.6px;
+//  }
+//
+//  &.subtitle {
+//    font-family: Montserrat;
+//    font-style: normal;
+//    font-weight: 600;
+//    font-size: 33px;
+//    line-height: 46px;
+//    letter-spacing: -1.5px;
+//  }
+//}
+
+
+//.card__list li + li:before {
+//  width: 16px !important;
+//  height: 16px !important;
+//}
+
+

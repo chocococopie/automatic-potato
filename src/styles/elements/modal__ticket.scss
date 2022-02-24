@@ -1,0 +1,118 @@
+.modal {
+  &-dialog {
+    max-width: 856px !important;
+  }
+
+  &-content {
+    border-radius: 0;
+  }
+
+  &-body {
+    align-items: stretch !important;
+    border: none;
+
+    @include for-mobile {
+      padding: 16px;
+    }
+
+    & .modal-headeralike {
+      display: flex;
+
+      & * {
+        display: flex;
+      }
+    }
+
+    & > {
+      display: flex;
+      margin: 0;
+    }
+
+    & p {
+      margin-bottom: 8px;
+    }
+  }
+
+  & .favorites__add-button {
+    color: #0066FF;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    padding: 5px 0;
+  }
+
+  &-plan {
+    align-items: stretch !important;
+    border: none;
+
+    & > {
+      display: flex;
+      margin: 0;
+    }
+
+    & .row {
+      align-items: center;
+    }
+
+    & .form-check {
+      padding: 0;
+    }
+
+    & .category {
+
+      &__item-label {
+        padding-top: 9px;
+
+        @include for-mobile {
+          padding-top: 0;
+        }
+      }
+
+      &__description {
+        border: 1px solid #EDEDEE;
+        padding: 16px 24px 40px;
+        margin-top: 32px;
+
+        @include for-mobile {
+          margin: 24px 1px 0 1px;
+          padding: 16px 4px;
+        }
+      }
+    }
+
+    & .cabin__facilities {
+      margin-top: 0 !important;
+
+      &-item {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    hr {
+      background: #EDEDEE;
+      opacity: 1;
+      margin: 24px 0;
+    }
+  }
+
+  &-footer {
+    border: none;
+    padding: 0;
+    height: 13px;
+  }
+
+  &-header {
+    border: none;
+    padding: 0;
+    height: 13px;
+  }
+}
+
+.tickets__extra-subtitle {
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -2px;
+}

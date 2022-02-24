@@ -1,0 +1,15 @@
+.breadcrumb {
+
+	@extend .fw-500;
+
+	&-item {
+
+		& a {
+			@extend .text-breadcrumb-color, .footer__menu-link;
+		}
+	}
+
+	&__container {
+		@extend .pt-7;
+	}
+}

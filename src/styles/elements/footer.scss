@@ -1,0 +1,82 @@
+.footer {
+	@extend .pt-7, .pb-9;
+	border-top: 1px solid #0066FF;
+
+	&__title {
+		@extend .fw-700, .text-uppercase;
+		font-size: 18px;
+		margin-bottom: 24px;
+
+		@include for-mobile {
+			font-size: 12px;
+			margin-bottom: 14px;
+		}
+	}
+
+	&__menu {
+		@extend .d-flex, .flex-column, .align-items-start;
+
+		&-link {
+			@extend .link-gray, .fw-500, .fs-11;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+
+				@include for-mobile {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	&__contact {
+		@extend .mb-3;
+
+		&-title,
+		&-info {
+			@extend .fw-500, .fs-11;
+		}
+
+		&-title {
+			@include for-mobile {
+				color: #6C6C70;
+			}
+		}
+
+		&-info {
+			@extend .text-gray, .align-items-start, .flex-column, .mt-1;
+			display: flex;
+
+			@include for-mobile {
+				display: none;
+			}
+
+			& span {
+				@extend .mt-1;
+			}
+		}
+	}
+
+	&__bottom {
+
+		&-link {
+			transition: $transition-base;
+			@extend .footer__title, .link-primary;
+		}
+	}
+
+	&__subscribe {
+		& .input {
+			@include for-mobile {
+				width: 100%;
+				border-color: #9F9FA2 !important;
+			}
+		}
+
+		& > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+			@include for-mobile {
+				margin-left: 0;
+			}
+		}
+	}
+}
